@@ -1,0 +1,18 @@
+{
+  "name": "sengokuRPG-core",
+  "version": "0.0.1",
+  "description": "sengokuRPG-core",
+  "main": "index.js",
+  "repository": "https://github.com/vspirit803/sengokuRPG-core",
+  "author": "vspirit803",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^2.6.0",
+    "eslint": "^6.6.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "eslint-config-standard": "^14.1.0"
+  }
+}
