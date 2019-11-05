@@ -1,19 +1,11 @@
-/*
- * @Author: Liu Xu
- * @Date: 2019-08-14 10:35:08
- * @LastEditors: Liu Xu
- * @LastEditTime: 2019-08-14 10:51:45
- * @Description: file content
- * @Version: Do not edit
- */
 module.exports = {
     parser: '@typescript-eslint/parser',
     env: {
-        // 'browser': true,
+        browser: true,
         node: true,
         es6: true
     },
-    extends: 'standard',
+    extends: ['standard', 'typescript'],
     globals: {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly'
@@ -35,11 +27,11 @@ module.exports = {
         semi: ['error', 'always'],
         'no-unused-vars': 'off',
         'space-before-function-paren': 'off',
-        'block-spacing': 'off',
+        // 'block-spacing': 'off',
         'spaced-comment': 'off',
-        'comma-dangle': 'off',
-        'no-eval': 'off',
-        'computed-property-even-spacing': 'off',
-        'standard/computed-property-even-spacing': 'off'
+        // 'comma-dangle': 'off',
+        // 'no-eval': 'off',
+        // 'computed-property-even-spacing': 'off',
+        // 'standard/computed-property-even-spacing': 'off'
     }
 };
