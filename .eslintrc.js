@@ -29,7 +29,7 @@ module.exports = {
         'space-before-function-paren': 'off',
         // 'block-spacing': 'off',
         'spaced-comment': 'off',
-        // 'comma-dangle': 'off',
+        'comma-dangle': 'off',
         // 'no-eval': 'off',
         // 'computed-property-even-spacing': 'off',
         // 'standard/computed-property-even-spacing': 'off'
