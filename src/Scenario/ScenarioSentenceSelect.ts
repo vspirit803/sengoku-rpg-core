@@ -5,9 +5,11 @@ import { ScenarioSentenceBase } from './ScenarioSentenceBase';
  */
 
 export class ScenarioSentenceSelect extends ScenarioSentenceBase {
+    name: string;
     options: Array<ScenarioSentenceSelectOption>;
     constructor() {
         super();
+        this.name = '';
         this.type = 'system';
         this.options = new Array<ScenarioSentenceSelectOption>(0);
     }
