@@ -21,11 +21,36 @@ class EventCenter {
 
     /**
      * 发布事件
+     * @param event 触发的事件
+     * @param isAsync 是否异步执行(默认同步)
      */
-    publish(event: Event) {
-        /**
-         * todo
-         */
+    async trigger(event: Event, isAsync = false): Promise<void> {
+        const filteredSubscribers = this.subscribers
+            .filter((eachSubscriber) => {
+                return (
+                    eachSubscriber.event === event.type &&
+                    (eachSubscriber.filter === undefined || //该订阅者不过滤来源
+                    (typeof eachSubscriber.filter === 'symbol' && eachSubscriber.filter === event.source.uuid) || //仅单个来源触发
+                        (typeof eachSubscriber.filter === 'object' &&
+                            eachSubscriber.filter.indexOf(event.source.uuid) !== -1)) //多个来源可触发
+                );
+            })
+            .sort((a, b) => {
+                //比较优先级 相同则比较时间戳
+                return a.priority !== b.priority ? a.priority - b.priority : a.timestamp - b.timestamp;
+            });
+        for (let i = 0; i < filteredSubscribers.length; i++) {
+            const eachSubscriber = filteredSubscribers[i];
+            let goOnFlag = true; //可能有的回调事件会阻止后面的事件触发
+            if (isAsync) {
+                goOnFlag = eachSubscriber.callback(event.source, event.data) as boolean;
+            } else {
+                goOnFlag = await (eachSubscriber.callback(event.source, event.data) as Promise<boolean>);
+            }
+            if (!goOnFlag) {
+                break;
+            }
+        }
     }
 }
 
