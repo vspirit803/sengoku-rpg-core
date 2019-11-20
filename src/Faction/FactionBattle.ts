@@ -24,6 +24,12 @@ export class FactionBattle extends Object {
     }
 
     get characters(): Array<CharacterBattle> {
-        return [];
+        return this.teams
+            .map((eachTeam) => {
+                return eachTeam.members;
+            })
+            .reduce((prev, curr) => {
+                return [...prev, ...curr];
+            });
     }
 }

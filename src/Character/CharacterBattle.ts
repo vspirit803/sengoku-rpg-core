@@ -21,6 +21,7 @@ export class CharacterBattle extends CharacterNormal {
     isAlive: boolean; //是否存活
     isSilence: boolean; //是否被沉默
     isStunned: boolean; //是否被眩晕
+    baseBattleEventSubscribers: { [eventName: string]: Subscriber };
 
     constructor() {
         super();
@@ -29,11 +30,26 @@ export class CharacterBattle extends CharacterNormal {
         this.isAlive = true;
         this.isSilence = false;
         this.isStunned = false;
+        this.baseBattleEventSubscribers = {};
         this.subscribeBaseBattleEvent();
     }
 
     /**订阅基本的战斗事件 */
     private subscribeBaseBattleEvent(): void {
+        //攻击
+        const onAttacking: Subscriber = new Subscriber({
+            event: 'attacking',
+            filter: this.uuid,
+            priority: 2,
+            callback: (source, data): boolean => {
+                console.log(`${this.name}发起了攻击`);
+                return true;
+            },
+        });
+        eventCenter.addSubscriber(onAttacking);
+        this.baseBattleEventSubscribers.onAttacking = onAttacking;
+
+        //被攻击
         const onAttacked: Subscriber = new Subscriber({
             event: 'attacked',
             filter: this.uuid,
@@ -44,5 +60,41 @@ export class CharacterBattle extends CharacterNormal {
             },
         });
         eventCenter.addSubscriber(onAttacked);
+        this.baseBattleEventSubscribers.onAttacked = onAttacked;
+
+        //击杀
+        const onKilling: Subscriber = new Subscriber({
+            event: 'killing',
+            filter: this.uuid,
+            priority: 2,
+            callback: (source, data): boolean => {
+                console.log(`${this.name}造成了击杀`);
+                return true;
+            },
+        });
+        eventCenter.addSubscriber(onKilling);
+        this.baseBattleEventSubscribers.onKilling = onKilling;
+
+        //被击杀
+        const onKilled: Subscriber = new Subscriber({
+            event: 'killed',
+            filter: this.uuid,
+            priority: 2,
+            callback: (source, data): boolean => {
+                console.log(`${this.name}受到了击杀`);
+                this.isAlive = false;
+                return true;
+            },
+        });
+        eventCenter.addSubscriber(onKilled);
+        this.baseBattleEventSubscribers.onKilled = onKilled;
+    }
+
+    /**移除订阅基本的战斗事件 */
+    private unSubscribeBaseBattleEvent(): void {
+        for (const eachSubscriberKey in this.baseBattleEventSubscribers) {
+            const eachSubscriber = this.baseBattleEventSubscribers[eachSubscriberKey];
+            eventCenter.removeSubscriber(eachSubscriber);
+        }
     }
 }

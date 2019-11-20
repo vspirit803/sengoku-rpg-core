@@ -1,6 +1,6 @@
 import { UUID } from '../Common/UUID';
 
-type EventData = Map<string, any>;
+type EventData = { [propName: string]: any };
 /**
  * 订阅者
  */

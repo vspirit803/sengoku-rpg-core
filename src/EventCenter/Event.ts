@@ -1,6 +1,6 @@
 import { UUID } from '../Common/UUID';
 
-type EventData = Map<string, any>;
+type EventData = { [propName: string]: any };
 
 /**
  * 事件
@@ -12,6 +12,6 @@ export class Event {
     constructor({ type, source, data }: { type: string; source: UUID; data?: EventData }) {
         this.type = type;
         this.source = source;
-        this.data = data || new Map<string, any>();
+        this.data = data || {};
     }
 }

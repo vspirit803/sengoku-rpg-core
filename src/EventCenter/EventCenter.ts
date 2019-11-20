@@ -5,7 +5,7 @@ import { Event } from './Event';
  * 发布-订阅模式的事件中心
  */
 
-class EventCenter {
+export class EventCenter {
     subscribers: Array<Subscriber>;
     constructor() {
         this.subscribers = new Array<Subscriber>(0);
@@ -17,6 +17,16 @@ class EventCenter {
      */
     addSubscriber(subscriber: Subscriber): void {
         this.subscribers.push(subscriber);
+    }
+
+    /**
+     * 移除订阅者
+     * @param subscriber 要移除的订阅者
+     */
+    removeSubscriber(subscriber: Subscriber): void {
+        this.subscribers = this.subscribers.filter((eachSubscriber) => {
+            return eachSubscriber !== subscriber;
+        });
     }
 
     /**

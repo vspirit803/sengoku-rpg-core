@@ -1,6 +1,7 @@
 import { BattleBattle } from '../Battle/BattleBattle';
 import { CharacterBattle } from '../Character/CharacterBattle';
 import { BattleActionQueueBase } from './BattleActionQueueBase';
+import { Event } from '../EventCenter/Event';
 
 /**
  * 战斗行动序列(梦幻西游型,每个回合所有角色按速度快慢依次行动)
@@ -22,9 +23,30 @@ export class BattleActionQueueMHXY extends BattleActionQueueBase {
     }
 
     getNext(): CharacterBattle {
+        if (!this.battle) {
+            throw Error('获取下一行动角色失败!未绑定battle.');
+        }
         if (this.actionQueue.length === 0) {
             //该回合已行动完毕,应该开始下一个回合
-            this.actionQueue.push(...this.battle!.characters);
+            if (this.roundCount) {
+                this.battle.eventCenter.trigger(
+                    //回合结束
+                    new Event({
+                        type: 'RoundEnd',
+                        source: { uuid: Symbol('BattleActionQueueMHXY') },
+                        data: { roundCount: this.roundCount },
+                    }),
+                );
+            }
+            this.actionQueue.push(...this.battle.characters);
+            this.battle.eventCenter.trigger(
+                //回合开始
+                new Event({
+                    type: 'RoundStart',
+                    source: { uuid: Symbol('BattleActionQueueMHXY') },
+                    data: { roundCount: this.roundCount },
+                }),
+            );
         }
         return this.actionQueue.shift()!;
     }
