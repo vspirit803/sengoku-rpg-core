@@ -23,10 +23,14 @@ export class CharacterBattle extends CharacterNormal {
     isStunned: boolean; //是否被眩晕
     baseBattleEventSubscribers: { [eventName: string]: Subscriber };
 
-    constructor() {
-        super();
+    constructor({ character = new CharacterNormal() }: { character?: CharacterNormal } = {}) {
+        super({ character, level: character.level });
         this.uuid = Symbol('CharacterBattle');
         this.properties = {};
+        for (const eachPropName in character.properties) {
+            const eachProperty = character.properties[eachPropName];
+            this.properties[eachPropName] = new CharacterPropertyBattle({ character: this, property: eachProperty });
+        }
         this.isAlive = true;
         this.isSilence = false;
         this.isStunned = false;

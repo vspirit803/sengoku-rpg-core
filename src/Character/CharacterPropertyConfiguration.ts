@@ -4,8 +4,13 @@
 export class CharacterPropertyConfiguration {
     baseValue: number;
     increaseValue: number;
-    constructor() {
-        this.baseValue = 5;
-        this.increaseValue = 1;
+    constructor(
+        { baseValue = 5, increaseValue = 1 }: { baseValue?: number; increaseValue?: number } = {
+            baseValue: 5,
+            increaseValue: 1,
+        },
+    ) {
+        this.baseValue = baseValue;
+        this.increaseValue = increaseValue;
     }
 }
