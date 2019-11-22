@@ -15,7 +15,6 @@ export class FactionBattle extends Object {
         super();
         this.teams = new Array<TeamBattle>(0);
         this.name = '';
-        this.battle = undefined;
     }
 
     /** 阵营是否"存活",只要阵营至少有一队伍存活,则阵营存活 */
@@ -31,5 +30,19 @@ export class FactionBattle extends Object {
             .reduce((prev, curr) => {
                 return [...prev, ...curr];
             });
+    }
+
+    addTeams(...teams: Array<TeamBattle>): void {
+        teams.forEach((eachTeam) => {
+            this.teams.push(eachTeam);
+            eachTeam.setFaction(this);
+        });
+    }
+
+    setBattle(battle: BattleBattle): void {
+        this.battle = battle;
+        this.teams.forEach((eachTeam) => {
+            eachTeam.setBattle(battle);
+        });
     }
 }

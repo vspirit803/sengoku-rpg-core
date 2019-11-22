@@ -26,28 +26,41 @@ export class BattleActionQueueMHXY extends BattleActionQueueBase {
         if (!this.battle) {
             throw Error('获取下一行动角色失败!未绑定battle.');
         }
-        if (this.actionQueue.length === 0) {
-            //该回合已行动完毕,应该开始下一个回合
-            if (this.roundCount) {
+        let nextCharacter: CharacterBattle;
+        do {
+            if (this.actionQueue.length === 0) {
+                //该回合已行动完毕,应该开始下一个回合
+                if (this.roundCount) {
+                    this.battle.eventCenter.trigger(
+                        //回合结束
+                        new Event({
+                            type: 'RoundEnd',
+                            source: { uuid: Symbol('BattleActionQueueMHXY') },
+                            data: { roundCount: this.roundCount },
+                        }),
+                    );
+                }
+                this.actionQueue.push(
+                    ...this.battle.characters
+                        .filter((eachCharacter) => {
+                            return eachCharacter.isAlive;
+                        })
+                        .sort((a, b) => {
+                            //速度从大到小排序
+                            return b.properties.speed.battleValue - a.properties.speed.battleValue;
+                        }),
+                );
                 this.battle.eventCenter.trigger(
-                    //回合结束
+                    //回合开始
                     new Event({
-                        type: 'RoundEnd',
+                        type: 'RoundStart',
                         source: { uuid: Symbol('BattleActionQueueMHXY') },
                         data: { roundCount: this.roundCount },
                     }),
                 );
             }
-            this.actionQueue.push(...this.battle.characters);
-            this.battle.eventCenter.trigger(
-                //回合开始
-                new Event({
-                    type: 'RoundStart',
-                    source: { uuid: Symbol('BattleActionQueueMHXY') },
-                    data: { roundCount: this.roundCount },
-                }),
-            );
-        }
-        return this.actionQueue.shift()!;
+            nextCharacter = this.actionQueue.shift()!;
+        } while (!nextCharacter.isAlive);
+        return nextCharacter;
     }
 }

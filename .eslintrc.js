@@ -3,24 +3,24 @@ module.exports = {
     env: {
         browser: true,
         node: true,
-        es6: true
+        es6: true,
     },
     extends: ['standard', 'typescript'],
     globals: {
         Atomics: 'readonly',
-        SharedArrayBuffer: 'readonly'
+        SharedArrayBuffer: 'readonly',
     },
     parserOptions: {
         ecmaVersion: 2018,
-        sourceType: 'module'
+        sourceType: 'module',
     },
     rules: {
         indent: [
             'error',
             4,
             {
-                SwitchCase: 1
-            }
+                SwitchCase: 1,
+            },
         ],
         'linebreak-style': ['error', 'windows'],
         quotes: ['error', 'single'],
@@ -30,8 +30,9 @@ module.exports = {
         // 'block-spacing': 'off',
         'spaced-comment': 'off',
         'comma-dangle': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
         // 'no-eval': 'off',
         // 'computed-property-even-spacing': 'off',
         // 'standard/computed-property-even-spacing': 'off'
-    }
+    },
 };

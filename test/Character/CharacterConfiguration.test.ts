@@ -32,23 +32,9 @@ const tokuCharacterConfiguration = new CharacterConfiguration({
 const tokuCharacterNormal = new CharacterNormal({ character: tokuCharacterConfiguration, level: 20 });
 const tokuCharacterBattle = new CharacterBattle({ character: tokuCharacterNormal });
 
-console.log('nobuCharacterConfiguration');
-console.log(nobuCharacterConfiguration);
-console.log('nobuCharacterNormal');
-console.log(nobuCharacterNormal);
-console.log('nobuCharacterBattle');
-console.log(nobuCharacterBattle);
-
 console.log('-------织田信长-------');
-for (const key in nobuCharacterBattle.properties) {
-    console.log(
-        `${key}:  ${nobuCharacterBattle.properties[key].normalValue} ${nobuCharacterBattle.properties[key].battleValue}`,
-    );
-}
+nobuCharacterBattle.print();
 
 console.log('-------德川家康-------');
-for (const key in tokuCharacterBattle.properties) {
-    console.log(
-        `${key}:  ${tokuCharacterBattle.properties[key].normalValue} ${tokuCharacterBattle.properties[key].battleValue}`,
-    );
-}
+tokuCharacterBattle.print();
+// console.table(tokuCharacterBattle.properties);
