@@ -1,4 +1,5 @@
 import { UUID } from '../Common/UUID';
+import { TriggerTiming } from './TriggerTiming';
 
 type EventData = { [propName: string]: any };
 
@@ -6,10 +7,10 @@ type EventData = { [propName: string]: any };
  * 事件
  */
 export class Event {
-    type: string;
+    type: TriggerTiming;
     source: UUID;
     data: EventData;
-    constructor({ type, source, data }: { type: string; source: UUID; data?: EventData }) {
+    constructor({ type, source, data }: { type: TriggerTiming; source: UUID; data?: EventData }) {
         this.type = type;
         this.source = source;
         this.data = data || {};

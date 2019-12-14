@@ -2,6 +2,7 @@ import { BattleBattle } from '../Battle/BattleBattle';
 import { CharacterBattle } from '../Character/CharacterBattle';
 import { BattleActionQueueBase } from './BattleActionQueueBase';
 import { Event } from '../EventCenter/Event';
+import { TriggerTiming } from '../EventCenter/TriggerTiming';
 
 /**
  * 战斗行动序列(梦幻西游型,每个回合所有角色按速度快慢依次行动)
@@ -34,7 +35,7 @@ export class BattleActionQueueMHXY extends BattleActionQueueBase {
                     this.battle.eventCenter.trigger(
                         //回合结束
                         new Event({
-                            type: 'RoundEnd',
+                            type: TriggerTiming.RoundEnd,
                             source: { uuid: Symbol('BattleActionQueueMHXY') },
                             data: { roundCount: this.roundCount },
                         }),
@@ -53,7 +54,7 @@ export class BattleActionQueueMHXY extends BattleActionQueueBase {
                 this.battle.eventCenter.trigger(
                     //回合开始
                     new Event({
-                        type: 'RoundStart',
+                        type: TriggerTiming.RoundStart,
                         source: { uuid: Symbol('BattleActionQueueMHXY') },
                         data: { roundCount: this.roundCount },
                     }),

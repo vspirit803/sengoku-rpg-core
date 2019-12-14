@@ -5,6 +5,11 @@ import { CharacterBattle } from '../../src/Character/CharacterBattle';
 import { TeamBattle } from '../../src/Team/TeamBattle';
 import { BattleBattle } from '../../src/Battle/BattleBattle';
 import { FactionBattle } from '../../src/Faction/FactionBattle';
+import { EventBuff } from '../../src/Status/EventBuff';
+import { PropertyBuff } from '../../src/Status/PropertyBuff';
+import { Status } from '../../src/Status/Status';
+import { TriggerTiming } from '../../src/EventCenter/TriggerTiming';
+import { EventDataAttacking } from '../../src/EventCenter/EventData';
 
 const nobuCharacterConfiguration = new CharacterConfiguration({
     id: '0001',
@@ -17,8 +22,8 @@ const nobuCharacterConfiguration = new CharacterConfiguration({
 });
 const nobuCharacterNormal = new CharacterNormal({ character: nobuCharacterConfiguration, level: 10 });
 const nobuCharacterBattle = new CharacterBattle({ character: nobuCharacterNormal });
-nobuCharacterBattle.properties.attack.extraPercent = 0.5;
-nobuCharacterBattle.properties.attack.extraValue = 200;
+nobuCharacterBattle.properties.attack.extraPercent = 0;
+nobuCharacterBattle.properties.attack.extraValue = 0;
 
 const tokuCharacterConfiguration = new CharacterConfiguration({
     id: '0002',
@@ -63,4 +68,23 @@ factionB.addTeams(teamB);
 
 const battle = new BattleBattle();
 battle.addFactions(factionA, factionB);
+
+const addAtkStatus = new Status({ source: nobuCharacterBattle, target: nobuCharacterBattle });
+const addAtkBuff = new EventBuff(addAtkStatus, {
+    event: TriggerTiming.Attacking,
+    callback: (source, data: EventDataAttacking): boolean => {
+        const attackSource = data.source;
+        console.log(`${attackSource.name}身上的[${TriggerTiming[TriggerTiming.Attacking]}]事件Buff触发了`);
+        attackSource.currHp += 2000;
+        const newBuff = new PropertyBuff(addAtkStatus, { name: 'attack', value: 100 });
+        addAtkBuff.status.addBuffs(newBuff);
+        console.log(
+            `${attackSource.name}当前血量:${attackSource.currHp}/${attackSource.properties.hp.battleValue},攻击力:${attackSource.properties.attack.battleValue}`,
+        );
+        return true;
+    },
+});
+addAtkStatus.addBuffs(addAtkBuff);
+nobuCharacterBattle.statuses.push(addAtkStatus);
+
 battle.start();

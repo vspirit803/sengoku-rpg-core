@@ -1,11 +1,12 @@
 import { UUID } from '../Common/UUID';
+import { TriggerTiming } from './TriggerTiming';
 
 type EventData = { [propName: string]: any };
 /**
  * 订阅者
  */
 export class Subscriber {
-    event: string;
+    event: TriggerTiming;
     filter?: symbol | Array<symbol>;
     priority: number;
     /**
@@ -19,7 +20,7 @@ export class Subscriber {
         priority = 5,
         callback,
     }: {
-        event: string;
+        event: TriggerTiming;
         filter?: symbol | Array<symbol>;
         priority?: number;
         /**

@@ -6,6 +6,10 @@ import { BattleBattle } from '../Battle/BattleBattle';
 import { Subscriber } from '../EventCenter/Subscriber';
 import { eventCenter } from '../EventCenter/EventCenter';
 import { Event } from '../EventCenter/Event';
+import { TriggerTiming } from '../EventCenter/TriggerTiming';
+import { Status } from '../Status/Status';
+import { SubscriberFactory } from '../EventCenter/SubscriberFactory';
+import { EventDataAttacking } from '../EventCenter/EventData';
 
 /**
  * 角色类(战斗状态)
@@ -29,6 +33,8 @@ export class CharacterBattle extends CharacterNormal {
     isStunned: boolean;
     /**基本战斗事件订阅者 */
     baseBattleEventSubscribers: { [eventName: string]: Subscriber };
+    /**状态数组 */
+    statuses: Array<Status>;
 
     constructor({ character = new CharacterNormal() }: { character?: CharacterNormal } = {}) {
         super({ character, level: character.level });
@@ -43,6 +49,7 @@ export class CharacterBattle extends CharacterNormal {
         this.isSilence = false;
         this.isStunned = false;
         this.baseBattleEventSubscribers = {};
+        this.statuses = [];
     }
 
     setBattle(battle: BattleBattle): void {
@@ -61,77 +68,169 @@ export class CharacterBattle extends CharacterNormal {
     /**订阅基本的战斗事件 */
     private subscribeBaseBattleEvent(): void {
         //攻击
-        const onAttacking: Subscriber = new Subscriber({
-            event: 'attacking',
-            filter: this.uuid,
-            priority: 2,
-            callback: (source, data): boolean => {
+        // const onAttacking: Subscriber = new Subscriber({
+        //     event: TriggerTiming.Attacking,
+        //     filter: this.uuid,
+        //     priority: 2,
+        //     callback: (source, data): boolean => {
+        //         const target: CharacterBattle = data.target;
+        //         console.log(`${this.name}向${target.name}发起了攻击`);
+        //         this.battle!.eventCenter.trigger(
+        //             new Event({ type: TriggerTiming.Attacked, source: target, data: { source: source } }),
+        //         );
+        //         return true;
+        //     },
+        // });
+        const onAttacking = SubscriberFactory.Subscriber(
+            TriggerTiming.Attacking,
+            (source, data: EventDataAttacking) => {
                 const target: CharacterBattle = data.target;
                 console.log(`${this.name}向${target.name}发起了攻击`);
                 this.battle!.eventCenter.trigger(
-                    new Event({ type: 'attacked', source: target, data: { source: source } }),
+                    new Event({ type: TriggerTiming.Attacked, source: target, data: { source: this, target } }),
                 );
                 return true;
             },
-        });
+            this,
+            2,
+        );
         this.battle!.eventCenter.addSubscriber(onAttacking);
         this.baseBattleEventSubscribers.onAttacking = onAttacking;
 
         //被攻击
-        const onAttacked: Subscriber = new Subscriber({
-            event: 'attacked',
-            filter: this.uuid,
-            priority: 2,
-            callback: (source, data): boolean => {
-                const attackSource: CharacterBattle = data.source;
+        // const onAttacked: Subscriber = new Subscriber({
+        //     event: TriggerTiming.Attacked,
+        //     filter: this.uuid,
+        //     priority: 2,
+        //     callback: (source, data): boolean => {
+        //         const attackSource: CharacterBattle = data.source;
 
+        //         const damage = attackSource.properties.attack.battleValue;
+        //         console.log(
+        //             `${this.name}受到了${attackSource.name}的${damage}攻击. HP:${this.currHp - damage}/${
+        //                 this.properties.hp.battleValue
+        //             }`,
+        //         );
+        //         this.currHp -= damage;
+        //         if (this.currHp <= 0) {
+        //             this.currHp = 0;
+        //             this.battle!.eventCenter.trigger(
+        //                 new Event({
+        //                     type: TriggerTiming.Killed,
+        //                     source: this,
+        //                     data: { source: attackSource, target: this },
+        //                 }),
+        //             );
+        //         }
+
+        //         return true;
+        //     },
+        // });
+
+        const onAttacked = SubscriberFactory.Subscriber(
+            TriggerTiming.Attacked,
+            (source, data) => {
+                const attackSource: CharacterBattle = data.source;
+                const target = data.target;
                 const damage = attackSource.properties.attack.battleValue;
                 console.log(
-                    `${this.name}受到了${attackSource.name}的${damage}攻击. HP:${this.currHp - damage}/${
-                        this.properties.hp.battleValue
+                    `${target.name}受到了${attackSource.name}的${damage}攻击. HP:${target.currHp - damage}/${
+                        target.properties.hp.battleValue
                     }`,
                 );
-                this.currHp -= damage;
-                if (this.currHp <= 0) {
-                    this.currHp = 0;
-                    this.battle!.eventCenter.trigger(
-                        new Event({ type: 'killed', source: this, data: { source: attackSource, target: this } }),
+                target.currHp -= damage;
+                if (target.currHp <= 0) {
+                    target.currHp = 0;
+                    target.battle!.eventCenter.trigger(
+                        new Event({
+                            type: TriggerTiming.Killed,
+                            source: target,
+                            data: { source: attackSource, target },
+                        }),
                     );
                 }
-
                 return true;
             },
-        });
+            this,
+            2,
+        );
         this.battle!.eventCenter.addSubscriber(onAttacked);
         this.baseBattleEventSubscribers.onAttacked = onAttacked;
 
         //击杀
-        const onKilling: Subscriber = new Subscriber({
-            event: 'killing',
-            filter: this.uuid,
-            priority: 2,
-            callback: (source, data): boolean => {
-                console.log(`${this.name}造成了击杀`);
+        // const onKilling: Subscriber = new Subscriber({
+        //     event: TriggerTiming.Killing,
+        //     filter: this.uuid,
+        //     priority: 2,
+        //     callback: (source, data): boolean => {
+        //         const target: CharacterBattle = data.target;
+        //         console.log(`${this.name}击杀了${target.name}`);
+        //         return true;
+        //     },
+        // });
+
+        const onKilling: Subscriber = SubscriberFactory.Subscriber(
+            TriggerTiming.Killing,
+            (source, data): boolean => {
+                const target = data.target;
+                console.log(`${this.name}击杀了${target.name}`);
                 return true;
             },
-        });
+            this,
+            2,
+        );
         this.battle!.eventCenter.addSubscriber(onKilling);
         this.baseBattleEventSubscribers.onKilling = onKilling;
 
         //被击杀
-        const onKilled: Subscriber = new Subscriber({
-            event: 'killed',
-            filter: this.uuid,
-            priority: 2,
-            callback: (source, data): boolean => {
-                console.log(`${this.name}受到了击杀`);
+        // const onKilled: Subscriber = new Subscriber({
+        //     event: TriggerTiming.Killed,
+        //     filter: this.uuid,
+        //     priority: 2,
+        //     callback: (source, data): boolean => {
+        //         const killSource: CharacterBattle = data.source;
+        //         console.log(`${this.name}被${killSource.name}击杀了`);
+        //         this.isAlive = false;
+        //         this.battle!.eventCenter.trigger(
+        //             new Event({
+        //                 type: TriggerTiming.Killing,
+        //                 source: killSource,
+        //                 data: { source: killSource, target: this },
+        //             }),
+        //         );
+        //         while (this.statuses.length) {
+        //             const eachStatus = this.statuses.pop()!;
+        //             eachStatus.destroy();
+        //         }
+        //         this.unSubscribeBaseBattleEvent();
+        //         return true;
+        //     },
+        // });
+
+        const onKilled: Subscriber = SubscriberFactory.Subscriber(
+            TriggerTiming.Killed,
+            (source, data): boolean => {
+                const killSource = data.source;
+                console.log(`${this.name}被${killSource.name}击杀了`);
                 this.isAlive = false;
                 this.battle!.eventCenter.trigger(
-                    new Event({ type: 'killing', source: this, data: { source: data.source, target: this } }),
+                    new Event({
+                        type: TriggerTiming.Killing,
+                        source: killSource,
+                        data: { source: killSource, target: this },
+                    }),
                 );
+                while (this.statuses.length) {
+                    const eachStatus = this.statuses.pop()!;
+                    eachStatus.destroy();
+                }
+                this.unSubscribeBaseBattleEvent();
                 return true;
             },
-        });
+            this,
+            2,
+        );
+
         this.battle!.eventCenter.addSubscriber(onKilled);
         this.baseBattleEventSubscribers.onKilled = onKilled;
     }
@@ -150,11 +249,13 @@ export class CharacterBattle extends CharacterNormal {
             return this.team !== eachCharacter.team && eachCharacter.isAlive;
         });
         const target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
-        await this.battle!.eventCenter.trigger(new Event({ type: 'attacking', source: this, data: { target } }));
+        await this.battle!.eventCenter.trigger(
+            new Event({ type: TriggerTiming.Attacking, source: this, data: { source: this, target } }),
+        );
     }
 
     print(): void {
-        const baseData: { [propName: string]: any } = {};
+        const baseData: { [propName: string]: any } = {}; // eslint-disable-line @typescript-eslint/no-explicit-any
         for (const key in this) {
             if (Object.hasOwnProperty.call(this, key)) {
                 const element = this[key];

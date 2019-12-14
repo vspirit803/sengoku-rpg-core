@@ -47,7 +47,7 @@ export class EventCenter {
             })
             .sort((a, b) => {
                 //比较优先级 相同则比较时间戳
-                return a.priority !== b.priority ? a.priority - b.priority : a.timestamp - b.timestamp;
+                return a.priority !== b.priority ? b.priority - a.priority : a.timestamp - b.timestamp;
             });
         for (let i = 0; i < filteredSubscribers.length; i++) {
             const eachSubscriber = filteredSubscribers[i];
