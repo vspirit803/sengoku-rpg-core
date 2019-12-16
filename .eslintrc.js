@@ -4,7 +4,9 @@ module.exports = {
         browser: true,
         node: true,
         es6: true,
+        jest: true,
     },
+    plugins: ['jest'],
     extends: ['standard', 'typescript'],
     globals: {
         Atomics: 'readonly',

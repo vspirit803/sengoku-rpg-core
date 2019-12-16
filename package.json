@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "vspirit803",
-  "license": "MIT", 
+  "license": "MIT",
   "scripts": {
-    "lint": "eslint \"./**/*.ts\""
+    "lint": "eslint \"./**/*.ts\"",
+    "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-typescript": "^7.7.4",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
+    "babel-jest": "^24.9.0",
     "eslint": "^6.6.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-config-typescript": "^3.0.0",
@@ -17,7 +22,12 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0",
     "ts-node": "^8.4.1",
     "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "@types/jest": "^24.0.23",
+    "eslint-plugin-jest": "^23.1.1"
   }
 }
