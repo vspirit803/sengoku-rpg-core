@@ -3,7 +3,6 @@ import { Status } from './Status';
 import { Subscriber } from '../EventCenter/Subscriber';
 import { TriggerTiming } from '../EventCenter/TriggerTiming';
 import { UUID } from '../Common/UUID';
-import { EventData, EventDataAttacking } from '../EventCenter/EventData';
 import { SubscriberFactory } from '../EventCenter/SubscriberFactory';
 /**
  * Buff - 事件Buff
@@ -18,7 +17,7 @@ export class EventBuff extends Buff {
     /**触发事件 */
     event: TriggerTiming;
     /**触发事件的回调函数 */
-    callback: (source: UUID, data: any) => boolean | Promise<boolean>;
+    callback: (source: UUID, data: any) => boolean | Promise<boolean>; // eslint-disable-line @typescript-eslint/no-explicit-any
     constructor(
         status: Status,
         {
@@ -32,7 +31,7 @@ export class EventBuff extends Buff {
             currCooldown?: number | 'forever';
             // subscriber?: Subscriber;
             event: TriggerTiming;
-            callback: (source: UUID, data: any) => boolean | Promise<boolean>;
+            callback: (source: UUID, data: any) => boolean | Promise<boolean>; // eslint-disable-line @typescript-eslint/no-explicit-any
         },
     ) {
         super(status);
@@ -45,7 +44,7 @@ export class EventBuff extends Buff {
         //     filter: this.status.source.uuid,
         //     callback,
         // });
-        this.subscriber = SubscriberFactory.Subscriber(event as any, callback as any, this.status.source);
+        this.subscriber = SubscriberFactory.Subscriber(event as any, callback as any, this.status.source); // eslint-disable-line @typescript-eslint/no-explicit-any
         this.status.source.battle!.eventCenter.addSubscriber(this.subscriber);
     }
 

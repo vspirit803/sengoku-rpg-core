@@ -1,7 +1,7 @@
 import { UUID } from '../Common/UUID';
 import { TriggerTiming } from './TriggerTiming';
+import { EventData } from './EventData';
 
-type EventData = { [propName: string]: any };
 /**
  * 订阅者
  */

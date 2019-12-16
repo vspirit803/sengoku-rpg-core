@@ -1,4 +1,3 @@
-import { BattleBattle } from '../Battle/BattleBattle';
 import { CharacterBattle } from '../Character/CharacterBattle';
 import { BattleActionQueueBase } from './BattleActionQueueBase';
 import { Event } from '../EventCenter/Event';

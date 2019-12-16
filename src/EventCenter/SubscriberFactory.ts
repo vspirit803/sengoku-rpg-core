@@ -98,7 +98,7 @@ export class SubscriberFactory {
 
     static Subscriber(
         event: TriggerTiming,
-        callback: (source: UUID, data: any) => Promise<boolean> | boolean,
+        callback: (source: UUID, data: any) => Promise<boolean> | boolean, // eslint-disable-line @typescript-eslint/no-explicit-any
         filter?: UUID | Array<UUID>,
         priority = 5,
     ): Subscriber {

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "vspirit803",
-  "license": "MIT",
+  "license": "MIT", 
+  "scripts": {
+    "lint": "eslint \"./**/*.ts\""
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
