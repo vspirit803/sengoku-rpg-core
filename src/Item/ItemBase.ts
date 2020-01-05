@@ -1,4 +1,4 @@
-import { ItemType, ItemConfiguration } from './ItemIndex';
+import { ItemType, ItemConfiguration } from './index';
 
 /**
  * 物品基类

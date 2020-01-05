@@ -1,4 +1,4 @@
-import { ItemBase, ItemType } from './ItemIndex';
+import { ItemBase, ItemType } from './index';
 
 /**
  * 材料类物品
