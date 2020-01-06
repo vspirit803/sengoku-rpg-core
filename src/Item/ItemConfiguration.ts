@@ -5,6 +5,8 @@ export class ItemConfiguration {
     id: string; //物品配置id
     name: string; //物品名称
     isStackable: boolean; //能否堆叠
+
+    /* istanbul ignore next */
     constructor({
         id = 'Item00000',
         name = '未命名物品',

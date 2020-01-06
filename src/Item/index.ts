@@ -4,5 +4,6 @@ import { ItemConfiguration } from './ItemConfiguration';
 import { ItemEquipment } from './ItemEquipment';
 import { ItemMaterial } from './ItemMaterial';
 import { EquipmentType } from './EquipmentType';
+import { ItemSystem } from './ItemSystem';
 
-export { ItemBase, ItemType, ItemConfiguration, ItemEquipment, ItemMaterial, EquipmentType };
+export { ItemBase, ItemType, ItemConfiguration, ItemEquipment, ItemMaterial, ItemSystem, EquipmentType };

@@ -1,10 +1,18 @@
-import { ItemBase, ItemType } from './index';
+// import { ItemBase, ItemType } from '@/Item';
+import { ItemBase } from './ItemBase';
+import { ItemType } from './ItemType';
+import { Rarity } from '@/Common/Rarity';
 
 /**
  * 材料类物品
  */
-export abstract class ItemMaterial extends ItemBase {
-    constructor({ id = 'Material00000', name = '未命名材料' }: { id?: string; name?: string } = {}) {
-        super({ id, name, isStackable: true, type: ItemType.Material });
+export class ItemMaterial extends ItemBase {
+    constructor({
+        id = 'Material00000',
+        name = '未命名材料',
+        count = 1,
+        rarity,
+    }: { id?: string; name?: string; count?: number; rarity?: Rarity } = {}) {
+        super({ id, name, isStackable: true, type: ItemType.Material, rarity, count });
     }
 }
