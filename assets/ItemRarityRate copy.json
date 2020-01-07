@@ -1,0 +1,8 @@
+{
+    "Common": 1,
+    "Rare": 0.5,
+    "Mythical": 0.1,
+    "Legendary": 0.015,
+    "Ancient": 0.005,
+    "Immortal": 0.001
+}

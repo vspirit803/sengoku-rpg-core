@@ -8,6 +8,10 @@ export class Backpack {
         this.items = [];
     }
 
+    /**
+     * 往背包加入物品
+     * @param item 要加入背包的物品
+     */
     addItem(item: ItemBase): void {
         if (item.isStackable) {
             //可叠加
