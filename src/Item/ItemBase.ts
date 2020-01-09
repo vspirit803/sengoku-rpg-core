@@ -1,14 +1,16 @@
 import { ItemConfiguration } from './ItemConfiguration';
 import { ItemType } from './ItemType';
 import { Rarity } from '../Common/Rarity';
+import { UUID } from '@/Common/UUID';
 
 /**
  * 物品基类
  */
-export abstract class ItemBase extends ItemConfiguration {
+export abstract class ItemBase extends ItemConfiguration implements UUID {
     type: ItemType;
     rarity: Rarity;
     count: number;
+    uuid: symbol;
 
     /* istanbul ignore next */
     constructor({
@@ -20,6 +22,7 @@ export abstract class ItemBase extends ItemConfiguration {
         count = 1,
     }: { id?: string; name?: string; isStackable?: boolean; type?: ItemType; rarity?: Rarity; count?: number } = {}) {
         super({ id, name, isStackable });
+        this.uuid = Symbol('ItemBase');
         this.type = type;
         this.id = id;
         this.name = name;

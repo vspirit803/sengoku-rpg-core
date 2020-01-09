@@ -6,4 +6,7 @@ export enum EquipmentType {
     Coat, //衣服
     Pants, //下装
     Shoes, //鞋子
+    Belt, //腰带
+    Shoulders, //护肩
+    Kneecap, //护膝
 }

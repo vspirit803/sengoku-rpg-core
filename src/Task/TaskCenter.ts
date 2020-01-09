@@ -1,10 +1,17 @@
 import { Task } from './Task';
 import { TaskStatus } from './TaskStatus';
+import { Game } from '@/Game';
 
 /**任务中心 */
 export class TaskCenter {
+    /**任务列表 */
     private tasks: Array<Task>;
+
+    /**任务id到任务的映射 */
     private taskMap: Map<string, Task>;
+
+    /**绑定的游戏实例 */
+    private game?: Game;
 
     constructor() {
         this.tasks = [];
@@ -33,5 +40,13 @@ export class TaskCenter {
         tasks.forEach((eachTask) => {
             this.taskMap.set(eachTask.id, eachTask);
         });
+    }
+
+    /**
+     * 绑定游戏实例
+     * @param game 要绑定的游戏实例
+     */
+    setGame(game: Game): void {
+        this.game = game;
     }
 }

@@ -11,7 +11,7 @@ export class CharacterNormal extends CharacterConfiguration implements UUID {
     properties: { [propName: string]: CharacterPropertyNormal };
     constructor({
         character = new CharacterConfiguration(),
-        level = 1,
+        level = 0,
     }: { character?: CharacterConfiguration; level?: number } = {}) {
         super(character);
         this.uuid = Symbol('CharacterNormal');

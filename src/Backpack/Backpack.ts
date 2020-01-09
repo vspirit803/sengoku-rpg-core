@@ -1,8 +1,12 @@
 import { ItemBase } from '@/Item';
+import { Game } from '@/Game';
 
 export class Backpack {
     /**背包物品 */
     items: Array<ItemBase>;
+
+    /**绑定的游戏实例 */
+    private game?: Game;
 
     constructor() {
         this.items = [];
@@ -29,5 +33,13 @@ export class Backpack {
             //没有该物品
             this.items.push(item);
         }
+    }
+
+    /**
+     * 绑定游戏实例
+     * @param game 要绑定的游戏实例
+     */
+    setGame(game: Game): void {
+        this.game = game;
     }
 }
