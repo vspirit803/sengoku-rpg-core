@@ -1,4 +1,3 @@
-// import { ItemBase, ItemType } from '@/Item';
 import { ItemBase } from './ItemBase';
 import { ItemType } from './ItemType';
 import { Rarity } from '@/Common/Rarity';

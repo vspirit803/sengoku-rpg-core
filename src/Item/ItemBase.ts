@@ -1,6 +1,6 @@
 import { ItemConfiguration } from './ItemConfiguration';
 import { ItemType } from './ItemType';
-import { Rarity } from '../Common/Rarity';
+import { Rarity } from '@/Common/Rarity';
 import { UUID } from '@/Common/UUID';
 
 /**

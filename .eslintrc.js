@@ -33,6 +33,8 @@ module.exports = {
         'spaced-comment': 'off',
         'comma-dangle': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
+        'no-useless-constructor': 'off',
+        '@typescript-eslint/no-useless-constructor': 'error',
         // 'no-eval': 'off',
         // 'computed-property-even-spacing': 'off',
         // 'standard/computed-property-even-spacing': 'off'

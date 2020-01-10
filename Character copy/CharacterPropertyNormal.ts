@@ -3,16 +3,10 @@ import { CharacterNormal } from './CharacterNormal';
 /**
  * 角色属性类(平常状态)
  */
-export class CharacterPropertyNormal implements CharacterPropertyConfiguration {
-    /**基础值 */
-    baseValue: number;
-
-    /**成长值 */
-    increaseValue: number;
-
-    /**角色 */
+export class CharacterPropertyNormal extends CharacterPropertyConfiguration {
     character: CharacterNormal;
     constructor({ character, property }: { character: CharacterNormal; property: CharacterPropertyConfiguration }) {
+        super();
         this.character = character;
         this.baseValue = property.baseValue;
         this.increaseValue = property.increaseValue;

@@ -62,7 +62,6 @@ export class CharacterCenter {
     loadCharactersConfiguration(characters: Array<CharacterConfiguration>): void {
         for (const eachCharacter of characters) {
             this.addCharacterConfiguration(eachCharacter);
-            // this.addCharacter(new CharacterNormal(eachCharacter));
         }
     }
 
@@ -72,33 +71,15 @@ export class CharacterCenter {
      */
     loadSave(characters: Array<CharacterSave>): void {
         for (const eachCharacterSave of characters) {
-            let eachCharacter = this.charactersMap.get(eachCharacterSave.id);
-            if (eachCharacter === undefined) {
-                eachCharacter = this.loadCharacter(eachCharacterSave.id);
+            const eachCharacterConfiguration = this.charactersConfigurationMap.get(eachCharacterSave.id);
+            if (eachCharacterConfiguration === undefined) {
+                throw Error(`id为[${eachCharacterSave.id}]的角色配置不存在`);
             }
-            eachCharacter.loadSave(eachCharacterSave);
+            const eachCharacter: CharacterNormal = new CharacterNormal({
+                character: eachCharacterConfiguration,
+                level: eachCharacterSave.level,
+            });
+            this.addCharacter(eachCharacter);
         }
-    }
-
-    /**
-     * 用角色配置初始化角色
-     * @param characterId 角色id
-     */
-    private loadCharacter(characterId: string): CharacterNormal {
-        const characterConfiguration = this.charactersConfigurationMap.get(characterId);
-        if (characterConfiguration === undefined) {
-            throw Error(`id为[${characterId}]的角色配置不存在`);
-        }
-        const character = new CharacterNormal(characterConfiguration);
-        this.addCharacter(character);
-        return character;
-    }
-
-    /**
-     * 激活角色
-     * @param characterId 角色id
-     */
-    unlockCharacter(characterId: string): void {
-        this.loadCharacter(characterId);
     }
 }

@@ -96,6 +96,13 @@ export class SubscriberFactory {
         priority?: number,
     ): Subscriber;
 
+    /**
+     * 生成订阅者
+     * @param event 触发时机
+     * @param callback 回调函数
+     * @param filter 过滤器,undefined表示任意事件
+     * @param priority 优先级
+     */
     static Subscriber(
         event: TriggerTiming,
         callback: (source: UUID, data: any) => Promise<boolean> | boolean, // eslint-disable-line @typescript-eslint/no-explicit-any

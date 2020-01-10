@@ -2,11 +2,11 @@ import { ItemBase } from '@/Item';
 import { Game } from '@/Game';
 
 export class Backpack {
-    /**背包物品 */
-    items: Array<ItemBase>;
-
     /**绑定的游戏实例 */
     private game?: Game;
+
+    /**背包物品 */
+    items: Array<ItemBase>;
 
     constructor() {
         this.items = [];

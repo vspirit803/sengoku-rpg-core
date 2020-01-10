@@ -10,16 +10,11 @@ import { TriggerTiming } from '../EventCenter/TriggerTiming';
 import { Status } from '../Status/Status';
 import { SubscriberFactory } from '../EventCenter/SubscriberFactory';
 import { EventDataAttacking } from '../EventCenter/EventData';
-import { UUID } from '@/Common/UUID';
 
 /**
  * 角色类(战斗状态)
  */
-export class CharacterBattle extends CharacterNormal implements UUID {
-    // uuid: symbol;
-    // id: string;
-    // level: number;
-    // name: string;
+export class CharacterBattle extends CharacterNormal {
     /**角色所处的队伍 */
     team?: TeamBattle;
     /**角色所处的阵营 */
@@ -41,13 +36,9 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     /**状态数组 */
     statuses: Array<Status>;
 
-    constructor(character: CharacterNormal) {
-        super(character);
+    constructor({ character = new CharacterNormal() }: { character?: CharacterNormal } = {}) {
+        super({ character, level: character.level });
         this.uuid = Symbol('CharacterBattle');
-        // this.id = character.id;
-        // this.name = character.name;
-        // this.level = character.level;
-        // this.equipmentSlots = character.equipmentSlots;
         this.properties = {};
         for (const eachPropName in character.properties) {
             const eachProperty = character.properties[eachPropName];
@@ -60,9 +51,6 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         this.baseBattleEventSubscribers = {};
         this.statuses = [];
     }
-
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    loadSave(): void {}
 
     setBattle(battle: BattleBattle): void {
         this.battle = battle;

@@ -17,9 +17,7 @@ export class TeamBattle extends TeamNormal {
     constructor({ team = new TeamNormal() }: { team?: TeamNormal } = {}) {
         super();
         this.members = new Array<CharacterBattle>(0);
-        this.addMembers(
-            ...team.members.map((eachMemberNormal) => new CharacterBattle({ character: eachMemberNormal })),
-        );
+        this.addMembers(...team.members.map((eachMemberNormal) => new CharacterBattle(eachMemberNormal)));
         this.orderPoint = 0;
     }
 

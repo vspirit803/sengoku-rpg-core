@@ -1,9 +1,12 @@
 import { ItemEquipment } from './ItemEquipment';
 import { EquipmentType } from './EquipmentType';
-import { Rarity } from '@/Common/Rarity';
-
-import rarityRate from '@/../assets/ItemRarityRate.json';
 import { EquipmentProperty } from './EquipmentProperty';
+import { Rarity } from '@/Common/Rarity';
+import rarityRate from '@assets/ItemRarityRate.json';
+
+/**
+ * 装备工厂
+ */
 export function generateEquipment({
     id,
     name,

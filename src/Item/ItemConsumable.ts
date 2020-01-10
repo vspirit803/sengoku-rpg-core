@@ -1,6 +1,6 @@
 import { ItemBase } from './ItemBase';
 import { ItemType } from './ItemType';
-import { Rarity } from '../Common/Rarity';
+import { Rarity } from '@/Common/Rarity';
 
 /**
  * 消耗类物品
