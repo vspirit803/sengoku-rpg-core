@@ -1,0 +1,23 @@
+{
+    "version": "0.0.1",
+    "characters": [
+        {
+            "id": "C0001",
+            "level": 5
+        },
+        {
+            "id": "C0002",
+            "level": 1,
+            "name": "羽柴秀吉"
+        },
+        {
+            "id": "C0003",
+            "level": 5,
+            "name": "武田信玄"
+        }
+    ],
+    "backpack": {
+        "materials": [],
+        "equipments": []
+    }
+}

@@ -18,24 +18,49 @@ export class ItemEquipment extends ItemBase {
     /**装备等级 */
     level: number;
 
+    // constructor(equipmentConfiguration: EquipmentConfiguration);
+    // constructor(equipmentSave: EquipmentSave);
+    // constructor(equipment: EquipmentConfiguration | EquipmentSave) {
+    //     super();
+    //     if ('type' in equipment) {
+    //         //参数为EquipmentConfiguration
+    //         this.uuid = Symbol('ItemEquipment');
+
+    //         this.id = equipment.id;
+    //         this.level = equipment.level;
+    //         this.equipmentType = equipment.equipmentType;
+    //         this.properties = {};
+    //         for (const eachEquipmentPropertyConfiguration in equipment.properties) {
+    //             const { min, max } = equipment.properties[eachEquipmentPropertyConfiguration];
+    //             const value = Math.round(Math.random() * (max - min) + min);
+    //             this.properties[eachEquipmentPropertyConfiguration] = { min, max, value };
+    //         }
+    //     }
+    //     else{
+    //         //参数为EquipmentSave
+    //     }
+    // }
+
     constructor({
         id,
         name,
         equipmentType,
         wearer,
         rarity,
-        level = 0,
-        properties = {},
+        level,
+        properties,
     }: {
         id: string;
         name: string;
         equipmentType: EquipmentType;
         wearer?: CharacterNormal;
-        rarity?: Rarity;
-        level?: number;
-        properties?: { [propName: string]: EquipmentProperty };
+        rarity: Rarity;
+        level: number;
+        properties: { [propName: string]: EquipmentProperty };
     }) {
-        super({ id, name, isStackable: false, type: ItemType.Equipment, rarity });
+        super({ id, name, isStackable: false, rarity });
+        this.uuid = Symbol('ItemEquipment');
+        this.type = ItemType.Equipment;
         this.level = level;
         this.equipmentType = equipmentType;
         this.wearer = wearer;

@@ -1,9 +1,15 @@
+import { EquipmentPropertyConfiguration } from './EquipmentPropertyConfiguration';
+
 /**
  * 装备属性类
  */
-export class EquipmentProperty {
+export interface EquipmentProperty extends EquipmentPropertyConfiguration {
+    /**最小值 */
+    min: number;
+
+    /**最大值 */
+    max: number;
+
+    /**实际值 */
     value: number;
-    constructor({ value = 0 }: { value?: number } = {}) {
-        this.value = value;
-    }
 }

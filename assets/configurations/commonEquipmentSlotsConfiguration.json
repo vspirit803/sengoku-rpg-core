@@ -1,0 +1,9 @@
+[
+    { "name": "Weapon", "validEquipmentTypes": ["Weapon"] },
+    { "name": "Coat", "validEquipmentTypes": ["Coat"] },
+    { "name": "Pants", "validEquipmentTypes": ["Pants"] },
+    { "name": "Shoes", "validEquipmentTypes": ["Shoes"] },
+    { "name": "Belt", "validEquipmentTypes": ["Belt"] },
+    { "name": "Shoulders", "validEquipmentTypes": ["Shoulders"] },
+    { "name": "Kneecap", "validEquipmentTypes": ["Kneecap"] }
+]

@@ -1,8 +1,8 @@
 import { GameSave } from './GameSave';
 import { TaskCenter } from '@/Task';
-import { Backpack } from '@/Backpack';
+import { ItemCenter } from '@/Item';
 import { CharacterCenter } from '@/Character';
-import characters from '@assets/characters.json';
+import characters from '@assets/configurations/characters.json';
 
 /**
  * 游戏的实例
@@ -10,25 +10,23 @@ import characters from '@assets/characters.json';
 export class Game {
     /**角色中心 */
     characterCenter: CharacterCenter;
-
     /**任务中心  */
     taskCenter: TaskCenter;
-
     /**背包 */
-    backpack: Backpack;
+    backpack: ItemCenter;
 
     constructor() {
         //初始化角色中心
         this.characterCenter = new CharacterCenter();
         this.characterCenter.setGame(this);
-        this.characterCenter.loadCharactersConfiguration(characters);
+        this.characterCenter.loadConfiguration(characters);
 
         //初始化任务中心
         this.taskCenter = new TaskCenter();
         this.taskCenter.setGame(this);
 
         //初始化背包
-        this.backpack = new Backpack();
+        this.backpack = new ItemCenter();
         this.backpack.setGame(this);
     }
 
@@ -37,6 +35,7 @@ export class Game {
      * @param gameSave 存档数据
      */
     loadSave(gameSave: GameSave): void {
-        this.characterCenter.loadSave(gameSave.charactersSave);
+        this.characterCenter.loadSave(gameSave.characters);
+        this.backpack.loadSave(gameSave.backpack);
     }
 }

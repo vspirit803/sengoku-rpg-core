@@ -12,7 +12,7 @@
             // "outFiles": [
             //     "${workspaceFolder}/**/*.js"
             // ],
-            "args": ["${relativeFile}"],
+            "args": ["-r", "tsconfig-paths/register", "${relativeFile}"],
             "cwd": "${workspaceRoot}",
             "protocol": "inspector"
         }

@@ -36,7 +36,7 @@
     },
     {
         "id": "C0002",
-        "name": "羽柴秀吉",
+        "name": "木下秀吉",
         "gender": "male",
         "properties": {
             "atk": {
@@ -71,7 +71,7 @@
     },
     {
         "id": "C0003",
-        "name": "武田信玄",
+        "name": "武田晴信",
         "gender": "male",
         "properties": {
             "atk": {

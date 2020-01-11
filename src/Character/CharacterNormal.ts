@@ -37,6 +37,9 @@ export class CharacterNormal implements UUID {
                     property: eachProperty,
                 });
             }
+            this.equipmentSlots = character.equipmentSlots.map(
+                (eachEquipmentSlotConfiguration) => new EquipmentSlot(eachEquipmentSlotConfiguration),
+            );
         }
 
         // for (const eachEquipmentSlotConfiguration of character.equipmentSlots) {

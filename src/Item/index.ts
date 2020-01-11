@@ -5,5 +5,17 @@ import { ItemEquipment } from './ItemEquipment';
 import { ItemMaterial } from './ItemMaterial';
 import { EquipmentType } from './EquipmentType';
 import { ItemSystem } from './ItemSystem';
+import { ItemCenter } from './ItemCenter';
+import { BackpackSave } from './BackpackSave';
 
-export { ItemBase, ItemType, ItemConfiguration, ItemEquipment, ItemMaterial, ItemSystem, EquipmentType };
+export {
+    ItemCenter,
+    ItemBase,
+    ItemType,
+    ItemConfiguration,
+    ItemEquipment,
+    ItemMaterial,
+    ItemSystem,
+    EquipmentType,
+    BackpackSave,
+};

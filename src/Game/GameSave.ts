@@ -1,13 +1,17 @@
 import { CharacterSave } from '@/Character';
+import { BackpackSave } from '@/Item';
 
 /**
  * 游戏存档
  */
 
 export interface GameSave {
-    /**角色存档 */
-    charactersSave: Array<CharacterSave>;
+    /**存档版本 */
+    version: string;
 
-    /**物品存档 */
-    // itemsSave:
+    /**角色存档 */
+    characters: Array<CharacterSave>;
+
+    /**背包存档 */
+    backpack: BackpackSave;
 }

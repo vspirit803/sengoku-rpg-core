@@ -2,11 +2,13 @@ import { CharacterNormal } from './CharacterNormal';
 import { CharacterConfiguration } from './CharacterConfiguration';
 import { CharacterSave } from './CharacterSave';
 import { Game } from '@/Game';
+import commonEquipmentSlotsConfiguration from '@assets/configurations/commonEquipmentSlotsConfiguration.json';
+import { SaveInterface } from '@/Game/SaveInterface';
 
 /**
  * 角色中心
  */
-export class CharacterCenter {
+export class CharacterCenter implements SaveInterface<Array<CharacterSave>> {
     /**绑定的游戏实例 */
     private game?: Game;
 
@@ -59,10 +61,9 @@ export class CharacterCenter {
      * 载入角色配置
      * @param characters 角色配置数组
      */
-    loadCharactersConfiguration(characters: Array<CharacterConfiguration>): void {
+    loadConfiguration(characters: Array<CharacterConfiguration>): void {
         for (const eachCharacter of characters) {
             this.addCharacterConfiguration(eachCharacter);
-            // this.addCharacter(new CharacterNormal(eachCharacter));
         }
     }
 
@@ -81,6 +82,24 @@ export class CharacterCenter {
     }
 
     /**
+     * 生成角色存档
+     * @returns 角色存档数组Array<CharacterSave>
+     */
+    generateSave(): Array<CharacterSave> {
+        return this.characters.map((eachCharacter) => {
+            return {
+                id: eachCharacter.id,
+                level: eachCharacter.level,
+                // 名字与配置不同(改过名)时,才会保存名字
+                name:
+                    eachCharacter.name !== this.charactersConfigurationMap.get(eachCharacter.id)?.name
+                        ? eachCharacter.name
+                        : undefined,
+            };
+        });
+    }
+
+    /**
      * 用角色配置初始化角色
      * @param characterId 角色id
      */
@@ -89,7 +108,10 @@ export class CharacterCenter {
         if (characterConfiguration === undefined) {
             throw Error(`id为[${characterId}]的角色配置不存在`);
         }
-        const character = new CharacterNormal(characterConfiguration);
+        const character = new CharacterNormal({
+            ...characterConfiguration,
+            equipmentSlots: commonEquipmentSlotsConfiguration,
+        });
         this.addCharacter(character);
         return character;
     }
@@ -100,5 +122,6 @@ export class CharacterCenter {
      */
     unlockCharacter(characterId: string): void {
         this.loadCharacter(characterId);
+        console.log(`激活了id为[${characterId}]的角色`);
     }
 }

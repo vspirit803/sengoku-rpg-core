@@ -1,12 +1,8 @@
-import { ItemEquipment } from './ItemEquipment';
 import { EquipmentType } from './EquipmentType';
-import { EquipmentProperty } from './EquipmentProperty';
+import { ItemEquipment } from './ItemEquipment';
 import { Rarity } from '@/Common/Rarity';
-import rarityRate from '@assets/ItemRarityRate.json';
+import rarityRate from '@assets/configurations/ItemRarityRate.json';
 
-/**
- * 装备工厂
- */
 export function generateEquipment({
     id,
     name,
@@ -41,10 +37,10 @@ export function generateEquipment({
     const rarityRange = rarityRate as { [rarity: string]: { min: number; max: number } };
     equipmentType = EquipmentType.Weapon;
     const { min: minRatio, max: maxRatio } = { ...rarityRange[Rarity[rarity]] };
-    const minValue = Math.round(Math.sin((0.01 * level - 0.5) * Math.PI + 1) * 500 * minRatio);
-    const maxValue = Math.round(Math.sin((0.01 * level - 0.5) * Math.PI + 1) * 500 * maxRatio);
-    const value = Math.round((maxValue - minValue) * Math.random()) + minValue;
-    const properties = { atk: new EquipmentProperty({ value }) };
+    const min = Math.round(Math.sin((0.01 * level - 0.5) * Math.PI + 1) * 500 * minRatio);
+    const max = Math.round(Math.sin((0.01 * level - 0.5) * Math.PI + 1) * 500 * maxRatio);
+    const value = Math.round((max - min) * Math.random()) + min;
+    const properties = { atk: { min, max, value } };
 
     return new ItemEquipment({ id, name, rarity, equipmentType, level, properties });
 }

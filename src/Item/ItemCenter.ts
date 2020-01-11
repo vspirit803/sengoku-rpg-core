@@ -1,15 +1,23 @@
-import { ItemBase } from '@/Item';
-import { Game } from '@/Game';
+import { ItemBase } from './ItemBase';
+import { Game, SaveInterface } from '@/Game';
+import { EquipmentCenter } from './EquipmentCenter';
+import { BackpackSave } from './BackpackSave';
 
-export class Backpack {
+/**
+ * 物品中心(背包)
+ */
+export class ItemCenter implements SaveInterface<BackpackSave> {
     /**绑定的游戏实例 */
     private game?: Game;
 
     /**背包物品 */
     items: Array<ItemBase>;
 
+    equipmentCenter: EquipmentCenter;
+
     constructor() {
         this.items = [];
+        this.equipmentCenter = new EquipmentCenter();
     }
 
     /**
@@ -41,5 +49,16 @@ export class Backpack {
      */
     setGame(game: Game): void {
         this.game = game;
+    }
+
+    loadSave(saveData: BackpackSave): void {
+        this.equipmentCenter.loadSave(saveData.equipments);
+    }
+
+    generateSave(): BackpackSave {
+        return {
+            equipments: this.equipmentCenter.generateSave(),
+            materials: [],
+        };
     }
 }
