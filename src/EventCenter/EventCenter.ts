@@ -42,7 +42,7 @@ export class EventCenter {
                     (eachSubscriber.filter === undefined || //该订阅者不过滤来源
                     (typeof eachSubscriber.filter === 'symbol' && eachSubscriber.filter === event.source.uuid) || //仅单个来源触发
                         (typeof eachSubscriber.filter === 'object' &&
-                            eachSubscriber.filter.indexOf(event.source.uuid) !== -1)) //多个来源可触发
+                            eachSubscriber.filter.includes(event.source.uuid))) //多个来源可触发
                 );
             })
             .sort((a, b) => {

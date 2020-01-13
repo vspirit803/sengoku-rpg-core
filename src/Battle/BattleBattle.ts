@@ -3,17 +3,35 @@ import { CharacterBattle } from '../Character/CharacterBattle';
 import { EventCenter } from '../EventCenter/EventCenter';
 import { BattleActionQueueMHXY } from '../BattleActionQueue/BattleActionQueueMHXY';
 import { BattleActionQueueBase } from '../BattleActionQueue/BattleActionQueueBase';
+import { BattleConfiguration } from './BattleConfiguration';
+import { Game } from '@/Game';
+import { TeamNormal, TeamBattle } from '@/Team';
 
 /**
  * 战斗(战斗状态)
  */
-export class BattleBattle extends Object {
-    factions: Array<FactionBattle>; //玩家所在的阵营固定为factions[0],每个阵营都是互为敌对关系
+export class BattleBattle {
+    name: string;
+    /**
+     * 阵营,每个阵营都是互为敌人
+     * 玩家所在的队伍固定为factions[0]的teams[0]
+     */
+    factions: Array<FactionBattle>;
     eventCenter: EventCenter;
-    constructor() {
-        super();
-        this.factions = new Array<FactionBattle>(0);
+
+    constructor(battleConfiguration: BattleConfiguration, game: Game, playerTeam: TeamNormal);
+    constructor(battleConfiguration?: BattleConfiguration, game?: Game, playerTeam?: TeamNormal) {
+        this.name = battleConfiguration?.name ?? '未留下名字的战斗';
+        this.factions = [];
         this.eventCenter = new EventCenter();
+        if (battleConfiguration && game && playerTeam) {
+            this.name = battleConfiguration.name;
+            this.factions = battleConfiguration.factions.map(
+                (eachFactionConfiguration) => new FactionBattle(eachFactionConfiguration, game),
+            );
+            this.factions[0].teams.unshift(new TeamBattle(playerTeam, game));
+        }
+        this.factions.forEach((eachFaction) => eachFaction.setBattle(this));
     }
 
     get characters(): Array<CharacterBattle> {
@@ -34,6 +52,9 @@ export class BattleBattle extends Object {
     }
 
     async start(): Promise<void> {
+        console.log(
+            `[${this.factions[0].name}]与[${this.factions[1].name}]两个阵营的矛盾终于暴发了,被后世称为[${this.name}]的战斗正式打响`,
+        );
         const battleActionQueue: BattleActionQueueBase = new BattleActionQueueMHXY();
         battleActionQueue.battle = this;
         battleActionQueue.init();

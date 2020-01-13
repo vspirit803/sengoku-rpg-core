@@ -17,6 +17,12 @@ export class ItemEquipment extends ItemBase {
     properties: { [propName: string]: EquipmentProperty };
     /**装备等级 */
     level: number;
+    /**装备评分 */
+    get score(): number {
+        return Object.values(this.properties)
+            .map((eachProperty) => eachProperty.value / eachProperty.max)
+            .reduce((prev, curr) => prev * curr);
+    }
 
     // constructor(equipmentConfiguration: EquipmentConfiguration);
     // constructor(equipmentSave: EquipmentSave);

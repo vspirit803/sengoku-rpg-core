@@ -1,0 +1,32 @@
+[
+    {
+        "id": "Battle00001",
+        "name": "桶狭间之战",
+        "factions": [
+            { "name": "织田军", "teams": [] },
+            {
+                "name": "今川义元军",
+                "teams": [
+                    {
+                        "name": "旗本",
+                        "members": [
+                            {
+                                "id": "Enemy0001",
+                                "level": 10
+                            }
+                        ]
+                    },
+                    {
+                        "name": "弓兵队",
+                        "members": [
+                            {
+                                "id": "Enemy0002",
+                                "level": 10
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

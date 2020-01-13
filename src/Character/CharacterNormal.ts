@@ -56,4 +56,12 @@ export class CharacterNormal implements UUID {
         this.name = eachCharacterSave.name ?? this.name;
         this.level = eachCharacterSave.level;
     }
+
+    getLevel(): number {
+        return this.level;
+    }
+
+    setLevel(level: number): void {
+        this.level = level;
+    }
 }

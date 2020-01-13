@@ -1,27 +1,27 @@
 /**事件触发时机 */
 export enum TriggerTiming {
     /**战斗开始时 */
-    BattleStart,
+    BattleStart = 'BattleStart',
     /**回合开始时 */
-    RoundStart,
+    RoundStart = 'RoundStart',
     /**行动开始时 */
-    ActionStart,
+    ActionStart = 'ActionStart',
     /**施放技能时 */
-    Spelling,
+    Spelling = 'Spelling',
     /**攻击时 */
-    Attacking,
+    Attacking = 'Attacking',
     /**受到攻击时 */
-    Attacked,
+    Attacked = 'Attacked',
     /**造成伤害时 */
-    Damaging,
+    Damaging = 'Damaging',
     /**受到伤害时 */
-    Damaged,
+    Damaged = 'Damaged',
     /**造成击杀时 */
-    Killing,
+    Killing = 'Killing',
     /**受到击杀时 */
-    Killed,
+    Killed = 'Killed',
     /**行动结束后 */
-    ActionEnd,
+    ActionEnd = 'ActionEnd',
     /**回合结束后 */
-    RoundEnd
+    RoundEnd = 'RoundEnd',
 }

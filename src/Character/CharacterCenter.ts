@@ -64,6 +64,9 @@ export class CharacterCenter implements SaveInterface<Array<CharacterSave>> {
     loadConfiguration(characters: Array<CharacterConfiguration>): void {
         for (const eachCharacter of characters) {
             this.addCharacterConfiguration(eachCharacter);
+            if (eachCharacter.id.startsWith('Enemy')) {
+                this.unlockCharacter(eachCharacter.id);
+            }
         }
     }
 
@@ -87,26 +90,23 @@ export class CharacterCenter implements SaveInterface<Array<CharacterSave>> {
      */
     generateSave(): Array<CharacterSave> {
         return this.characters.map((eachCharacter) => {
-            return {
-                id: eachCharacter.id,
-                level: eachCharacter.level,
-                // 名字与配置不同(改过名)时,才会保存名字
-                name:
-                    eachCharacter.name !== this.charactersConfigurationMap.get(eachCharacter.id)?.name
-                        ? eachCharacter.name
-                        : undefined,
-            };
+            const characterSave: CharacterSave = { id: eachCharacter.id, level: eachCharacter.getLevel() };
+            // 名字与配置不同(改过名)时,才会保存名字
+            if (eachCharacter.name !== this.charactersConfigurationMap.get(eachCharacter.id)?.name) {
+                characterSave.name = eachCharacter.name;
+            }
+            return characterSave;
         });
     }
 
     /**
      * 用角色配置初始化角色
-     * @param characterId 角色id
+     * @param id 角色id
      */
-    private loadCharacter(characterId: string): CharacterNormal {
-        const characterConfiguration = this.charactersConfigurationMap.get(characterId);
+    private loadCharacter(id: string): CharacterNormal {
+        const characterConfiguration = this.charactersConfigurationMap.get(id);
         if (characterConfiguration === undefined) {
-            throw Error(`id为[${characterId}]的角色配置不存在`);
+            throw Error(`id为[${id}]的角色配置不存在`);
         }
         const character = new CharacterNormal({
             ...characterConfiguration,
@@ -118,10 +118,22 @@ export class CharacterCenter implements SaveInterface<Array<CharacterSave>> {
 
     /**
      * 激活角色
-     * @param characterId 角色id
+     * @param id 角色id
      */
-    unlockCharacter(characterId: string): void {
-        this.loadCharacter(characterId);
-        console.log(`激活了id为[${characterId}]的角色`);
+    unlockCharacter(id: string): void {
+        this.loadCharacter(id);
+        console.log(`激活了id为[${id}]的角色`);
+    }
+
+    /**
+     * 获取角色
+     * @param id 角色id
+     */
+    getCharacter(id: string): CharacterNormal {
+        const character = this.charactersMap.get(id);
+        if (character === undefined) {
+            throw new Error(`id为${id}的角色未激活`);
+        }
+        return character;
     }
 }

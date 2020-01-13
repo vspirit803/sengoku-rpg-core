@@ -1,10 +1,9 @@
-export class TeamConfiguration {
+import { CharacterConfiguration } from '@/Character';
+
+/**
+ * 队伍(配置)
+ */
+export interface TeamConfiguration {
     name: string;
-    id: string;
-    memberIds: Array<string>;
-    constructor() {
-        this.name = '未命名队伍';
-        this.id = 'Team.0001';
-        this.memberIds = new Array<string>(0);
-    }
+    members: Array<({ id: string } | CharacterConfiguration) & { level?: number }>;
 }

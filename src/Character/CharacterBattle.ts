@@ -144,7 +144,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
             (source, data) => {
                 const attackSource: CharacterBattle = data.source;
                 const target = data.target;
-                const damage = attackSource.properties.attack.battleValue;
+                const damage = attackSource.properties.atk.battleValue;
                 console.log(
                     `${target.name}受到了${attackSource.name}的${damage}攻击. HP:${target.currHp - damage}/${
                         target.properties.hp.battleValue
@@ -258,7 +258,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     async action(): Promise<void> {
         console.log(`轮到${this.name}行动了`);
         const availableTargets = this.battle!.characters.filter((eachCharacter) => {
-            return this.team !== eachCharacter.team && eachCharacter.isAlive;
+            return this.faction !== eachCharacter.faction && eachCharacter.isAlive;
         });
         const target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
         await this.battle!.eventCenter.trigger(

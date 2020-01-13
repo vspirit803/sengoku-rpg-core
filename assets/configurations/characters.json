@@ -453,5 +453,74 @@
                 "increaseValue": 0
             }
         }
+    },
+    {
+        "id": "Enemy0001",
+        "name": "今川义元",
+        "gender": "male",
+        "properties": {
+            "atk": {
+                "baseValue": 5,
+                "increaseValue": 2
+            },
+            "def": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "critRate": {
+                "baseValue": 0.05,
+                "increaseValue": 0
+            },
+            "critMultiply": {
+                "baseValue": 1.5,
+                "increaseValue": 0
+            },
+            "missRate": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "hp": {
+                "baseValue": 100,
+                "increaseValue": 5
+            },
+            "speed": {
+                "baseValue": 60,
+                "increaseValue": 0
+            }
+        }
+    },{
+        "id": "Enemy0002",
+        "name": "骏河弓兵",
+        "gender": "male",
+        "properties": {
+            "atk": {
+                "baseValue": 10,
+                "increaseValue": 0
+            },
+            "def": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "critRate": {
+                "baseValue": 0.05,
+                "increaseValue": 0
+            },
+            "critMultiply": {
+                "baseValue": 1.5,
+                "increaseValue": 0
+            },
+            "missRate": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "hp": {
+                "baseValue": 100,
+                "increaseValue": 5
+            },
+            "speed": {
+                "baseValue": 60,
+                "increaseValue": 0
+            }
+        }
     }
 ]

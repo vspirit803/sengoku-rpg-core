@@ -3,7 +3,9 @@ import save001 from '@assets/saves/sav001.json';
 const game = new Game();
 game.loadSave(save001);
 
-console.log(game.characterCenter.characters);
+// console.log(game.characterCenter.characters);
 
-// eslint-disable-next-line no-empty
-while (true) {}
+const battle = game.battleCenter.generateBattle('Battle00001');
+battle.start();
+
+// console.log('end');

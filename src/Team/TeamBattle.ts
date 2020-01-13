@@ -2,11 +2,14 @@ import { TeamNormal } from './TeamNormal';
 import { CharacterBattle } from '../Character/CharacterBattle';
 import { FactionBattle } from '../Faction/FactionBattle';
 import { BattleBattle } from '../Battle/BattleBattle';
+import { Game } from '@/Game';
 
 /**
  * 队伍(战斗状态)
  */
-export class TeamBattle extends TeamNormal {
+export class TeamBattle implements TeamNormal {
+    name: string;
+    // id: string;
     members: Array<CharacterBattle>;
     /**队伍所处的阵营 */
     faction?: FactionBattle;
@@ -14,9 +17,11 @@ export class TeamBattle extends TeamNormal {
     battle?: BattleBattle;
     /**指令点,用于施放技能 */
     orderPoint: number; //指令点,用于施放技能
-    constructor({ team = new TeamNormal() }: { team?: TeamNormal } = {}) {
-        super();
-        this.members = new Array<CharacterBattle>(0);
+    constructor(team: TeamNormal, game: Game) {
+        this.name = team.name;
+        // this.id = team.id;
+        this.members = [];
+        // this.members = team.members.map((eachMember) => new CharacterBattle(eachMember));
         this.addMembers(...team.members.map((eachMemberNormal) => new CharacterBattle(eachMemberNormal)));
         this.orderPoint = 0;
     }
