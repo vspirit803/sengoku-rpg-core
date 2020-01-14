@@ -4,4 +4,4 @@ node_js:
 script:
     - yarn install
     - npm run lint
-    - npm run jest
+    - npm run test

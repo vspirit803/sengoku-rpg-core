@@ -1,6 +1,11 @@
-import { CharacterCenter } from '@/Character/CharacterCenter';
-test('test', () => {
+import { CharacterCenter } from '@/Character';
+import characters from '@assets/configurations/characters.json';
+test('默认值', () => {
     const characterCenter = new CharacterCenter();
-    // console.log(characterCenter.characters[0].properties?.atk.normalValue);
-    expect(characterCenter.charactersConfiguration.length).toEqual(13);
+    expect(characterCenter.charactersConfiguration.length).toEqual(0);
+});
+test('读取角色配置', () => {
+    const characterCenter = new CharacterCenter();
+    characterCenter.loadConfiguration(characters);
+    expect(characterCenter.charactersConfiguration).toEqual(characters);
 });

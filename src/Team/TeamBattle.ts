@@ -17,6 +17,7 @@ export class TeamBattle implements TeamNormal {
     battle?: BattleBattle;
     /**指令点,用于施放技能 */
     orderPoint: number; //指令点,用于施放技能
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     constructor(team: TeamNormal, game: Game) {
         this.name = team.name;
         // this.id = team.id;

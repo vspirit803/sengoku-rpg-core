@@ -29,6 +29,7 @@ module.exports = {
     roots: ['<rootDir>'],
     moduleNameMapper: {
         '^@/(.*)$': '<rootDir>/src/$1',
+        '^@assets/(.*)$': '<rootDir>/assets/$1',
     },
 
     // An array of regexp pattern strings used to skip coverage collection
