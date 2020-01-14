@@ -11,16 +11,12 @@ import { SaveInterface } from '@/Game/SaveInterface';
 export class CharacterCenter implements SaveInterface<Array<CharacterSave>> {
     /**绑定的游戏实例 */
     private game?: Game;
-
     /**角色配置列表 */
     charactersConfiguration: Array<CharacterConfiguration>;
-
     /**角色配置映射 */
     charactersConfigurationMap: Map<string, CharacterConfiguration>;
-
     /**角色列表 */
     characters: Array<CharacterNormal>;
-
     /**角色id到角色实例的映射 */
     charactersMap: Map<string, CharacterNormal>;
 
@@ -65,7 +61,7 @@ export class CharacterCenter implements SaveInterface<Array<CharacterSave>> {
         for (const eachCharacter of characters) {
             this.addCharacterConfiguration(eachCharacter);
             if (eachCharacter.id.startsWith('Enemy')) {
-                this.unlockCharacter(eachCharacter.id);
+                this.loadCharacter(eachCharacter.id);
             }
         }
     }

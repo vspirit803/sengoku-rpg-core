@@ -37,7 +37,14 @@ export class BattleCenter {
         const battle = new BattleBattle(
             battleConfiguration,
             game,
-            new TeamNormal(game.characterCenter.characters.splice(0, 5), game),
+            new TeamNormal(
+                [
+                    game.characterCenter.getCharacter('C0001'),
+                    game.characterCenter.getCharacter('C0002'),
+                    game.characterCenter.getCharacter('C0003'),
+                ],
+                game,
+            ),
         );
         return battle;
     }

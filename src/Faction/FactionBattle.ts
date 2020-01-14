@@ -8,7 +8,6 @@ import { Game } from '@/Game';
 /**
  * 阵营(战斗状态)
  */
-
 export class FactionBattle {
     teams: Array<TeamBattle>;
     name: string;
@@ -16,9 +15,6 @@ export class FactionBattle {
     battle?: BattleBattle;
     constructor(factionConfiguration: FactionConfiguration, game: Game) {
         this.name = factionConfiguration.name;
-        // this.teams = factionConfiguration.teams.map(
-        //     (eachTeamConfiguration) => new TeamBattle(new TeamNormal(eachTeamConfiguration, game), game),
-        // );
         this.teams = [];
         this.addTeams(
             ...factionConfiguration.teams.map(
@@ -47,6 +43,16 @@ export class FactionBattle {
             this.teams.push(eachTeam);
             eachTeam.setFaction(this);
         });
+    }
+
+    /**
+     * 设置玩家队伍
+     * @param team 玩家的队伍
+     */
+    setPlayerTeam(team: TeamBattle): void {
+        this.teams[0] = team;
+        team.setFaction(this);
+        team.setBattle(this.battle!);
     }
 
     setBattle(battle: BattleBattle): void {

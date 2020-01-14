@@ -65,6 +65,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     loadSave(): void {}
 
     setBattle(battle: BattleBattle): void {
+        // this.unSubscribeBaseBattleEvent();
         this.battle = battle;
         this.subscribeBaseBattleEvent();
     }
@@ -257,13 +258,21 @@ export class CharacterBattle extends CharacterNormal implements UUID {
 
     async action(): Promise<void> {
         console.log(`轮到${this.name}行动了`);
-        const availableTargets = this.battle!.characters.filter((eachCharacter) => {
-            return this.faction !== eachCharacter.faction && eachCharacter.isAlive;
-        });
+        // const availableTargets = this.battle!.characters.filter((eachCharacter) => {
+        //     return this.faction !== eachCharacter.faction && eachCharacter.isAlive;
+        // });
+        const availableTargets = this.enemies.filter((eachCharacter) => eachCharacter.isAlive);
         const target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
         await this.battle!.eventCenter.trigger(
             new Event({ type: TriggerTiming.Attacking, source: this, data: { source: this, target } }),
         );
+    }
+
+    get enemies(): Array<CharacterBattle> {
+        if (!this.battle) {
+            throw new Error('[CharacterBattle] get enemies before setting battle');
+        }
+        return this.battle.characters.filter((eachCharacter) => eachCharacter.faction !== this.faction);
     }
 
     print(): void {

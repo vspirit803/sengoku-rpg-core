@@ -26,12 +26,13 @@ export class BattleBattle {
         this.eventCenter = new EventCenter();
         if (battleConfiguration && game && playerTeam) {
             this.name = battleConfiguration.name;
-            this.factions = battleConfiguration.factions.map(
-                (eachFactionConfiguration) => new FactionBattle(eachFactionConfiguration, game),
+            this.addFactions(
+                ...battleConfiguration.factions.map(
+                    (eachFactionConfiguration) => new FactionBattle(eachFactionConfiguration, game),
+                ),
             );
-            this.factions[0].teams.unshift(new TeamBattle(playerTeam, game));
+            this.factions[0].setPlayerTeam(new TeamBattle(playerTeam, game));
         }
-        this.factions.forEach((eachFaction) => eachFaction.setBattle(this));
     }
 
     get characters(): Array<CharacterBattle> {
