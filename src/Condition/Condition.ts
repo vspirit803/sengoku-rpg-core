@@ -14,21 +14,34 @@ export enum LogicOperator {
 export class Condition {
     /**各个条件项的关系 */
     logicOperator: LogicOperator;
-    conditionItems: Array<ConditionItem | Condition>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    conditionItems: Array<ConditionItem<any> | Condition>;
 
     constructor({
         logicOperator = LogicOperator.And,
         conditionItems = [],
     }: {
         logicOperator?: LogicOperator;
-        conditionItems?: Array<ConditionItem | Condition>;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        conditionItems?: Array<ConditionItem<any> | Condition>;
     } = {}) {
         this.logicOperator = logicOperator;
         this.conditionItems = conditionItems;
     }
 
-    addConditionItem(...items: Array<ConditionItem | Condition>): void {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    addConditionItem(...items: Array<ConditionItem<any> | Condition>): void {
         this.conditionItems.push(...items);
+    }
+
+    getFormatedDescription(indentation = 0): string {
+        // const innterStr = `\n${(this.logicOperator === LogicOperator.And ? 'and' : 'or').padStart(4 * indentation)}`;
+        const innterStr = `  ${this.logicOperator === LogicOperator.And ? '且' : '或'}\n`;
+        return (
+            this.conditionItems
+                .map((eachConditionItem) => eachConditionItem.getFormatedDescription(indentation + 1))
+                .join(innterStr)
+        );
     }
 
     //是否完成

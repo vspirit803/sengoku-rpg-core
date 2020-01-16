@@ -2,6 +2,8 @@ import { BattleConfiguration } from './BattleConfiguration';
 import { BattleBattle } from './BattleBattle';
 import { Game } from '@/Game';
 import { TeamNormal } from '@/Team';
+import { Condition, ConditionItem } from '@/Condition';
+import { LogicOperator } from '@/Condition/Condition';
 
 /**
  * 战斗中心
@@ -34,6 +36,47 @@ export class BattleCenter {
         if (battleConfiguration === undefined) {
             throw new Error(`id为[${id}]的战斗配置不存在`);
         }
+
+        const conditionItemKillJCYY: ConditionItem<BattleBattle> = new ConditionItem<BattleBattle>({
+            testFunction: (battle: BattleBattle): boolean => {
+                return !(battle.characters.find((eachCharacter) => eachCharacter.id === 'Enemy0001')?.isAlive ?? true);
+            },
+            description: '击杀[今川义元]',
+        });
+        const conditionItemKillAll: ConditionItem<BattleBattle> = new ConditionItem<BattleBattle>({
+            testFunction: (battle: BattleBattle): boolean => {
+                return !battle.factions
+                    .filter((eachFaction) => eachFaction !== battle.factions[0])
+                    .some((eachFaction) => eachFaction.isAlive);
+            },
+            description: '击杀所有敌人',
+        });
+
+        const conditionItemNobuAlive: ConditionItem<BattleBattle> = new ConditionItem<BattleBattle>({
+            testFunction: (battle: BattleBattle): boolean => {
+                return battle.characters.find((eachCharacter) => eachCharacter.id === 'C0001')?.isAlive ?? true;
+            },
+            description: '[织田信长]存活',
+        });
+
+        const conditionItemRound5: ConditionItem<BattleBattle> = new ConditionItem<BattleBattle>({
+            testFunction: (battle: BattleBattle): boolean => {
+                return battle.battleActionQueue.roundCount > 5;
+            },
+            description: '坚持5个回合',
+        });
+
+        const successCondition = new Condition({
+            conditionItems: [
+                conditionItemKillJCYY,
+                conditionItemKillAll,
+                new Condition({
+                    conditionItems: [conditionItemNobuAlive, conditionItemRound5],
+                }),
+            ],
+            logicOperator: LogicOperator.Or,
+        });
+
         const battle = new BattleBattle(
             battleConfiguration,
             game,
@@ -45,7 +88,12 @@ export class BattleCenter {
                 ],
                 game,
             ),
+            successCondition,
         );
+        conditionItemKillJCYY.setTestInstence(battle);
+        conditionItemKillAll.setTestInstence(battle);
+        conditionItemNobuAlive.setTestInstence(battle);
+        conditionItemRound5.setTestInstence(battle);
         return battle;
     }
 

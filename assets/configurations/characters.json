@@ -488,7 +488,8 @@
                 "increaseValue": 0
             }
         }
-    },{
+    },
+    {
         "id": "Enemy0002",
         "name": "骏河弓兵",
         "gender": "male",
@@ -519,6 +520,41 @@
             },
             "speed": {
                 "baseValue": 60,
+                "increaseValue": 0
+            }
+        }
+    },
+    {
+        "id": "Enemy0003",
+        "name": "骏河武士",
+        "gender": "male",
+        "properties": {
+            "atk": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "def": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "critRate": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "critMultiply": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "missRate": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "hp": {
+                "baseValue": 100000,
+                "increaseValue": 1000
+            },
+            "speed": {
+                "baseValue": 20,
                 "increaseValue": 0
             }
         }

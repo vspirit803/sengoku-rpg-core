@@ -1,11 +1,12 @@
-import { FactionBattle } from '../Faction/FactionBattle';
-import { CharacterBattle } from '../Character/CharacterBattle';
-import { EventCenter } from '../EventCenter/EventCenter';
+import { BattleConfiguration } from './BattleConfiguration';
+import { FactionBattle } from '@/Faction';
+import { CharacterBattle } from '@/Character';
+import { EventCenter } from '@/EventCenter/';
 import { BattleActionQueueMHXY } from '../BattleActionQueue/BattleActionQueueMHXY';
 import { BattleActionQueueBase } from '../BattleActionQueue/BattleActionQueueBase';
-import { BattleConfiguration } from './BattleConfiguration';
 import { Game } from '@/Game';
 import { TeamNormal, TeamBattle } from '@/Team';
+import { Condition } from '@/Condition';
 
 /**
  * 战斗(战斗状态)
@@ -18,12 +19,26 @@ export class BattleBattle {
      */
     factions: Array<FactionBattle>;
     eventCenter: EventCenter;
+    successCondition: Condition;
+    battleActionQueue: BattleActionQueueBase;
 
-    constructor(battleConfiguration: BattleConfiguration, game: Game, playerTeam: TeamNormal);
-    constructor(battleConfiguration?: BattleConfiguration, game?: Game, playerTeam?: TeamNormal) {
+    constructor(
+        battleConfiguration: BattleConfiguration,
+        game: Game,
+        playerTeam: TeamNormal,
+        successCondition: Condition,
+    );
+
+    constructor(
+        battleConfiguration?: BattleConfiguration,
+        game?: Game,
+        playerTeam?: TeamNormal,
+        successCondition?: Condition,
+    ) {
         this.name = battleConfiguration?.name ?? '未留下名字的战斗';
         this.factions = [];
         this.eventCenter = new EventCenter();
+        this.successCondition = successCondition ?? new Condition();
         if (battleConfiguration && game && playerTeam) {
             this.name = battleConfiguration.name;
             this.addFactions(
@@ -33,6 +48,9 @@ export class BattleBattle {
             );
             this.factions[0].setPlayerTeam(new TeamBattle(playerTeam, game));
         }
+        this.battleActionQueue = new BattleActionQueueMHXY();
+        this.battleActionQueue.setBattle(this);
+        this.battleActionQueue.init();
     }
 
     get characters(): Array<CharacterBattle> {
@@ -56,11 +74,9 @@ export class BattleBattle {
         console.log(
             `[${this.factions[0].name}]与[${this.factions[1].name}]两个阵营的矛盾终于暴发了,被后世称为[${this.name}]的战斗正式打响`,
         );
-        const battleActionQueue: BattleActionQueueBase = new BattleActionQueueMHXY();
-        battleActionQueue.battle = this;
-        battleActionQueue.init();
+        console.log(this.successCondition.getFormatedDescription());
         while (true) {
-            const character = battleActionQueue.getNext();
+            const character = this.battleActionQueue.getNext();
             character.action();
             await new Promise((resolve) => {
                 setTimeout(() => {
@@ -68,14 +84,13 @@ export class BattleBattle {
                 }, 1000);
             });
 
-            const enemies = this.factions.filter((eachFaction) => {
-                return eachFaction !== this.factions[0];
-            });
+            console.log(this.successCondition.getFormatedDescription());
 
-            if (!enemies.some((eachFaction) => eachFaction.isAlive)) {
-                console.log('赢了');
+            if (this.successCondition.isCompleted) {
+                console.log('赢了!');
                 break;
             }
+
             if (!this.factions[0].isAlive) {
                 //所有友军死亡
                 console.log('输了');

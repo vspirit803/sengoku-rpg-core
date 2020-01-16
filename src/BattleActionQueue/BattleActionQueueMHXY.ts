@@ -8,7 +8,6 @@ import { TriggerTiming } from '../EventCenter/TriggerTiming';
  */
 export class BattleActionQueueMHXY extends BattleActionQueueBase {
     private actionQueue: Array<CharacterBattle>;
-    private roundCount: number;
 
     constructor() {
         super();

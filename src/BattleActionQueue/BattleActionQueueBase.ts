@@ -6,6 +6,11 @@ import { CharacterBattle } from '../Character/CharacterBattle';
  */
 export abstract class BattleActionQueueBase {
     battle?: BattleBattle;
+    roundCount: number;
+    constructor() {
+        this.roundCount = 0;
+    }
+
     init(): void {
         if (!this.battle) {
             throw Error('战斗行动序列生成器初始化失败!未绑定battle.');
