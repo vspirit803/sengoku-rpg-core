@@ -2,29 +2,23 @@ import { CharacterBattle } from '../Character/CharacterBattle';
 import { BattleActionQueueBase } from './BattleActionQueueBase';
 import { Event } from '../EventCenter/Event';
 import { TriggerTiming } from '../EventCenter/TriggerTiming';
+import { BattleBattle } from '@/Battle';
 
 /**
  * 战斗行动序列(梦幻西游型,每个回合所有角色按速度快慢依次行动)
  */
-export class BattleActionQueueMHXY extends BattleActionQueueBase {
+export class BattleActionQueueMHXY implements BattleActionQueueBase {
+    battle: BattleBattle;
+    roundCount: number;
     private actionQueue: Array<CharacterBattle>;
 
-    constructor() {
-        super();
+    constructor(battle: BattleBattle) {
+        this.battle = battle;
         this.actionQueue = new Array<CharacterBattle>(0);
         this.roundCount = 0;
     }
 
-    init(): void {
-        if (!this.battle) {
-            throw Error('战斗行动序列生成器初始化失败!未绑定battle.');
-        }
-    }
-
     getNext(): CharacterBattle {
-        if (!this.battle) {
-            throw Error('获取下一行动角色失败!未绑定battle.');
-        }
         let nextCharacter: CharacterBattle;
         do {
             if (this.actionQueue.length === 0) {
@@ -57,6 +51,7 @@ export class BattleActionQueueMHXY extends BattleActionQueueBase {
                         data: { roundCount: this.roundCount },
                     }),
                 );
+                this.roundCount++;
             }
             nextCharacter = this.actionQueue.shift()!;
         } while (!nextCharacter.isAlive);

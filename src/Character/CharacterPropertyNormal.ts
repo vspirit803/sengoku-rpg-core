@@ -6,9 +6,10 @@ import { CharacterNormal } from './CharacterNormal';
 export class CharacterPropertyNormal implements CharacterPropertyConfiguration {
     /**基础值 */
     baseValue: number;
-
     /**成长值 */
     increaseValue: number;
+    /**装备值 */
+    equipmentValue: number;
 
     /**角色 */
     character: CharacterNormal;
@@ -16,6 +17,7 @@ export class CharacterPropertyNormal implements CharacterPropertyConfiguration {
         this.character = character;
         this.baseValue = property.baseValue;
         this.increaseValue = property.increaseValue;
+        this.equipmentValue = 0;
     }
 
     /**
@@ -25,6 +27,6 @@ export class CharacterPropertyNormal implements CharacterPropertyConfiguration {
         if (!this.character) {
             throw new Error('此角色属性实例并未绑定角色');
         }
-        return this.character.level * this.increaseValue + this.baseValue;
+        return this.character.level * this.increaseValue + this.baseValue + this.equipmentValue;
     }
 }

@@ -98,7 +98,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
             TriggerTiming.Attacking,
             (source, data: EventDataAttacking) => {
                 const target: CharacterBattle = data.target;
-                console.log(`${this.name}向${target.name}发起了攻击`);
+                console.log(`[${this.name}]🗡️[${target.name}]`);
                 this.battle!.eventCenter.trigger(
                     new Event({ type: TriggerTiming.Attacked, source: target, data: { source: this, target } }),
                 );
@@ -110,48 +110,20 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         this.battle!.eventCenter.addSubscriber(onAttacking);
         this.baseBattleEventSubscribers.onAttacking = onAttacking;
 
-        //被攻击
-        // const onAttacked: Subscriber = new Subscriber({
-        //     event: TriggerTiming.Attacked,
-        //     filter: this.uuid,
-        //     priority: 2,
-        //     callback: (source, data): boolean => {
-        //         const attackSource: CharacterBattle = data.source;
-
-        //         const damage = attackSource.properties.attack.battleValue;
-        //         console.log(
-        //             `${this.name}受到了${attackSource.name}的${damage}攻击. HP:${this.currHp - damage}/${
-        //                 this.properties.hp.battleValue
-        //             }`,
-        //         );
-        //         this.currHp -= damage;
-        //         if (this.currHp <= 0) {
-        //             this.currHp = 0;
-        //             this.battle!.eventCenter.trigger(
-        //                 new Event({
-        //                     type: TriggerTiming.Killed,
-        //                     source: this,
-        //                     data: { source: attackSource, target: this },
-        //                 }),
-        //             );
-        //         }
-
-        //         return true;
-        //     },
-        // });
-
         const onAttacked = SubscriberFactory.Subscriber(
             TriggerTiming.Attacked,
             (source, data) => {
                 const attackSource: CharacterBattle = data.source;
                 const target = data.target;
-                const damage = attackSource.properties.atk.battleValue;
+                const damage = Math.round(attackSource.properties.atk.battleValue);
+                const newHp = target.currHp > damage ? target.currHp - damage : 0;
+                // console.log(
+                //     `[${target.name}]    ${target.currHp}❤️ - ${damage}💔 -> ${newHp}/${target.properties.hp.battleValue}`,
+                // );
                 console.log(
-                    `${target.name}受到了${attackSource.name}的${damage}攻击. HP:${target.currHp - damage}/${
-                        target.properties.hp.battleValue
-                    }`,
+                    `[${target.name}]💔${damage} -> ${newHp}/${target.properties.hp.battleValue}`,
                 );
-                target.currHp -= damage;
+                target.currHp = newHp;
                 if (target.currHp <= 0) {
                     target.currHp = 0;
                     target.battle!.eventCenter.trigger(
@@ -170,23 +142,11 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         this.battle!.eventCenter.addSubscriber(onAttacked);
         this.baseBattleEventSubscribers.onAttacked = onAttacked;
 
-        //击杀
-        // const onKilling: Subscriber = new Subscriber({
-        //     event: TriggerTiming.Killing,
-        //     filter: this.uuid,
-        //     priority: 2,
-        //     callback: (source, data): boolean => {
-        //         const target: CharacterBattle = data.target;
-        //         console.log(`${this.name}击杀了${target.name}`);
-        //         return true;
-        //     },
-        // });
-
         const onKilling: Subscriber = SubscriberFactory.Subscriber(
             TriggerTiming.Killing,
             (source, data): boolean => {
                 const target = data.target;
-                console.log(`${this.name}击杀了${target.name}`);
+                console.log(`[${this.name}]🗡️☠[${target.name}]`);
                 return true;
             },
             this,
@@ -195,36 +155,11 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         this.battle!.eventCenter.addSubscriber(onKilling);
         this.baseBattleEventSubscribers.onKilling = onKilling;
 
-        //被击杀
-        // const onKilled: Subscriber = new Subscriber({
-        //     event: TriggerTiming.Killed,
-        //     filter: this.uuid,
-        //     priority: 2,
-        //     callback: (source, data): boolean => {
-        //         const killSource: CharacterBattle = data.source;
-        //         console.log(`${this.name}被${killSource.name}击杀了`);
-        //         this.isAlive = false;
-        //         this.battle!.eventCenter.trigger(
-        //             new Event({
-        //                 type: TriggerTiming.Killing,
-        //                 source: killSource,
-        //                 data: { source: killSource, target: this },
-        //             }),
-        //         );
-        //         while (this.statuses.length) {
-        //             const eachStatus = this.statuses.pop()!;
-        //             eachStatus.destroy();
-        //         }
-        //         this.unSubscribeBaseBattleEvent();
-        //         return true;
-        //     },
-        // });
-
         const onKilled: Subscriber = SubscriberFactory.Subscriber(
             TriggerTiming.Killed,
             (source, data): boolean => {
                 const killSource = data.source;
-                console.log(`${this.name}被${killSource.name}击杀了`);
+                console.log(`[${this.name}]☠`);
                 this.isAlive = false;
                 this.battle!.eventCenter.trigger(
                     new Event({

@@ -7,10 +7,8 @@ import { EquipmentSlotConfiguration } from './EquipmentSlotConfiguration';
 export class EquipmentSlot {
     /**插槽名称 */
     name: string;
-
     /**允许的装备类型 */
     validEquipmentTypes: Set<EquipmentType>;
-
     /**插槽中的装备 */
     equipment?: ItemEquipment;
 

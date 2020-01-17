@@ -41,7 +41,7 @@ export class BattleCenter {
             testFunction: (battle: BattleBattle): boolean => {
                 return !(battle.characters.find((eachCharacter) => eachCharacter.id === 'Enemy0001')?.isAlive ?? true);
             },
-            description: '击杀[今川义元]',
+            description: '\x1b[31m击杀[今川义元]\x1b[0m',
         });
         const conditionItemKillAll: ConditionItem<BattleBattle> = new ConditionItem<BattleBattle>({
             testFunction: (battle: BattleBattle): boolean => {
@@ -49,21 +49,21 @@ export class BattleCenter {
                     .filter((eachFaction) => eachFaction !== battle.factions[0])
                     .some((eachFaction) => eachFaction.isAlive);
             },
-            description: '击杀所有敌人',
+            description: '\x1b[31m击杀所有敌人\x1b[0m',
         });
 
         const conditionItemNobuAlive: ConditionItem<BattleBattle> = new ConditionItem<BattleBattle>({
             testFunction: (battle: BattleBattle): boolean => {
                 return battle.characters.find((eachCharacter) => eachCharacter.id === 'C0001')?.isAlive ?? true;
             },
-            description: '[织田信长]存活',
+            description: '\x1b[34m[织田信长]存活\x1b[0m',
         });
 
         const conditionItemRound5: ConditionItem<BattleBattle> = new ConditionItem<BattleBattle>({
             testFunction: (battle: BattleBattle): boolean => {
                 return battle.battleActionQueue.roundCount > 5;
             },
-            description: '坚持5个回合',
+            description: '\x1b[34m坚持5个回合\x1b[0m',
         });
 
         const successCondition = new Condition({

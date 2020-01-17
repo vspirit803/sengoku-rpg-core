@@ -3,6 +3,7 @@ import { CharacterPropertyNormal } from './CharacterPropertyNormal';
 import { UUID } from '@/Common/UUID';
 import { EquipmentSlot } from './EquipmentSlot';
 import { CharacterSave } from './CharacterSave';
+import { ItemEquipment } from '@/Item';
 
 /**
  * 角色类(平常状态)
@@ -41,11 +42,6 @@ export class CharacterNormal implements UUID {
                 (eachEquipmentSlotConfiguration) => new EquipmentSlot(eachEquipmentSlotConfiguration),
             );
         }
-
-        // for (const eachEquipmentSlotConfiguration of character.equipmentSlots) {
-        //     const eachEquipmentSlot = new EquipmentSlot(eachEquipmentSlotConfiguration);
-        //     this.equipmentSlots.push(eachEquipmentSlot);
-        // }
     }
 
     /**
@@ -63,5 +59,37 @@ export class CharacterNormal implements UUID {
 
     setLevel(level: number): void {
         this.level = level;
+    }
+
+    putOnEquipment(slot: EquipmentSlot, equipment: ItemEquipment): void {
+        if (!slot.validEquipmentTypes.has(equipment.equipmentType)) {
+            throw new Error(
+                `try to put on Equipment[${equipment.equipmentType}] to Slot[${Array.from(
+                    slot.validEquipmentTypes,
+                ).join(',')}]`,
+            );
+        }
+        this.takeOffEquipment(slot);
+        equipment.setWearer(this);
+        for (const eachPropName in equipment.properties) {
+            const eachProperty = equipment.properties[eachPropName];
+            if (eachPropName in this.properties) {
+                this.properties[eachPropName].equipmentValue += eachProperty.value;
+            }
+        }
+    }
+
+    takeOffEquipment(slot: EquipmentSlot): void {
+        if (!slot.equipment) {
+            return;
+        }
+        const equipment = slot.equipment;
+        equipment.setWearer(undefined);
+        for (const eachPropName in equipment.properties) {
+            const eachProperty = equipment.properties[eachPropName];
+            if (eachPropName in this.properties) {
+                this.properties[eachPropName].equipmentValue -= eachProperty.value;
+            }
+        }
     }
 }

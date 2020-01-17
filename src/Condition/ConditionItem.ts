@@ -28,7 +28,6 @@ export class ConditionItem<T> {
     }
 
     get isCompleted(): boolean {
-        // return true;
         if (this.testInstence === undefined) {
             throw new Error('未设定实例就尝试获取条件状态');
         }

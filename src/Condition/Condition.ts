@@ -35,7 +35,6 @@ export class Condition {
     }
 
     getFormatedDescription(indentation = 0): string {
-        // const innterStr = `\n${(this.logicOperator === LogicOperator.And ? 'and' : 'or').padStart(4 * indentation)}`;
         const innterStr = `  ${this.logicOperator === LogicOperator.And ? '且' : '或'}\n`;
         return (
             this.conditionItems

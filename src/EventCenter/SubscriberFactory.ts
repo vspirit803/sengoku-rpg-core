@@ -96,6 +96,13 @@ export class SubscriberFactory {
         priority?: number,
     ): Subscriber;
 
+    static Subscriber(
+        event: TriggerTiming.BattleSuccess,
+        callback: (source: UUID, data: EventData.EventDataBattleSuccess) => Promise<boolean> | boolean,
+        filter?: UUID | Array<UUID>,
+        priority?: number,
+    ): Subscriber;
+
     /**
      * 生成订阅者
      * @param event 触发时机

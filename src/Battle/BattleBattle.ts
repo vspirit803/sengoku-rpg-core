@@ -1,17 +1,19 @@
 import { BattleConfiguration } from './BattleConfiguration';
 import { FactionBattle } from '@/Faction';
 import { CharacterBattle } from '@/Character';
-import { EventCenter } from '@/EventCenter/';
+import { EventCenter, Event, TriggerTiming } from '@/EventCenter/';
 import { BattleActionQueueMHXY } from '../BattleActionQueue/BattleActionQueueMHXY';
 import { BattleActionQueueBase } from '../BattleActionQueue/BattleActionQueueBase';
 import { Game } from '@/Game';
 import { TeamNormal, TeamBattle } from '@/Team';
 import { Condition } from '@/Condition';
+import { UUID } from '@/Common/UUID';
 
 /**
  * 战斗(战斗状态)
  */
-export class BattleBattle {
+export class BattleBattle implements UUID {
+    uuid: symbol;
     name: string;
     /**
      * 阵营,每个阵营都是互为敌人
@@ -35,6 +37,7 @@ export class BattleBattle {
         playerTeam?: TeamNormal,
         successCondition?: Condition,
     ) {
+        this.uuid = Symbol('BattleBattle');
         this.name = battleConfiguration?.name ?? '未留下名字的战斗';
         this.factions = [];
         this.eventCenter = new EventCenter();
@@ -48,9 +51,7 @@ export class BattleBattle {
             );
             this.factions[0].setPlayerTeam(new TeamBattle(playerTeam, game));
         }
-        this.battleActionQueue = new BattleActionQueueMHXY();
-        this.battleActionQueue.setBattle(this);
-        this.battleActionQueue.init();
+        this.battleActionQueue = new BattleActionQueueMHXY(this);
     }
 
     get characters(): Array<CharacterBattle> {
@@ -71,23 +72,40 @@ export class BattleBattle {
     }
 
     async start(): Promise<void> {
-        console.log(
-            `[${this.factions[0].name}]与[${this.factions[1].name}]两个阵营的矛盾终于暴发了,被后世称为[${this.name}]的战斗正式打响`,
+        this.eventCenter.trigger(
+            new Event({
+                type: TriggerTiming.BattleStart,
+                source: this,
+                data: {
+                    battle: this,
+                },
+            }),
         );
-        console.log(this.successCondition.getFormatedDescription());
+
         while (true) {
             const character = this.battleActionQueue.getNext();
             character.action();
             await new Promise((resolve) => {
                 setTimeout(() => {
                     resolve();
-                }, 1000);
+                }, 100);
             });
 
-            console.log(this.successCondition.getFormatedDescription());
-
             if (this.successCondition.isCompleted) {
-                console.log('赢了!');
+                this.eventCenter.trigger(
+                    new Event({
+                        type: TriggerTiming.BattleSuccess,
+                        source: this,
+                        data: {
+                            battle: this,
+                            round: this.battleActionQueue.roundCount,
+                            killed: this.characters
+                                .filter((eachCharacter) => eachCharacter.faction !== this.factions[0])
+                                .filter((eachCharacter) => !eachCharacter.isAlive)
+                                .map((eachCharacter) => eachCharacter.id),
+                        },
+                    }),
+                );
                 break;
             }
 

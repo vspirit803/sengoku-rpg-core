@@ -18,6 +18,17 @@
     ],
     "backpack": {
         "materials": [],
-        "equipments": []
+        "equipments2": [],
+        "equipments": [
+            {
+                "id": "weapon0003",
+                "properties": {
+                    "atk": 917,
+                    "critRate": 0.25,
+                    "critMultiply": 0.17
+                },
+                "count": 1
+            }
+        ]
     }
 }

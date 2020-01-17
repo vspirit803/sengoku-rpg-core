@@ -1,0 +1,26 @@
+[
+    {
+        "id": "Owari",
+        "name": "尾张国",
+        "district": "东海道",
+        "cities": ["City0001","City0002"]
+    },
+    {
+        "id": "Mikawa",
+        "name": "三河国",
+        "district": "东海道",
+        "cities": ["City0003"]
+    },
+    {
+        "id": "Mino",
+        "name": "美浓国",
+        "district": "东山道",
+        "cities": ["City0004"]
+    },
+    {
+        "id": "Yamashiro",
+        "name": "山城国",
+        "district": "近畿",
+        "cities": ["City0005"]
+    }
+]

@@ -14,6 +14,6 @@ export class Event {
     constructor({ type, source, data }: { type: TriggerTiming; source: UUID; data?: EventData }) {
         this.type = type;
         this.source = source;
-        this.data = data || {};
+        this.data = data ?? {};
     }
 }

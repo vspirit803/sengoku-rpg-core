@@ -24,4 +24,6 @@ export enum TriggerTiming {
     ActionEnd = 'ActionEnd',
     /**回合结束后 */
     RoundEnd = 'RoundEnd',
+    /**战斗胜利 */
+    BattleSuccess = 'BattleSuccess',
 }

@@ -16,6 +16,7 @@ export class CharacterPropertyBattle extends CharacterPropertyNormal {
         this.character = character;
         this.baseValue = property.baseValue;
         this.increaseValue = property.increaseValue;
+        this.equipmentValue = property.equipmentValue;
         this.extraPercent = 0;
         this.extraValue = 0;
     }

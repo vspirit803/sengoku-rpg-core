@@ -4,6 +4,7 @@ import { ItemCenter } from '@/Item';
 import { CharacterCenter } from '@/Character';
 import characters from '@assets/configurations/characters.json';
 import battles from '@assets/configurations/battles.json';
+import equipments from '@assets/configurations/items/equipments.json';
 import { BattleCenter } from '@/Battle';
 
 /**
@@ -32,6 +33,7 @@ export class Game {
         //初始化背包
         this.backpack = new ItemCenter();
         this.backpack.setGame(this);
+        this.backpack.equipmentCenter.loadConfiguration(equipments);
 
         this.battleCenter = new BattleCenter(this);
         this.battleCenter.loadConfiguration(battles);

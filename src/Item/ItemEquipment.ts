@@ -24,29 +24,6 @@ export class ItemEquipment extends ItemBase {
             .reduce((prev, curr) => prev * curr);
     }
 
-    // constructor(equipmentConfiguration: EquipmentConfiguration);
-    // constructor(equipmentSave: EquipmentSave);
-    // constructor(equipment: EquipmentConfiguration | EquipmentSave) {
-    //     super();
-    //     if ('type' in equipment) {
-    //         //参数为EquipmentConfiguration
-    //         this.uuid = Symbol('ItemEquipment');
-
-    //         this.id = equipment.id;
-    //         this.level = equipment.level;
-    //         this.equipmentType = equipment.equipmentType;
-    //         this.properties = {};
-    //         for (const eachEquipmentPropertyConfiguration in equipment.properties) {
-    //             const { min, max } = equipment.properties[eachEquipmentPropertyConfiguration];
-    //             const value = Math.round(Math.random() * (max - min) + min);
-    //             this.properties[eachEquipmentPropertyConfiguration] = { min, max, value };
-    //         }
-    //     }
-    //     else{
-    //         //参数为EquipmentSave
-    //     }
-    // }
-
     constructor({
         id,
         name,
@@ -74,7 +51,7 @@ export class ItemEquipment extends ItemBase {
     }
 
     /**设置wearer */
-    setWearer(wearer: CharacterNormal): void {
+    setWearer(wearer: CharacterNormal | undefined): void {
         this.wearer = wearer;
     }
 }

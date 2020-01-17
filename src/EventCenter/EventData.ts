@@ -62,4 +62,9 @@ export interface EventDataRoundEnd extends EventData {
     battle: BattleBattle;
     round: number;
 }
-// export {EventDataAttacking} as default;
+
+export interface EventDataBattleSuccess extends EventData {
+    battle: BattleBattle;
+    round: number;
+    killed: Array<string>;
+}
