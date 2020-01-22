@@ -1,17 +1,16 @@
 import { MapConfiguration } from './MapConfiguration';
-import { Game } from '@/Game';
+import { Game, SaveInterface } from '@/Game';
 import { GameMap } from './Map';
 import { City } from './City';
 import { CityConfiguration } from './CityConfiguration';
 import { Province } from './Province';
 import { ProvinceConfiguration } from './ProvinceConfiguration';
 import { District } from './District';
-import maps from '@assets/configurations/maps.json';
-import cities from '@assets/configurations/cities.json';
-import provinces from '@assets/configurations/provinces.json';
-import { MapSave } from './MapSave';
+// import { MapSave } from './MapSave';
+import { CitySave } from './CitySave';
+import { MapSave } from '.';
 
-export class MapCenter {
+export class MapCenter implements SaveInterface<MapSave> {
     /**绑定的游戏实例 */
     private game?: Game;
     /**地图配置映射 */
@@ -99,16 +98,31 @@ export class MapCenter {
         return map;
     }
 
-    loadSave(data: MapSave): void {
-        for (const eachCitySave of data.cities) {
+    loadSave(saveData: MapSave): void {
+        for (const eachCitySave of saveData.cities) {
             const city = this.getCity(eachCitySave.id);
             city.loadSave(eachCitySave);
         }
     }
-}
 
-const mapCenter = new MapCenter();
-mapCenter.loadCitiesConfiguration(cities);
-mapCenter.loadProvincesConfiguration(provinces);
-mapCenter.loadMapsConfiguration(maps);
-const japan = mapCenter.getMap('japan');
+    generateSave(): MapSave {
+        const cities: Array<CitySave> = [];
+        for (const eachCity of this.citiesMap.values()) {
+            const id = eachCity.id;
+            const configuration = this.citiesConfigurationMap.get(id)!;
+            const eachCitySave: CitySave = { id };
+            if (eachCity.name !== configuration.name) {
+                eachCitySave.name = eachCity.name;
+            }
+            if (eachCity.owner) {
+                eachCitySave.owner = eachCity.owner;
+            }
+            cities.push(eachCity);
+        }
+        return { cities };
+
+        // return Array.from(this.mapsMap.values()).map((eachMap) => {
+        //     return { id: eachMap.id, cities: eachMap.generateSave() };
+        // });
+    }
+}

@@ -1,16 +1,11 @@
 import { CharacterNormal } from './CharacterNormal';
 import { CharacterPropertyBattle } from './CharacterPropertyBattle';
-import { TeamBattle } from '../Team/TeamBattle';
-import { FactionBattle } from '../Faction/FactionBattle';
-import { BattleBattle } from '../Battle/BattleBattle';
-import { Subscriber } from '../EventCenter/Subscriber';
-import { eventCenter } from '../EventCenter/EventCenter';
-import { Event } from '../EventCenter/Event';
-import { TriggerTiming } from '../EventCenter/TriggerTiming';
-import { Status } from '../Status/Status';
-import { SubscriberFactory } from '../EventCenter/SubscriberFactory';
-import { EventDataAttacking } from '../EventCenter/EventData';
-import { UUID } from '@/Common/UUID';
+import { TeamBattle } from '@/Team';
+import { FactionBattle } from '@/Faction';
+import { BattleBattle } from '@/Battle';
+import { Event, Subscriber, TriggerTiming, SubscriberFactory, EventData } from '@/EventCenter';
+import { Status } from '@/Status';
+import { UUID } from '@/Common';
 
 /**
  * 角色类(战斗状态)
@@ -44,10 +39,6 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     constructor(character: CharacterNormal) {
         super(character);
         this.uuid = Symbol('CharacterBattle');
-        // this.id = character.id;
-        // this.name = character.name;
-        // this.level = character.level;
-        // this.equipmentSlots = character.equipmentSlots;
         this.properties = {};
         for (const eachPropName in character.properties) {
             const eachProperty = character.properties[eachPropName];
@@ -96,7 +87,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         // });
         const onAttacking = SubscriberFactory.Subscriber(
             TriggerTiming.Attacking,
-            (source, data: EventDataAttacking) => {
+            (source, data: EventData.EventDataAttacking) => {
                 const target: CharacterBattle = data.target;
                 console.log(`[${this.name}]🗡️[${target.name}]`);
                 this.battle!.eventCenter.trigger(
@@ -120,9 +111,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
                 // console.log(
                 //     `[${target.name}]    ${target.currHp}❤️ - ${damage}💔 -> ${newHp}/${target.properties.hp.battleValue}`,
                 // );
-                console.log(
-                    `[${target.name}]💔${damage} -> ${newHp}/${target.properties.hp.battleValue}`,
-                );
+                console.log(`[${target.name}]💔${damage} -> ${newHp}/${target.properties.hp.battleValue}`);
                 target.currHp = newHp;
                 if (target.currHp <= 0) {
                     target.currHp = 0;
@@ -187,7 +176,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     private unSubscribeBaseBattleEvent(): void {
         for (const eachSubscriberKey in this.baseBattleEventSubscribers) {
             const eachSubscriber = this.baseBattleEventSubscribers[eachSubscriberKey];
-            eventCenter.removeSubscriber(eachSubscriber);
+            this.battle!.eventCenter.removeSubscriber(eachSubscriber);
         }
     }
 

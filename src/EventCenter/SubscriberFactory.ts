@@ -1,14 +1,6 @@
 import { Subscriber } from './Subscriber';
 import { TriggerTiming } from './TriggerTiming';
-import { UUID } from '../Common/UUID';
-// import {
-//     EventData,
-//     EventDataAttacking,
-//     EventDataAttacked,
-//     EventDataDamageing,
-//     EventDataRoundStart,
-//     EventDataBattleStart,
-// } from './EventData';
+import { UUID } from '@/Common';
 import * as EventData from './EventData';
 
 export class SubscriberFactory {

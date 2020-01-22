@@ -1,5 +1,5 @@
 import { EventCenter } from './EventCenter';
-import { EventData } from './EventData';
+import * as EventData from './EventData';
 import { Subscriber } from './Subscriber';
 import { SubscriberFactory } from './SubscriberFactory';
 import { TriggerTiming } from './TriggerTiming';

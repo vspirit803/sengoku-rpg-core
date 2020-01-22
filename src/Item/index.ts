@@ -7,6 +7,8 @@ import { EquipmentType } from './EquipmentType';
 import { ItemSystem } from './ItemSystem';
 import { ItemCenter } from './ItemCenter';
 import { BackpackSave } from './BackpackSave';
+import { ItemConsumable } from './ItemConsumable';
+import { ItemSave } from './ItemSave';
 
 export {
     ItemCenter,
@@ -14,8 +16,10 @@ export {
     ItemType,
     ItemConfiguration,
     ItemEquipment,
+    ItemConsumable,
     ItemMaterial,
     ItemSystem,
+    ItemSave,
     EquipmentType,
     BackpackSave,
 };

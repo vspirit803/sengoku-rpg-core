@@ -30,5 +30,8 @@
                 "count": 1
             }
         ]
+    },
+    "maps": {
+        "cities": [{ "id": "City0004", "name": "岐阜城", "owner": "C0001" }]
     }
 }
