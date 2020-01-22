@@ -1,6 +1,5 @@
 import { City } from './City';
 import { District } from './District';
-import { ProvinceConfiguration } from './ProvinceConfiguration';
 
 /**
  * 令制国
@@ -16,10 +15,4 @@ export class Province {
         this.cities = cities;
         this.district = district;
     }
-    // constructor(configuration: ProvinceConfiguration) {
-    //     this.id = configuration.id;
-    //     this.name = configuration.name;
-    //     this.cities = configuration.cities.map((eachCityConfiguration) => new City(eachCityConfiguration));
-    //     this.district = (District as { [districtName: string]: string })[configuration.district] as District;
-    // }
 }

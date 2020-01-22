@@ -1,7 +1,6 @@
-import { Game } from './Game';
+import { Game } from '@/Game';
+import { EventData, SubscriberFactory, TriggerTiming } from '@/EventCenter';
 import save001 from '@assets/saves/sav001.json';
-import { SubscriberFactory, TriggerTiming } from '@/EventCenter';
-import { EventDataBattleSuccess, EventDataBattleStart } from '@/EventCenter/EventData';
 
 console.time('载入游戏配置');
 const game = new Game();
@@ -16,7 +15,7 @@ const battle = game.battleCenter.generateBattle('Battle00001');
 battle.eventCenter.addSubscriber(
     SubscriberFactory.Subscriber(
         TriggerTiming.BattleStart,
-        (source, data: EventDataBattleStart) => {
+        (source, data: EventData.EventDataBattleStart) => {
             const battle = data.battle;
             console.log(
                 `[${battle.factions[0].name}]与[${battle.factions[1].name}]两个阵营的矛盾终于暴发了,被后世称为[${battle.name}]的战斗正式打响`,
@@ -33,7 +32,7 @@ battle.eventCenter.addSubscriber(
 battle.eventCenter.addSubscriber(
     SubscriberFactory.Subscriber(
         TriggerTiming.BattleSuccess,
-        (source, data: EventDataBattleSuccess) => {
+        (source, data: EventData.EventDataBattleSuccess) => {
             const battle = data.battle;
             console.log(
                 `经过${data.round}回合的鏖战后,[${battle.factions[0].name}]终于取得了胜利`,

@@ -14,7 +14,7 @@ export class City implements CityConfiguration {
     }
 
     loadSave(data: CitySave): void {
-        this.name = data.name;
+        this.name = data.name ?? this.name;
         this.owner = data.owner;
     }
 }

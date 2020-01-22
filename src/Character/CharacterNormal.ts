@@ -1,8 +1,8 @@
 import { CharacterConfiguration } from './CharacterConfiguration';
 import { CharacterPropertyNormal } from './CharacterPropertyNormal';
-import { UUID } from '@/Common/UUID';
 import { EquipmentSlot } from './EquipmentSlot';
 import { CharacterSave } from './CharacterSave';
+import { UUID } from '@/Common';
 import { ItemEquipment } from '@/Item';
 
 /**

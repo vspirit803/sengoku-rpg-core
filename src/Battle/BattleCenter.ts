@@ -2,8 +2,7 @@ import { BattleConfiguration } from './BattleConfiguration';
 import { BattleBattle } from './BattleBattle';
 import { Game } from '@/Game';
 import { TeamNormal } from '@/Team';
-import { Condition, ConditionItem } from '@/Condition';
-import { LogicOperator } from '@/Condition/Condition';
+import { Condition, ConditionItem, LogicOperator } from '@/Condition';
 
 /**
  * 战斗中心

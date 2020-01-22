@@ -2,10 +2,16 @@ import { GameSave } from './GameSave';
 import { TaskCenter } from '@/Task';
 import { ItemCenter } from '@/Item';
 import { CharacterCenter } from '@/Character';
+import { BattleCenter } from '@/Battle';
+import { MapCenter } from '@/Map';
+
 import characters from '@assets/configurations/characters.json';
 import battles from '@assets/configurations/battles.json';
 import equipments from '@assets/configurations/items/equipments.json';
-import { BattleCenter } from '@/Battle';
+
+import maps from '@assets/configurations/maps.json';
+import cities from '@assets/configurations/cities.json';
+import provinces from '@assets/configurations/provinces.json';
 
 /**
  * 游戏的实例
@@ -19,6 +25,8 @@ export class Game {
     backpack: ItemCenter;
     /**战斗中心 */
     battleCenter: BattleCenter;
+    /**地图中心 */
+    mapCenter: MapCenter;
 
     constructor() {
         //初始化角色中心
@@ -35,9 +43,15 @@ export class Game {
         this.backpack.setGame(this);
         this.backpack.equipmentCenter.loadConfiguration(equipments);
 
+        //初始化战斗中心
         this.battleCenter = new BattleCenter(this);
         this.battleCenter.loadConfiguration(battles);
-        // this.battleCenter.setGame(this);
+        this.battleCenter.setGame(this);
+
+        this.mapCenter = new MapCenter();
+        this.mapCenter.loadCitiesConfiguration(cities);
+        this.mapCenter.loadProvincesConfiguration(provinces);
+        this.mapCenter.loadMapsConfiguration(maps);
     }
 
     /**
@@ -47,6 +61,7 @@ export class Game {
     loadSave(gameSave: GameSave): void {
         this.characterCenter.loadSave(gameSave.characters);
         this.backpack.loadSave(gameSave.backpack);
+        this.mapCenter.loadSave(gameSave.maps);
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -55,6 +70,7 @@ export class Game {
             version: '0.0.1',
             characters: this.characterCenter.generateSave(),
             backpack: this.backpack.generateSave(),
+            maps: this.mapCenter.generateSave(),
         };
     }
 }

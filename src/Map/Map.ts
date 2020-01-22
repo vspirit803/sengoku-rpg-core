@@ -9,11 +9,4 @@ export class GameMap {
         this.name = name;
         this.provinces = provinces;
     }
-    // constructor(configuration: MapConfiguration) {
-    //     this.id = configuration.id;
-    //     this.name = configuration.name;
-    //     this.provinces = configuration.provinces.map(
-    //         (eachProvinceConfiguration) => new Province(eachProvinceConfiguration),
-    //     );
-    // }
 }

@@ -1,4 +1,4 @@
-import { UUID } from '../Common/UUID';
+import { UUID } from '@/Common';
 import { TriggerTiming } from './TriggerTiming';
 import { EventData } from './EventData';
 

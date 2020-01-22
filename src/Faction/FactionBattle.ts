@@ -1,8 +1,7 @@
-import { TeamBattle } from '../Team/TeamBattle';
-import { BattleBattle } from '../Battle/BattleBattle';
-import { CharacterBattle } from '../Character/CharacterBattle';
+import { TeamNormal, TeamBattle } from '@/Team';
+import { BattleBattle } from '@/Battle';
+import { CharacterBattle } from '@/Character';
 import { FactionConfiguration } from './FactionConfiguration';
-import { TeamNormal } from '@/Team';
 import { Game } from '@/Game';
 
 /**
