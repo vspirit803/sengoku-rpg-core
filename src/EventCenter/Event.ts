@@ -1,6 +1,6 @@
 import { TriggerTiming } from './TriggerTiming';
 import { EventData } from './EventData';
-import { UUID } from '@/Common';
+import { UUID } from '@src/Common';
 
 /**
  * 事件

@@ -1,6 +1,6 @@
 import { Task } from './Task';
 import { TaskStatus } from './TaskStatus';
-import { Game } from '@/Game';
+import { Game } from '@src/Game';
 
 /**任务中心 */
 export class TaskCenter {

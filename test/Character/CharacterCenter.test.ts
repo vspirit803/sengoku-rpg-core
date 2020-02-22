@@ -1,4 +1,4 @@
-import { CharacterCenter } from '@/Character';
+import { CharacterCenter } from '@src/Character';
 import characters from '@assets/configurations/characters.json';
 test('默认值', () => {
     const characterCenter = new CharacterCenter();

@@ -1,4 +1,4 @@
-import { EquipmentType, ItemEquipment } from '@/Item';
+import { EquipmentType, ItemEquipment } from '@src/Item';
 import { EquipmentSlotConfiguration } from './EquipmentSlotConfiguration';
 
 /**

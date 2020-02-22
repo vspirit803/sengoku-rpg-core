@@ -1,9 +1,9 @@
 import { GameSave } from './GameSave';
-import { TaskCenter } from '@/Task';
-import { ItemCenter } from '@/Item';
-import { CharacterCenter } from '@/Character';
-import { BattleCenter } from '@/Battle';
-import { MapCenter } from '@/Map';
+import { TaskCenter } from '@src/Task';
+import { ItemCenter } from '@src/Item';
+import { CharacterCenter } from '@src/Character';
+import { BattleCenter } from '@src/Battle';
+import { MapCenter } from '@src/Map';
 
 import characters from '@assets/configurations/characters.json';
 import battles from '@assets/configurations/battles.json';

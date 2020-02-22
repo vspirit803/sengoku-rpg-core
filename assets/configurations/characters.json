@@ -32,7 +32,8 @@
                 "baseValue": 90,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0002",
@@ -67,7 +68,8 @@
                 "baseValue": 100,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0003",
@@ -102,7 +104,8 @@
                 "baseValue": 88,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0004",
@@ -137,7 +140,8 @@
                 "baseValue": 80,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0005",
@@ -172,7 +176,8 @@
                 "baseValue": 80,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0006",
@@ -207,7 +212,8 @@
                 "baseValue": 80,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0007",
@@ -242,7 +248,8 @@
                 "baseValue": 80,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0008",
@@ -277,7 +284,8 @@
                 "baseValue": 80,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0009",
@@ -312,7 +320,8 @@
                 "baseValue": 80,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0010",
@@ -347,7 +356,8 @@
                 "baseValue": 80,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0011",
@@ -382,7 +392,8 @@
                 "baseValue": 80,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0012",
@@ -417,7 +428,8 @@
                 "baseValue": 80,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "C0013",
@@ -452,7 +464,8 @@
                 "baseValue": 80,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "Enemy0001",
@@ -487,7 +500,8 @@
                 "baseValue": 60,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "Enemy0002",
@@ -522,7 +536,8 @@
                 "baseValue": 60,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     },
     {
         "id": "Enemy0003",
@@ -557,6 +572,7 @@
                 "baseValue": 20,
                 "increaseValue": 0
             }
-        }
+        },
+        "equipmentSlots": []
     }
 ]

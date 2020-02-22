@@ -1,8 +1,8 @@
 import { ItemBase } from './ItemBase';
 import { ItemType } from './ItemType';
 import { EquipmentType } from './EquipmentType';
-import { CharacterNormal } from '@/Character';
-import { Rarity } from '@/Common/Rarity';
+import { CharacterNormal } from '@src/Character';
+import { Rarity } from '@src/Common/Rarity';
 import { EquipmentProperty } from './EquipmentProperty';
 
 /**

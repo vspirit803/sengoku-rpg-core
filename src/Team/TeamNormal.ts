@@ -1,6 +1,6 @@
 import { TeamConfiguration } from './TeamConfiguration';
 import { CharacterNormal } from '../Character/CharacterNormal';
-import { Game } from '@/Game';
+import { Game } from '@src/Game';
 
 /**
  * 队伍(平常状态)

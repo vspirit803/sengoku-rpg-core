@@ -1,4 +1,4 @@
-import { TeamConfiguration } from '@/Team';
+import { TeamConfiguration } from '@src/Team';
 
 /**
  * 阵营(配置)

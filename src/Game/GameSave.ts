@@ -1,6 +1,6 @@
-import { CharacterSave } from '@/Character';
-import { BackpackSave } from '@/Item';
-import { MapSave } from '@/Map';
+import { CharacterSave } from '@src/Character';
+import { BackpackSave } from '@src/Item';
+import { MapSave } from '@src/Map';
 
 /**
  * 游戏存档

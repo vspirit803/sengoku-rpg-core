@@ -1,4 +1,4 @@
-import { FactionConfiguration } from '@/Faction';
+import { FactionConfiguration } from '@src/Faction';
 
 /**
  * 战斗(配置)

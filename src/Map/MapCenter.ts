@@ -1,5 +1,5 @@
 import { MapConfiguration } from './MapConfiguration';
-import { Game, SaveInterface } from '@/Game';
+import { Game, SaveInterface } from '@src/Game';
 import { GameMap } from './Map';
 import { City } from './City';
 import { CityConfiguration } from './CityConfiguration';

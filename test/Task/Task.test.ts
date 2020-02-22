@@ -1,5 +1,5 @@
-import { Task } from '@/Task/Task';
-import { Condition } from '@/Condition';
+import { Task } from '@src/Task/Task';
+import { Condition } from '@src/Condition';
 
 test('test', () => {
     const precondition = new Condition();

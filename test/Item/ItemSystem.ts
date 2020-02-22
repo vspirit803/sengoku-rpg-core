@@ -1,5 +1,5 @@
-import { ItemSystem, ItemType } from '@/Item';
-import { Rarity } from '@/Common/Rarity';
+import { ItemSystem, ItemType } from '@src/Item';
+import { Rarity } from '@src/Common/Rarity';
 
 test('默认值', () => {
     const item = new ItemSystem();

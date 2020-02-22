@@ -1,4 +1,4 @@
-import { MapCenter } from '@/Map';
+import { MapCenter } from '@src/Map';
 
 import maps from '@assets/configurations/maps.json';
 import cities from '@assets/configurations/cities.json';

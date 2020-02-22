@@ -1,5 +1,5 @@
 import { ItemBase } from './ItemBase';
-import { Game, SaveInterface } from '@/Game';
+import { Game, SaveInterface } from '@src/Game';
 import { EquipmentCenter } from './EquipmentCenter';
 import { BackpackSave } from './BackpackSave';
 

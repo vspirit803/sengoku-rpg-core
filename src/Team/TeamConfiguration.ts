@@ -1,4 +1,4 @@
-import { CharacterConfiguration } from '@/Character';
+import { CharacterConfiguration } from '@src/Character';
 
 /**
  * 队伍(配置)

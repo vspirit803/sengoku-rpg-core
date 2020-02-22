@@ -1,5 +1,5 @@
-import { Game } from '@/Game';
-import { EventData, SubscriberFactory, TriggerTiming } from '@/EventCenter';
+import { Game } from '@src/Game';
+import { EventData, SubscriberFactory, TriggerTiming } from '@src/EventCenter';
 import save001 from '@assets/saves/sav001.json';
 
 console.time('载入游戏配置');

@@ -1,11 +1,11 @@
 import { CharacterNormal } from './CharacterNormal';
 import { CharacterPropertyBattle } from './CharacterPropertyBattle';
-import { TeamBattle } from '@/Team';
-import { FactionBattle } from '@/Faction';
-import { BattleBattle } from '@/Battle';
-import { Event, Subscriber, TriggerTiming, SubscriberFactory, EventData } from '@/EventCenter';
-import { Status } from '@/Status';
-import { UUID } from '@/Common';
+import { TeamBattle } from '@src/Team';
+import { FactionBattle } from '@src/Faction';
+import { BattleBattle } from '@src/Battle';
+import { Event, Subscriber, TriggerTiming, SubscriberFactory, EventData } from '@src/EventCenter';
+import { Status } from '@src/Status';
+import { UUID } from '@src/Common';
 
 /**
  * 角色类(战斗状态)

@@ -2,7 +2,7 @@ import { TeamNormal } from './TeamNormal';
 import { CharacterBattle } from '../Character/CharacterBattle';
 import { FactionBattle } from '../Faction/FactionBattle';
 import { BattleBattle } from '../Battle/BattleBattle';
-import { Game } from '@/Game';
+import { Game } from '@src/Game';
 
 /**
  * 队伍(战斗状态)

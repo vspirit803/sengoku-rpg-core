@@ -1,6 +1,6 @@
 import { EquipmentType } from './EquipmentType';
 import { ItemEquipment } from './ItemEquipment';
-import { Rarity } from '@/Common/Rarity';
+import { Rarity } from '@src/Common/Rarity';
 import rarityRate from '@assets/configurations/ItemRarityRate.json';
 
 export function generateEquipment({

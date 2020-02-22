@@ -2,8 +2,8 @@ import { CharacterConfiguration } from './CharacterConfiguration';
 import { CharacterPropertyNormal } from './CharacterPropertyNormal';
 import { EquipmentSlot } from './EquipmentSlot';
 import { CharacterSave } from './CharacterSave';
-import { UUID } from '@/Common';
-import { ItemEquipment } from '@/Item';
+import { UUID } from '@src/Common';
+import { ItemEquipment } from '@src/Item';
 
 /**
  * 角色类(平常状态)
