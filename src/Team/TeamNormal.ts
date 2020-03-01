@@ -51,6 +51,13 @@ export class TeamNormal implements UUID {
         this.members.push(member);
     }
 
+    removeMember(member: CharacterNormal): void {
+        if (!this.members.includes(member)) {
+            throw new Error(`[${member.id}]${member.name}不在队伍中`);
+        }
+        this.members.splice(this.members.indexOf(member), 1);
+    }
+
     replaceMember(memberBefore: CharacterNormal, memberAfter: CharacterNormal): void {
         const index = this.members.indexOf(memberBefore);
         if (index === -1) {

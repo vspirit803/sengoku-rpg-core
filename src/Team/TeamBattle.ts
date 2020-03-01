@@ -63,6 +63,10 @@ export class TeamBattle implements TeamNormal, UUID {
         throw new Error('Method not implemented.');
     }
 
+    removeMember(member: CharacterBattle): void {
+        throw new Error('Method not implemented.');
+    }
+
     replaceMember(memberBefore: CharacterBattle, memberAfter: CharacterBattle): void {
         throw new Error('Method not implemented.');
     }
