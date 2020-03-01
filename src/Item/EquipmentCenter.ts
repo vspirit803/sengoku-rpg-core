@@ -87,7 +87,11 @@ export class EquipmentCenter implements SaveInterface<Array<EquipmentSave>> {
             let value: number;
             if ('type' in equipment) {
                 //范围内随机取值
-                value = Math.round(Math.random() * (max - min) + min);
+                value = Math.random() * (max - min) + min;
+                //若为整数则取整
+                if (Number.isInteger(min) && Number.isInteger(max)) {
+                    value = Math.round(value);
+                }
             } else {
                 //从存档读取数值
                 value = equipment.properties[eachEquipmentPropertyConfiguration];

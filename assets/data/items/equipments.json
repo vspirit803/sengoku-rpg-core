@@ -1,0 +1,58 @@
+[
+    {
+        "id": "weapon0001",
+        "name": "苍穹绝音手炮",
+        "type": "equipment",
+        "equipmentType": "Weapon",
+        "isStackable": false,
+        "rarity": "Mythical",
+        "level": 70,
+        "properties": {
+            "atk": { "min": 740, "max": 770 },
+            "critRate": { "min": 0.1, "max": 0.1 },
+            "critMultiply": { "min": 0.05, "max": 0.05 }
+        }
+    },
+    {
+        "id": "weapon0002",
+        "name": "超能磁轨炮",
+        "type": "equipment",
+        "equipmentType": "Weapon",
+        "isStackable": false,
+        "rarity": "Mythical",
+        "level": 80,
+        "properties": {
+            "atk": { "min": 800, "max": 814 },
+            "critRate": { "min": 0.08, "max": 0.08 },
+            "critMultiply": { "min": 0, "max": 0 }
+        }
+    },
+    {
+        "id": "weapon0003",
+        "name": "无轩之黄金手炮",
+        "type": "equipment",
+        "equipmentType": "Weapon",
+        "isStackable": false,
+        "rarity": "Legendary",
+        "level": 85,
+        "properties": {
+            "atk": { "min": 900, "max": 927 },
+            "critRate": { "min": 0.25, "max": 0.25 },
+            "critMultiply": { "min": 0.17, "max": 0.17 }
+        }
+    },
+    {
+        "id": "weapon0004",
+        "name": "荒古遗尘手炮",
+        "type": "equipment",
+        "equipmentType": "Weapon",
+        "isStackable": false,
+        "rarity": "Immortal",
+        "level": 100,
+        "properties": {
+            "atk": { "min": 1000, "max": 1000 },
+            "critRate": { "min": 0.5, "max": 0.5 },
+            "critMultiply": { "min": 0.5, "max": 0.5 }
+        }
+    }
+]

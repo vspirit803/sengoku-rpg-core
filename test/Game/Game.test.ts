@@ -10,7 +10,8 @@ console.time('载入游戏存档');
 game.loadSave(save001);
 console.timeEnd('载入游戏存档');
 
-const battle = game.battleCenter.generateBattle('Battle00001');
+const team = game.teamCenter.teams[1];
+const battle = game.battleCenter.generateBattle('Battle00001', team);
 
 battle.eventCenter.addSubscriber(
     SubscriberFactory.Subscriber(
@@ -49,4 +50,4 @@ battle.start().then(() => {
     // console.timeEnd('战斗');
 });
 
-// console.log('end');
+console.log('end');

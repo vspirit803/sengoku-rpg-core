@@ -29,8 +29,8 @@ export class BattleCenter {
         }
     }
 
-    generateBattle(id: string): BattleBattle {
-        const game = this.game!;
+    generateBattle(id: string, team?: TeamNormal): BattleBattle {
+        const game = this.game;
         const battleConfiguration = this.battlesMap.get(id);
         if (battleConfiguration === undefined) {
             throw new Error(`id为[${id}]的战斗配置不存在`);
@@ -66,27 +66,29 @@ export class BattleCenter {
         });
 
         const successCondition = new Condition({
+            logicOperator: LogicOperator.Or,
             conditionItems: [
                 conditionItemKillJCYY,
                 conditionItemKillAll,
                 new Condition({
+                    logicOperator: LogicOperator.And,
                     conditionItems: [conditionItemNobuAlive, conditionItemRound5],
                 }),
             ],
-            logicOperator: LogicOperator.Or,
         });
 
         const battle = new BattleBattle(
             battleConfiguration,
             game,
-            new TeamNormal(
-                [
-                    game.characterCenter.getCharacter('C0001'),
-                    game.characterCenter.getCharacter('C0002'),
-                    game.characterCenter.getCharacter('C0003'),
-                ],
-                game,
-            ),
+            team ??
+                new TeamNormal(
+                    [
+                        game.characterCenter.getCharacter('C0001'),
+                        game.characterCenter.getCharacter('C0002'),
+                        game.characterCenter.getCharacter('C0003'),
+                    ],
+                    game,
+                ),
             successCondition,
         );
         conditionItemKillJCYY.setTestInstence(battle);

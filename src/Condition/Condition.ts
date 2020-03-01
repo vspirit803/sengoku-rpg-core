@@ -36,11 +36,9 @@ export class Condition {
 
     getFormatedDescription(indentation = 0): string {
         const innterStr = `  ${this.logicOperator === LogicOperator.And ? '且' : '或'}\n`;
-        return (
-            this.conditionItems
-                .map((eachConditionItem) => eachConditionItem.getFormatedDescription(indentation + 1))
-                .join(innterStr)
-        );
+        return this.conditionItems
+            .map((eachConditionItem) => eachConditionItem.getFormatedDescription(indentation + 1))
+            .join(innterStr);
     }
 
     //是否完成

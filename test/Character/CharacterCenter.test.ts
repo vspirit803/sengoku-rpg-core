@@ -1,5 +1,5 @@
 import { CharacterCenter } from '@src/Character';
-import characters from '@assets/configurations/characters.json';
+import characters from '@assets/data/characters.json';
 test('默认值', () => {
     const characterCenter = new CharacterCenter();
     expect(characterCenter.charactersConfiguration.length).toEqual(0);

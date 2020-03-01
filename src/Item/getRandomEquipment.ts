@@ -1,7 +1,7 @@
 import { EquipmentType } from './EquipmentType';
 import { ItemEquipment } from './ItemEquipment';
 import { Rarity } from '@src/Common/Rarity';
-import rarityRate from '@assets/configurations/ItemRarityRate.json';
+import rarityRate from '@assets/data/ItemRarityRate.json';
 
 export function generateEquipment({
     id,
@@ -36,7 +36,8 @@ export function generateEquipment({
     }
     const rarityRange = rarityRate as { [rarity: string]: { min: number; max: number } };
     equipmentType = EquipmentType.Weapon;
-    const { min: minRatio, max: maxRatio } = { ...rarityRange[Rarity[rarity]] };
+    // const { min: minRatio, max: maxRatio } = { ...rarityRange[Rarity[rarity]] };
+    const { min: minRatio, max: maxRatio } = { ...rarityRange[rarity] };
     const min = Math.round(Math.sin((0.01 * level - 0.5) * Math.PI + 1) * 500 * minRatio);
     const max = Math.round(Math.sin((0.01 * level - 0.5) * Math.PI + 1) * 500 * maxRatio);
     const value = Math.round((max - min) * Math.random()) + min;

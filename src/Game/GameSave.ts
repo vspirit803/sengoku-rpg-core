@@ -1,6 +1,7 @@
 import { CharacterSave } from '@src/Character';
 import { BackpackSave } from '@src/Item';
 import { MapSave } from '@src/Map';
+import { TeamSave } from '@src/Team/TeamSave';
 
 /**
  * 游戏存档
@@ -15,4 +16,6 @@ export interface GameSave {
     backpack: BackpackSave;
     /**地图存档 */
     maps: MapSave;
+    /**队伍 */
+    teams: Array<TeamSave>;
 }

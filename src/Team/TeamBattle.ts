@@ -3,13 +3,16 @@ import { CharacterBattle } from '../Character/CharacterBattle';
 import { FactionBattle } from '../Faction/FactionBattle';
 import { BattleBattle } from '../Battle/BattleBattle';
 import { Game } from '@src/Game';
+import { UUID } from '@src/Common';
 
 /**
  * 队伍(战斗状态)
  */
-export class TeamBattle implements TeamNormal {
+export class TeamBattle implements TeamNormal, UUID {
     name: string;
-    // id: string;
+    /**队伍id */
+    uuid: symbol;
+    /**队伍成员 */
     members: Array<CharacterBattle>;
     /**队伍所处的阵营 */
     faction?: FactionBattle;
@@ -19,10 +22,9 @@ export class TeamBattle implements TeamNormal {
     orderPoint: number; //指令点,用于施放技能
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     constructor(team: TeamNormal, game: Game) {
+        this.uuid = Symbol('TeamBattle');
         this.name = team.name;
-        // this.id = team.id;
         this.members = [];
-        // this.members = team.members.map((eachMember) => new CharacterBattle(eachMember));
         this.addMembers(...team.members.map((eachMemberNormal) => new CharacterBattle(eachMemberNormal)));
         this.orderPoint = 0;
     }
@@ -51,5 +53,13 @@ export class TeamBattle implements TeamNormal {
         this.members.forEach((eachMember) => {
             eachMember.setFaction(faction);
         });
+    }
+
+    includes(id: string): boolean {
+        throw new Error('Method not implemented.');
+    }
+
+    addMember(member: import('../Character').CharacterNormal): void {
+        throw new Error('Method not implemented.');
     }
 }

@@ -9,6 +9,7 @@ import { ItemCenter } from './ItemCenter';
 import { BackpackSave } from './BackpackSave';
 import { ItemConsumable } from './ItemConsumable';
 import { ItemSave } from './ItemSave';
+import { generateEquipment } from './getRandomEquipment';
 
 export {
     ItemCenter,
@@ -22,4 +23,5 @@ export {
     ItemSave,
     EquipmentType,
     BackpackSave,
+    generateEquipment,
 };

@@ -17,7 +17,7 @@ interface SkillEffectConfigurationBuff extends SkillEffectConfigurationBase {
 /**攻击 */
 interface SkillEffectConfigurationAttack extends SkillEffectConfigurationBase {
     /**目标 */
-    target: string;//单体 or 全体
+    target: string; //单体 or 全体
     /**攻击倍率 */
     atkRatio: number;
 }
@@ -25,7 +25,7 @@ interface SkillEffectConfigurationAttack extends SkillEffectConfigurationBase {
 /**治疗 */
 interface SkillEffectConfigurationTreat extends SkillEffectConfigurationBase {
     /**目标 */
-    target: string;//单体 or 全体
+    target: string; //单体 or 全体
     /**治疗倍率 */
     treatRatio: number;
 }

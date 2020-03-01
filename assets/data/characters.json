@@ -1,0 +1,1805 @@
+[
+    {
+        "id": "C0001",
+        "name": "风樱雪",
+        "gender": "female",
+        "properties": {
+            "atk": { "baseValue": 50, "increaseValue": 10 },
+            "def": { "baseValue": 0, "increaseValue": 0 },
+            "critRate": { "baseValue": 0.1, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.65, "increaseValue": 0 },
+            "missRate": { "baseValue": 0.1, "increaseValue": 0 },
+            "hp": { "baseValue": 200, "increaseValue": 20 },
+            "speed": { "baseValue": 100, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0002",
+        "name": "织田信长",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 50, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 470, "increaseValue": 47 },
+            "speed": { "baseValue": 90, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0003",
+        "name": "武田晴信",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 50, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 470, "increaseValue": 47 },
+            "speed": { "baseValue": 87, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0004",
+        "name": "毛利元就",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 49, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 500, "increaseValue": 50 },
+            "speed": { "baseValue": 86, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0005",
+        "name": "北条氏康",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 48, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 450, "increaseValue": 45 },
+            "speed": { "baseValue": 89, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0006",
+        "name": "松平元康",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 50, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 450, "increaseValue": 45 },
+            "speed": { "baseValue": 84, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0007",
+        "name": "木下秀吉",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 47, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 485, "increaseValue": 49 },
+            "speed": { "baseValue": 89, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0008",
+        "name": "明智光秀",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 48, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 465, "increaseValue": 47 },
+            "speed": { "baseValue": 81, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0009",
+        "name": "伊达政宗",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 48, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 455, "increaseValue": 46 },
+            "speed": { "baseValue": 79, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0010",
+        "name": "北条氏纲",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 47, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 465, "increaseValue": 47 },
+            "speed": { "baseValue": 82, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0011",
+        "name": "真田昌幸",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 47, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 490, "increaseValue": 49 },
+            "speed": { "baseValue": 73, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0012",
+        "name": "世良田元信",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 435, "increaseValue": 44 },
+            "speed": { "baseValue": 79, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0013",
+        "name": "长宗我部元亲",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 47, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 445, "increaseValue": 45 },
+            "speed": { "baseValue": 76, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0014",
+        "name": "小早川隆景",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 475, "increaseValue": 48 },
+            "speed": { "baseValue": 85, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0015",
+        "name": "直江兼续",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 45, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 445, "increaseValue": 45 },
+            "speed": { "baseValue": 83, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0016",
+        "name": "最上义光",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 455, "increaseValue": 46 },
+            "speed": { "baseValue": 77, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0017",
+        "name": "下间赖廉",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 435, "increaseValue": 44 },
+            "speed": { "baseValue": 75, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0018",
+        "name": "斋藤道三",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 45, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 495, "increaseValue": 50 },
+            "speed": { "baseValue": 72, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0019",
+        "name": "锅岛直茂",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 455, "increaseValue": 46 },
+            "speed": { "baseValue": 80, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0020",
+        "name": "今川义元",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 47, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 435, "increaseValue": 44 },
+            "speed": { "baseValue": 88, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0021",
+        "name": "宇喜多直家",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 480, "increaseValue": 48 },
+            "speed": { "baseValue": 79, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0022",
+        "name": "长尾景虎",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 49, "increaseValue": 10 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 415, "increaseValue": 42 },
+            "speed": { "baseValue": 52, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0023",
+        "name": "岛津义弘",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 49, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 415, "increaseValue": 42 },
+            "speed": { "baseValue": 58, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0024",
+        "name": "片仓小十郎",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 460, "increaseValue": 46 },
+            "speed": { "baseValue": 76, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0025",
+        "name": "佐竹义重",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 395, "increaseValue": 40 },
+            "speed": { "baseValue": 73, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0026",
+        "name": "三好长庆",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 46, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 435, "increaseValue": 44 },
+            "speed": { "baseValue": 85, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0027",
+        "name": "山县昌景",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 46, "increaseValue": 10 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 405, "increaseValue": 41 },
+            "speed": { "baseValue": 60, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0028",
+        "name": "蒲生氏乡",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 45, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 70, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0029",
+        "name": "藤堂高虎",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 435, "increaseValue": 44 },
+            "speed": { "baseValue": 82, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0030",
+        "name": "黑田如水",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 45, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 485, "increaseValue": 49 },
+            "speed": { "baseValue": 71, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0031",
+        "name": "太原雪斋",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 480, "increaseValue": 48 },
+            "speed": { "baseValue": 83, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0032",
+        "name": "津轻为信",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 455, "increaseValue": 46 },
+            "speed": { "baseValue": 76, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0033",
+        "name": "井伊直政",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 45, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 380, "increaseValue": 38 },
+            "speed": { "baseValue": 70, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0034",
+        "name": "马场信春",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 440, "increaseValue": 44 },
+            "speed": { "baseValue": 62, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0035",
+        "name": "本愿寺显如",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 440, "increaseValue": 44 },
+            "speed": { "baseValue": 87, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0036",
+        "name": "吉川元春",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 47, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 410, "increaseValue": 41 },
+            "speed": { "baseValue": 55, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0037",
+        "name": "立花道雪",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 48, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 435, "increaseValue": 44 },
+            "speed": { "baseValue": 54, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0038",
+        "name": "织田信秀",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 435, "increaseValue": 44 },
+            "speed": { "baseValue": 80, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0039",
+        "name": "松永久秀",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 465, "increaseValue": 47 },
+            "speed": { "baseValue": 80, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0040",
+        "name": "立花宗茂",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 46, "increaseValue": 10 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 405, "increaseValue": 41 },
+            "speed": { "baseValue": 52, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0041",
+        "name": "细川幽斋",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 39, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 425, "increaseValue": 43 },
+            "speed": { "baseValue": 80, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0042",
+        "name": "甲斐亲直",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 445, "increaseValue": 45 },
+            "speed": { "baseValue": 72, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0043",
+        "name": "北条纲成",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 45, "increaseValue": 10 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 400, "increaseValue": 40 },
+            "speed": { "baseValue": 50, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0044",
+        "name": "内藤昌丰",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 425, "increaseValue": 43 },
+            "speed": { "baseValue": 73, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0045",
+        "name": "岛津家久",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 10 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 425, "increaseValue": 43 },
+            "speed": { "baseValue": 44, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0046",
+        "name": "朝仓孝景",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 80, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0047",
+        "name": "茶茶",
+        "gender": "female",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 355, "increaseValue": 36 },
+            "speed": { "baseValue": 76, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0048",
+        "name": "岛津义久",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 82, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0049",
+        "name": "真田信幸",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 430, "increaseValue": 43 },
+            "speed": { "baseValue": 73, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0050",
+        "name": "长尾为景",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 56, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0051",
+        "name": "竹中半兵卫",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 45, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 495, "increaseValue": 50 },
+            "speed": { "baseValue": 47, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0052",
+        "name": "大谷吉继",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 445, "increaseValue": 45 },
+            "speed": { "baseValue": 70, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0053",
+        "name": "陶晴贤",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 385, "increaseValue": 39 },
+            "speed": { "baseValue": 63, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0054",
+        "name": "畠山义总",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 380, "increaseValue": 38 },
+            "speed": { "baseValue": 71, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0055",
+        "name": "武田信繁",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 395, "increaseValue": 40 },
+            "speed": { "baseValue": 70, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0056",
+        "name": "斋藤朝信",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 405, "increaseValue": 41 },
+            "speed": { "baseValue": 70, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0057",
+        "name": "柿崎景家",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 385, "increaseValue": 39 },
+            "speed": { "baseValue": 53, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0058",
+        "name": "真田幸隆",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 465, "increaseValue": 47 },
+            "speed": { "baseValue": 68, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0059",
+        "name": "芦名盛氏",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 74, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0060",
+        "name": "高桥绍运",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 45, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 375, "increaseValue": 38 },
+            "speed": { "baseValue": 51, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0061",
+        "name": "堀秀政",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 395, "increaseValue": 40 },
+            "speed": { "baseValue": 67, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0062",
+        "name": "小笠原长栋",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 390, "increaseValue": 39 },
+            "speed": { "baseValue": 71, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0063",
+        "name": "真田信繁",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 46, "increaseValue": 10 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 410, "increaseValue": 41 },
+            "speed": { "baseValue": 33, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0064",
+        "name": "木下秀长",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 38, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 82, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0065",
+        "name": "毛利隆元",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 39, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 405, "increaseValue": 41 },
+            "speed": { "baseValue": 80, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0066",
+        "name": "上杉景胜",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 350, "increaseValue": 35 },
+            "speed": { "baseValue": 72, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0067",
+        "name": "泷川一益",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 445, "increaseValue": 45 },
+            "speed": { "baseValue": 52, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0068",
+        "name": "高坂昌信",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 43, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 430, "increaseValue": 43 },
+            "speed": { "baseValue": 56, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0069",
+        "name": "长宗我部国亲",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 415, "increaseValue": 42 },
+            "speed": { "baseValue": 72, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0070",
+        "name": "岛津贵久",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 77, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0071",
+        "name": "安东爱季",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 72, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0072",
+        "name": "波多野稙通",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 400, "increaseValue": 40 },
+            "speed": { "baseValue": 67, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0073",
+        "name": "阿市",
+        "gender": "female",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 360, "increaseValue": 36 },
+            "speed": { "baseValue": 70, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0074",
+        "name": "本多忠胜",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 10 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 365, "increaseValue": 37 },
+            "speed": { "baseValue": 49, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0075",
+        "name": "加藤清正",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 350, "increaseValue": 35 },
+            "speed": { "baseValue": 60, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0076",
+        "name": "三好义贤",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 410, "increaseValue": 41 },
+            "speed": { "baseValue": 71, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0077",
+        "name": "岛津岁久",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 450, "increaseValue": 45 },
+            "speed": { "baseValue": 68, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0078",
+        "name": "六角定赖",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 405, "increaseValue": 41 },
+            "speed": { "baseValue": 83, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0079",
+        "name": "柴田胜家",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 340, "increaseValue": 34 },
+            "speed": { "baseValue": 56, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0080",
+        "name": "前田利家",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 355, "increaseValue": 36 },
+            "speed": { "baseValue": 68, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0081",
+        "name": "长野业正",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 45, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 430, "increaseValue": 43 },
+            "speed": { "baseValue": 50, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0082",
+        "name": "武田信虎",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 375, "increaseValue": 38 },
+            "speed": { "baseValue": 52, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0083",
+        "name": "丹羽长秀",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 365, "increaseValue": 37 },
+            "speed": { "baseValue": 74, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0084",
+        "name": "大友义鉴",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 370, "increaseValue": 37 },
+            "speed": { "baseValue": 75, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0085",
+        "name": "相良义滋",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 405, "increaseValue": 41 },
+            "speed": { "baseValue": 73, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0086",
+        "name": "高力清长",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 415, "increaseValue": 42 },
+            "speed": { "baseValue": 73, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0087",
+        "name": "栗山利安",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 385, "increaseValue": 39 },
+            "speed": { "baseValue": 68, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0088",
+        "name": "大友宗麟",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 38, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 410, "increaseValue": 41 },
+            "speed": { "baseValue": 76, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0089",
+        "name": "香宗我部亲泰",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 37, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 410, "increaseValue": 41 },
+            "speed": { "baseValue": 74, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0090",
+        "name": "相马利胤",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 390, "increaseValue": 39 },
+            "speed": { "baseValue": 74, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0091",
+        "name": "岛津忠良",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 39, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 78, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0092",
+        "name": "板垣信方",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 70, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0093",
+        "name": "佐竹义笃",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 390, "increaseValue": 39 },
+            "speed": { "baseValue": 63, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0094",
+        "name": "松平清康",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 345, "increaseValue": 35 },
+            "speed": { "baseValue": 57, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0095",
+        "name": "德姬",
+        "gender": "female",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 390, "increaseValue": 39 },
+            "speed": { "baseValue": 69, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0096",
+        "name": "酒井忠次",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 425, "increaseValue": 43 },
+            "speed": { "baseValue": 53, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0097",
+        "name": "浅井亮政",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 360, "increaseValue": 36 },
+            "speed": { "baseValue": 55, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0098",
+        "name": "黑田长政",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 38, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 400, "increaseValue": 40 },
+            "speed": { "baseValue": 69, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0099",
+        "name": "成濑正成",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 42, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 350, "increaseValue": 35 },
+            "speed": { "baseValue": 74, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0100",
+        "name": "山本勘助",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 36, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 475, "increaseValue": 48 },
+            "speed": { "baseValue": 60, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0101",
+        "name": "北条氏政",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 40, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 385, "increaseValue": 39 },
+            "speed": { "baseValue": 76, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0102",
+        "name": "宇佐美定满",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 460, "increaseValue": 46 },
+            "speed": { "baseValue": 58, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0103",
+        "name": "一条信龙",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 38, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 420, "increaseValue": 42 },
+            "speed": { "baseValue": 65, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0104",
+        "name": "大道寺政繁",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 36, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 345, "increaseValue": 35 },
+            "speed": { "baseValue": 73, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0105",
+        "name": "岛清兴岛左近",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 44, "increaseValue": 9 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 385, "increaseValue": 39 },
+            "speed": { "baseValue": 35, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0106",
+        "name": "归蝶",
+        "gender": "female",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 310, "increaseValue": 31 },
+            "speed": { "baseValue": 70, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0107",
+        "name": "大久保忠教",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 39, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 375, "increaseValue": 38 },
+            "speed": { "baseValue": 57, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0108",
+        "name": "蜂须贺正胜",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 36, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 425, "increaseValue": 43 },
+            "speed": { "baseValue": 57, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0109",
+        "name": "筒井顺昭",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 385, "increaseValue": 39 },
+            "speed": { "baseValue": 75, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0110",
+        "name": "细川忠兴",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 38, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 375, "increaseValue": 38 },
+            "speed": { "baseValue": 68, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0111",
+        "name": "宇喜多秀家",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 7 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 360, "increaseValue": 36 },
+            "speed": { "baseValue": 63, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0112",
+        "name": "秋山虎繁",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 41, "increaseValue": 8 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 410, "increaseValue": 41 },
+            "speed": { "baseValue": 48, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "C0113",
+        "name": "石田三成",
+        "gender": "male",
+        "properties": {
+            "atk": { "baseValue": 35, "increaseValue": 6 },
+            "def": { "baseValue": 10, "increaseValue": 1 },
+            "critRate": { "baseValue": 0.05, "increaseValue": 0 },
+            "critMultiply": { "baseValue": 1.5, "increaseValue": 0 },
+            "missRate": { "baseValue": 0, "increaseValue": 0 },
+            "hp": { "baseValue": 385, "increaseValue": 39 },
+            "speed": { "baseValue": 85, "increaseValue": 0 }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "Enemy0001",
+        "name": "今川义元",
+        "gender": "male",
+        "properties": {
+            "atk": {
+                "baseValue": 50,
+                "increaseValue": 0
+            },
+            "def": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "critRate": {
+                "baseValue": 0.05,
+                "increaseValue": 0
+            },
+            "critMultiply": {
+                "baseValue": 1.5,
+                "increaseValue": 0
+            },
+            "missRate": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "hp": {
+                "baseValue": 1000,
+                "increaseValue": 5
+            },
+            "speed": {
+                "baseValue": 60,
+                "increaseValue": 0
+            }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "Enemy0002",
+        "name": "骏河弓兵",
+        "gender": "male",
+        "properties": {
+            "atk": {
+                "baseValue": 20,
+                "increaseValue": 0
+            },
+            "def": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "critRate": {
+                "baseValue": 0.05,
+                "increaseValue": 0
+            },
+            "critMultiply": {
+                "baseValue": 1.5,
+                "increaseValue": 0
+            },
+            "missRate": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "hp": {
+                "baseValue": 1000,
+                "increaseValue": 5
+            },
+            "speed": {
+                "baseValue": 60,
+                "increaseValue": 0
+            }
+        },
+        "equipmentSlots": []
+    },
+    {
+        "id": "Enemy0003",
+        "name": "骏河武士",
+        "gender": "male",
+        "properties": {
+            "atk": {
+                "baseValue": 20,
+                "increaseValue": 0
+            },
+            "def": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "critRate": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "critMultiply": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "missRate": {
+                "baseValue": 0,
+                "increaseValue": 0
+            },
+            "hp": {
+                "baseValue": 100000,
+                "increaseValue": 1000
+            },
+            "speed": {
+                "baseValue": 20,
+                "increaseValue": 0
+            }
+        },
+        "equipmentSlots": []
+    }
+]

@@ -1,0 +1,119 @@
+[
+    {
+        "id": "Battle00001",
+        "name": "桶狭间之战",
+        "factions": [
+            { "name": "织田军", "teams": [{ "name": "织田信长直属部队", "members": [] }] },
+            {
+                "name": "今川义元军",
+                "teams": [
+                    {
+                        "name": "旗本",
+                        "members": [
+                            {
+                                "id": "Enemy0001",
+                                "level": 10
+                            }
+                        ]
+                    },
+                    {
+                        "name": "弓兵队",
+                        "members": [
+                            {
+                                "id": "Enemy0002",
+                                "level": 10
+                            }
+                        ]
+                    },
+                    {
+                        "name": "肉盾队",
+                        "members": [
+                            {
+                                "id": "Enemy0003",
+                                "level": 10
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "Battle00002",
+        "name": "三方原合战",
+        "factions": [
+            { "name": "织田军", "teams": [{ "name": "织田信长直属部队", "members": [] }] },
+            {
+                "name": "今川义元军",
+                "teams": [
+                    {
+                        "name": "旗本",
+                        "members": [
+                            {
+                                "id": "Enemy0001",
+                                "level": 10
+                            }
+                        ]
+                    },
+                    {
+                        "name": "弓兵队",
+                        "members": [
+                            {
+                                "id": "Enemy0002",
+                                "level": 10
+                            }
+                        ]
+                    },
+                    {
+                        "name": "肉盾队",
+                        "members": [
+                            {
+                                "id": "Enemy0003",
+                                "level": 10
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "Battle00003",
+        "name": "信长包围网",
+        "factions": [
+            { "name": "织田军", "teams": [{ "name": "织田信长直属部队", "members": [] }] },
+            {
+                "name": "今川义元军",
+                "teams": [
+                    {
+                        "name": "旗本",
+                        "members": [
+                            {
+                                "id": "Enemy0001",
+                                "level": 10
+                            }
+                        ]
+                    },
+                    {
+                        "name": "弓兵队",
+                        "members": [
+                            {
+                                "id": "Enemy0002",
+                                "level": 10
+                            }
+                        ]
+                    },
+                    {
+                        "name": "肉盾队",
+                        "members": [
+                            {
+                                "id": "Enemy0003",
+                                "level": 10
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

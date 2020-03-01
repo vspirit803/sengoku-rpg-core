@@ -20,7 +20,7 @@ export class ItemEquipment extends ItemBase {
     /**装备评分 */
     get score(): number {
         return Object.values(this.properties)
-            .map((eachProperty) => eachProperty.value / eachProperty.max)
+            .map((eachProperty) => (eachProperty.min === eachProperty.max ? 1 : eachProperty.value / eachProperty.max))
             .reduce((prev, curr) => prev * curr);
     }
 

@@ -1,29 +1,29 @@
 import { TeamConfiguration } from './TeamConfiguration';
-import { CharacterNormal } from '../Character/CharacterNormal';
+import { CharacterNormal } from '@src/Character';
 import { Game } from '@src/Game';
+import { UUID, Properties } from '@src/Common';
 
 /**
  * 队伍(平常状态)
  */
-export class TeamNormal {
+export class TeamNormal implements UUID {
     /**队伍名称 */
     name: string;
-    // /**队伍id */
-    // id: string;
+    /**队伍id */
+    uuid: symbol;
     /**队伍成员 */
     members: Array<CharacterNormal>;
-    // /**队伍成员Id */
-    constructor(members: Array<CharacterNormal>, game: Game);
-    constructor(teamConfiguration: TeamConfiguration, game: Game);
-    constructor(teamConfiguration: TeamConfiguration | Array<CharacterNormal>, game: Game) {
-        if ('length' in teamConfiguration) {
+    constructor(data: Array<CharacterNormal>, game: Game);
+    constructor(data: TeamConfiguration, game: Game);
+    constructor(data: TeamConfiguration | Array<CharacterNormal>, game: Game) {
+        this.uuid = Symbol('TeamNormal');
+        if (Array.isArray(data)) {
             this.name = '玩家队伍';
-            this.members = teamConfiguration;
+            this.members = data;
             return;
         }
-        this.name = teamConfiguration.name;
-        // this.id = teamConfiguration.id;
-        this.members = teamConfiguration.members.map((eachMember) => {
+        this.name = data.name;
+        this.members = data.members.map((eachMember) => {
             let character;
             if ('properties' in eachMember) {
                 //配置
@@ -35,5 +35,19 @@ export class TeamNormal {
             eachMember.level && character.setLevel(eachMember.level);
             return character;
         });
+    }
+
+    includes(id: string): boolean {
+        return this.members.map((each) => each.id).includes(id);
+    }
+
+    addMember(member: CharacterNormal): void {
+        if (this.members.includes(member)) {
+            throw new Error(`[${member.id}]${member.name}已在队伍中`);
+        }
+        if (this.members.length >= Properties.MaxTeamMembersNum) {
+            throw new Error(`队伍成员数已达上限(${Properties.MaxTeamMembersNum})`);
+        }
+        this.members.push(member);
     }
 }

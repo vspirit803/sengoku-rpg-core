@@ -1,0 +1,7 @@
+{
+    "Common": { "rate": 0.48, "stackRate": 1, "min": 0.6, "max": 0.8 },
+    "Rare": { "rate": 0.4, "stackRate": 0.52, "min": 0.75, "max": 0.9 },
+    "Mythical": { "rate": 0.1, "stackRate": 0.12, "min": 0.85, "max": 0.95 },
+    "Legendary": { "rate": 0.018, "stackRate": 0.02, "min": 0.95, "max": 1 },
+    "Immortal": { "rate": 0.002, "stackRate": 0.002, "min": 1, "max": 1 }
+}
