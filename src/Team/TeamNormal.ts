@@ -58,6 +58,19 @@ export class TeamNormal implements UUID {
         this.members.splice(this.members.indexOf(member), 1);
     }
 
+    swapMember(memberA: CharacterNormal, memberB: CharacterNormal): void {
+        if (!this.members.includes(memberA)) {
+            throw new Error(`[${memberA.id}]${memberA.name}不在队伍中`);
+        }
+        if (!this.members.includes(memberB)) {
+            throw new Error(`[${memberB.id}]${memberB.name}不在队伍中`);
+        }
+        const indexA = this.members.indexOf(memberA);
+        const indexB = this.members.indexOf(memberB);
+        this.members.splice(indexA, 1, memberB);
+        this.members.splice(indexB, 1, memberA);
+    }
+
     replaceMember(memberBefore: CharacterNormal, memberAfter: CharacterNormal): void {
         const index = this.members.indexOf(memberBefore);
         if (index === -1) {
