@@ -1,7 +1,7 @@
 const path = require('path');
-
+const resolve = (dir) => path.resolve(__dirname, dir);
 module.exports = {
-    entry: './src/Character/CharacterCenter.ts',
+    entry: './src/Game/Game.ts',
     // entry: './src/index.ts',
     module: {
         rules: [
@@ -14,6 +14,10 @@ module.exports = {
         ],
     },
     resolve: {
+        alias: {
+            '@src': resolve('src'),
+            '@assets': resolve('assets'),
+        },
         extensions: ['.tsx', '.ts', '.js'],
     },
     output: {
