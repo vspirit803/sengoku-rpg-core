@@ -5,6 +5,7 @@ import { Rarity } from '@src/Common/Rarity';
 import { EquipmentSave } from './EquipmentSave';
 import { EquipmentConfiguration } from './EquipmentConfiguration';
 import { SaveInterface } from '@src/Game';
+import { CharacterNormal } from '@src/Character';
 
 /**
  * 装备中心
@@ -98,6 +99,13 @@ export class EquipmentCenter implements SaveInterface<Array<EquipmentSave>> {
             }
             properties[eachEquipmentPropertyConfiguration] = { min, max, value };
         }
-        return new ItemEquipment({ ...equipmentConfiguration, rarity, equipmentType, properties });
+
+        const thisEquipment = new ItemEquipment({ ...equipmentConfiguration, rarity, equipmentType, properties });
+        //存档,且有人佩戴
+        if (!('type' in equipment) && equipment.wearerId) {
+            // const wearer: CharacterNormal;
+            // wearer.putOnEquipment(thisEquipment);
+        }
+        return thisEquipment;
     }
 }
