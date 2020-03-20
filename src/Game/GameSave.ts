@@ -6,7 +6,6 @@ import { TeamSave } from '@src/Team/TeamSave';
 /**
  * 游戏存档
  */
-
 export interface GameSave {
     /**存档版本 */
     version: string;
