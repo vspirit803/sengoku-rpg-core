@@ -1,7 +1,7 @@
 import { TeamNormal } from './TeamNormal';
-import { CharacterBattle } from '../Character/CharacterBattle';
-import { FactionBattle } from '../Faction/FactionBattle';
-import { BattleBattle } from '../Battle/BattleBattle';
+import { CharacterBattle } from '@src/Character/CharacterBattle';
+import { FactionBattle } from '@src/Faction/FactionBattle';
+import { BattleBattle } from '@src/Battle/BattleBattle';
 import { Game } from '@src/Game';
 import { UUID } from '@src/Common';
 

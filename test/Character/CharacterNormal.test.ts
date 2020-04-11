@@ -1,6 +1,6 @@
-import { CharacterNormal } from '../../src/Character/CharacterNormal';
-import { CharacterPropertyConfiguration } from '../../src/Character/CharacterPropertyConfiguration';
-import { CharacterConfiguration } from '../../src/Character/CharacterConfiguration';
+import { CharacterNormal } from '@src/Character/CharacterNormal';
+import { CharacterPropertyConfiguration } from '@src/Character/CharacterPropertyConfiguration';
+import { CharacterConfiguration } from '@src/Character/CharacterConfiguration';
 
 test('角色(常规) - 传值初始化', () => {
     const attack: CharacterPropertyConfiguration = {

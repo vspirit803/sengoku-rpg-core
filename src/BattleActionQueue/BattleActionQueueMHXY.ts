@@ -1,7 +1,7 @@
-import { CharacterBattle } from '../Character/CharacterBattle';
+import { CharacterBattle } from '@src/Character/CharacterBattle';
 import { BattleActionQueueBase } from './BattleActionQueueBase';
-import { Event } from '../EventCenter/Event';
-import { TriggerTiming } from '../EventCenter/TriggerTiming';
+import { Event } from '@src/EventCenter/Event';
+import { TriggerTiming } from '@src/EventCenter/TriggerTiming';
 import { BattleBattle } from '@src/Battle';
 
 /**

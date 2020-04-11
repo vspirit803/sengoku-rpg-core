@@ -1,5 +1,5 @@
-import { CharacterPropertyNormal } from '../../src/Character/CharacterPropertyNormal';
-import { CharacterNormal } from '../../src/Character/CharacterNormal';
+import { CharacterPropertyNormal } from '@src/Character/CharacterPropertyNormal';
+import { CharacterNormal } from '@src/Character/CharacterNormal';
 
 test('角色属性(常规) - normalValue校验', () => {
     const characterNormal = new CharacterNormal({

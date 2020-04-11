@@ -28,7 +28,7 @@ module.exports = {
 
     roots: ['<rootDir>'],
     moduleNameMapper: {
-        '^@/(.*)$': '<rootDir>/src/$1',
+        '^@src/(.*)$': '<rootDir>/src/$1',
         '^@assets/(.*)$': '<rootDir>/assets/$1',
     },
 
