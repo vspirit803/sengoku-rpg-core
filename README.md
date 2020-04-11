@@ -1,4 +1,4 @@
-# sengokuRPG-core 一个日本战国背景RPG游戏的后端代码
+# sengoku-rpg-core 一个日本战国背景RPG游戏的后端代码
 
 业余时间做着玩 顺便熟悉下设计模式
 
