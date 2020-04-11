@@ -85,7 +85,7 @@ export class BattleBattle implements UUID {
         // eslint-disable-next-line no-constant-condition
         while (true) {
             const character = this.battleActionQueue.getNext();
-            character.action();
+            await character.action();
             // await new Promise((resolve) => {
             //     setTimeout(() => {
             //         resolve();

@@ -70,10 +70,10 @@ export class BattleCenter {
             conditionItems: [
                 conditionItemKillJCYY,
                 conditionItemKillAll,
-                new Condition({
-                    logicOperator: LogicOperator.And,
-                    conditionItems: [conditionItemNobuAlive, conditionItemRound5],
-                }),
+                // new Condition({
+                //     logicOperator: LogicOperator.And,
+                //     conditionItems: [conditionItemNobuAlive, conditionItemRound5],
+                // }),
             ],
         });
 

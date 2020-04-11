@@ -190,6 +190,9 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         await this.battle!.eventCenter.trigger(
             new Event({ type: TriggerTiming.Attacking, source: this, data: { source: this, target } }),
         );
+        await this.battle!.eventCenter.trigger(
+            new Event({ type: TriggerTiming.ActionEnd, source: this, data: { source: this } }),
+        );
     }
 
     get enemies(): Array<CharacterBattle> {
