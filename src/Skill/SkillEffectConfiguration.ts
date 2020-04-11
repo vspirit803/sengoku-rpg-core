@@ -2,12 +2,12 @@
  * 技能效果
  */
 
-interface SkillEffectConfigurationBase {
+export interface SkillEffectConfigurationBase {
     type: string;
 }
 
 /**buff */
-interface SkillEffectConfigurationBuff extends SkillEffectConfigurationBase {
+export interface SkillEffectConfigurationBuff extends SkillEffectConfigurationBase {
     /**buff id */
     buffId: string;
     /**持续时间 */
@@ -15,7 +15,7 @@ interface SkillEffectConfigurationBuff extends SkillEffectConfigurationBase {
 }
 
 /**攻击 */
-interface SkillEffectConfigurationAttack extends SkillEffectConfigurationBase {
+export interface SkillEffectConfigurationAttack extends SkillEffectConfigurationBase {
     /**目标 */
     target: string; //单体 or 全体
     /**攻击倍率 */
@@ -23,7 +23,7 @@ interface SkillEffectConfigurationAttack extends SkillEffectConfigurationBase {
 }
 
 /**治疗 */
-interface SkillEffectConfigurationTreat extends SkillEffectConfigurationBase {
+export interface SkillEffectConfigurationTreat extends SkillEffectConfigurationBase {
     /**目标 */
     target: string; //单体 or 全体
     /**治疗倍率 */

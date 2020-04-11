@@ -1,7 +1,7 @@
 {
     "name": "sengoku-rpg-core",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "src/index.ts",
     "author": "vspirit803",
     "license": "MIT",
     "sideEffects": false,
