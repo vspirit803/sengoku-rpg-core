@@ -37,7 +37,7 @@ battle.eventCenter.addSubscriber(
             const battle = data.battle;
             console.log(
                 `经过${data.round}回合的鏖战后,[${battle.factions[0].name}]终于取得了胜利`,
-                `\n这场战斗中,击杀了敌军${data.killed.join(', ')}`,
+                `\n这场战斗中,击杀了敌军[${data.killed.join(', ')}]`,
             );
             return true;
         },
