@@ -1,13 +1,10 @@
 const path = require('path');
-const resolve = (dir) => path.resolve(__dirname, dir);
 module.exports = {
-    entry: './src/Game/Game.ts',
-    // entry: './src/index.ts',
+    entry: './src/index.ts',
     module: {
         rules: [
             {
-                // test: /test\/\.tsx?$/,
-                test: [path.resolve(__dirname, 'test')],
+                test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
@@ -15,13 +12,13 @@ module.exports = {
     },
     resolve: {
         alias: {
-            '@src': resolve('src'),
-            '@assets': resolve('assets'),
+            '@src': path.resolve(__dirname, 'src'),
+            '@assets': path.resolve(__dirname, 'assets'),
         },
         extensions: ['.tsx', '.ts', '.js'],
     },
     output: {
-        filename: 'bundle.js',
+        filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
     },
 };

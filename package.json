@@ -7,8 +7,7 @@
     "sideEffects": false,
     "scripts": {
         "lint": "eslint \"./**/*.ts\"",
-        "test": "jest",
-        "build": "webpack"
+        "test": "jest"
     },
     "devDependencies": {
         "@babel/core": "^7.7.5",
