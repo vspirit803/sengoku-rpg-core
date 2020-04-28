@@ -1,11 +1,10 @@
 import { ItemEquipment } from './ItemEquipment';
 import { EquipmentType } from './EquipmentType';
 import { EquipmentProperty } from './EquipmentProperty';
-import { Rarity } from '@src/Common/Rarity';
+import { Rarity } from '@src/Common';
 import { EquipmentSave } from './EquipmentSave';
 import { EquipmentConfiguration } from './EquipmentConfiguration';
 import { SaveInterface } from '@src/Game';
-import { CharacterNormal } from '@src/Character';
 
 /**
  * 装备中心

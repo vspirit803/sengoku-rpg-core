@@ -1,9 +1,9 @@
 import { TeamNormal } from './TeamNormal';
-import { CharacterBattle } from '@src/Character/CharacterBattle';
-import { FactionBattle } from '@src/Faction/FactionBattle';
-import { BattleBattle } from '@src/Battle/BattleBattle';
+import { CharacterBattle } from '@src/Character';
+import { FactionBattle } from '@src/Faction';
+import { BattleBattle } from '@src/Battle';
 import { Game } from '@src/Game';
-import { UUID } from '@src/Common';
+import { UUID, Properties } from '@src/Common';
 
 /**
  * 队伍(战斗状态)
@@ -55,23 +55,65 @@ export class TeamBattle implements TeamNormal, UUID {
         });
     }
 
+    // includes(id: string): boolean {
+    //     throw new Error('Method not implemented.');
+    // }
+
+    // addMember(member: CharacterBattle): void {
+    //     throw new Error('Method not implemented.');
+    // }
+
+    // removeMember(member: CharacterBattle): void {
+    //     throw new Error('Method not implemented.');
+    // }
+
+    // swapMember(memberA: CharacterBattle, memberB: CharacterBattle): void {
+    //     throw new Error('Method not implemented.');
+    // }
+
+    // replaceMember(memberBefore: CharacterBattle, memberAfter: CharacterBattle): void {
+    //     throw new Error('Method not implemented.');
+    // }
+
     includes(id: string): boolean {
-        throw new Error('Method not implemented.');
+        return this.members.map((each) => each.id).includes(id);
     }
 
     addMember(member: CharacterBattle): void {
-        throw new Error('Method not implemented.');
+        if (this.members.includes(member)) {
+            throw new Error(`[${member.id}]${member.name}已在队伍中`);
+        }
+        if (this.members.length >= Properties.MaxTeamMembersNum) {
+            throw new Error(`队伍成员数已达上限(${Properties.MaxTeamMembersNum})`);
+        }
+        this.members.push(member);
     }
 
     removeMember(member: CharacterBattle): void {
-        throw new Error('Method not implemented.');
+        if (!this.members.includes(member)) {
+            throw new Error(`[${member.id}]${member.name}不在队伍中`);
+        }
+        this.members.splice(this.members.indexOf(member), 1);
     }
 
     swapMember(memberA: CharacterBattle, memberB: CharacterBattle): void {
-        throw new Error('Method not implemented.');
+        if (!this.members.includes(memberA)) {
+            throw new Error(`[${memberA.id}]${memberA.name}不在队伍中`);
+        }
+        if (!this.members.includes(memberB)) {
+            throw new Error(`[${memberB.id}]${memberB.name}不在队伍中`);
+        }
+        const indexA = this.members.indexOf(memberA);
+        const indexB = this.members.indexOf(memberB);
+        this.members.splice(indexA, 1, memberB);
+        this.members.splice(indexB, 1, memberA);
     }
 
     replaceMember(memberBefore: CharacterBattle, memberAfter: CharacterBattle): void {
-        throw new Error('Method not implemented.');
+        const index = this.members.indexOf(memberBefore);
+        if (index === -1) {
+            throw new Error(`[${memberBefore.id}]${memberBefore.name}不在队伍中`);
+        }
+        this.members.splice(index, 1, memberAfter);
     }
 }

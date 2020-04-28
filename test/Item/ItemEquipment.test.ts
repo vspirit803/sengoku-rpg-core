@@ -1,6 +1,6 @@
 import { ItemEquipment, EquipmentType } from '@src/Item';
-import { Rarity } from '@src/Common/Rarity';
-import { CharacterNormal } from '@src/Character/CharacterNormal';
+import { Rarity } from '@src/Common';
+import { CharacterNormal } from '@src/Character';
 
 test('构造函数', () => {
     const item = new ItemEquipment({

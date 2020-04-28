@@ -1,5 +1,5 @@
 import { ItemMaterial, ItemType } from '@src/Item';
-import { Rarity } from '@src/Common/Rarity';
+import { Rarity } from '@src/Common';
 
 test('默认值', () => {
     const itemMaterial = new ItemMaterial();

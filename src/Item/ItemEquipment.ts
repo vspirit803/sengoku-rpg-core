@@ -2,7 +2,7 @@ import { ItemBase } from './ItemBase';
 import { ItemType } from './ItemType';
 import { EquipmentType } from './EquipmentType';
 import { CharacterNormal } from '@src/Character';
-import { Rarity } from '@src/Common/Rarity';
+import { Rarity } from '@src/Common';
 import { EquipmentProperty } from './EquipmentProperty';
 
 /**

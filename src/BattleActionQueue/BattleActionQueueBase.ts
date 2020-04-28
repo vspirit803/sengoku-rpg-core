@@ -1,5 +1,5 @@
-import { BattleBattle } from '@src/Battle/BattleBattle';
-import { CharacterBattle } from '@src/Character/CharacterBattle';
+import { BattleBattle } from '@src/Battle';
+import { CharacterBattle } from '@src/Character';
 
 /**
  * 战斗行动序列(基类)

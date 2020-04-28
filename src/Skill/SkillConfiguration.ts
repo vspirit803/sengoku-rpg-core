@@ -10,5 +10,5 @@ export interface SkillConfiguration {
     /**技能消耗 */
     cost: number;
     /**技能效果 */
-    effects: Array<any>;
+    effects: Array<unknown>;
 }

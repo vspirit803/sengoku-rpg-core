@@ -1,4 +1,2 @@
-import { FactionConfiguration } from './FactionConfiguration';
-import { FactionBattle } from './FactionBattle';
-
-export { FactionConfiguration, FactionBattle };
+export * from './FactionConfiguration';
+export * from './FactionBattle';

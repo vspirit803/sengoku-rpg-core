@@ -1,7 +1,7 @@
 import { CharacterSave } from '@src/Character';
 import { BackpackSave } from '@src/Item';
 import { MapSave } from '@src/Map';
-import { TeamSave } from '@src/Team/TeamSave';
+import { TeamSave } from '@src/Team';
 
 /**
  * 游戏存档

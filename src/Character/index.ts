@@ -1,4 +1,5 @@
 export * from './CharacterCenter';
+export * from './CharacterConfiguration';
 export * from './CharacterNormal';
 export * from './CharacterBattle';
 export * from './CharacterPropertyConfiguration';

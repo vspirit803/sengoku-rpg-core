@@ -1,6 +1,4 @@
-import { TaskCenter } from './TaskCenter';
-import { Task } from './Task';
-import { TaskItem } from './TaskItem';
-import { TaskStatus } from './TaskStatus';
-
-export { TaskCenter, Task, TaskItem, TaskStatus };
+export * from './TaskCenter';
+export * from './Task';
+export * from './TaskItem';
+export * from './TaskStatus';

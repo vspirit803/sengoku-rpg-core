@@ -1,4 +1,4 @@
-import { CharacterBattle } from '@src/Character/CharacterBattle';
+import { CharacterBattle } from '@src/Character';
 import { Buff } from './Buff';
 
 /**能否驱散 */

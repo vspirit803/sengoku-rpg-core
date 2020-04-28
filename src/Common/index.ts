@@ -1,4 +1,3 @@
-import { Rarity } from './Rarity';
-import { UUID } from './UUID';
-import * as Properties from './Properties';
-export { Rarity, UUID, Properties };
+export * from './Rarity';
+export * from './UUID';
+export * as Properties from './Properties';

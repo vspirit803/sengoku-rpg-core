@@ -1,5 +1,5 @@
 import { ItemSystem, ItemCenter } from '@src/Item';
-import { Rarity } from '@src/Common/Rarity';
+import { Rarity } from '@src/Common';
 
 test('添加背包', () => {
     const backpack = new ItemCenter();

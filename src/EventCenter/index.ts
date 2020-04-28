@@ -1,8 +1,6 @@
-import { EventCenter } from './EventCenter';
-import * as EventData from './EventData';
-import { Subscriber } from './Subscriber';
-import { SubscriberFactory } from './SubscriberFactory';
-import { TriggerTiming } from './TriggerTiming';
-import { Event } from './Event';
-
-export { Event, EventCenter, EventData, Subscriber, SubscriberFactory, TriggerTiming };
+export * from './EventCenter';
+export * from './Subscriber';
+export * from './SubscriberFactory';
+export * from './TriggerTiming';
+export * from './Event';
+export * as EventData from './EventData';

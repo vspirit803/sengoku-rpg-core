@@ -1,4 +1,2 @@
-import { BattleActionQueueBase } from './BattleActionQueueBase';
-import { BattleActionQueueMHXY } from './BattleActionQueueMHXY';
-
-export { BattleActionQueueBase, BattleActionQueueMHXY };
+export * from './BattleActionQueueBase';
+export * from './BattleActionQueueMHXY';

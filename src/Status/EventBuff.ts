@@ -1,9 +1,7 @@
 import { Buff } from './Buff';
 import { Status } from './Status';
-import { Subscriber } from '@src/EventCenter/Subscriber';
-import { TriggerTiming } from '@src/EventCenter/TriggerTiming';
-import { UUID } from '@src/Common/UUID';
-import { SubscriberFactory } from '@src/EventCenter/SubscriberFactory';
+import { Subscriber, TriggerTiming, SubscriberFactory } from '@src/EventCenter';
+import { UUID } from '@src/Common';
 /**
  * Buff - 事件Buff
  */

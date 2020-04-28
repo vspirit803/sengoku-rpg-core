@@ -1,4 +1,4 @@
-import { Task } from '@src/Task/Task';
+import { Task } from '@src/Task';
 import { Condition } from '@src/Condition';
 
 test('test', () => {
