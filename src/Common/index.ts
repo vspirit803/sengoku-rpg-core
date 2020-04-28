@@ -1,3 +1,6 @@
+import * as Properties from './Properties';
 export * from './Rarity';
 export * from './UUID';
-export * as Properties from './Properties';
+
+export { Properties };
+// export * as Properties from './Properties';
