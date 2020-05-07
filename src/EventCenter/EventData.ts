@@ -1,5 +1,5 @@
-import { CharacterBattle } from '@src/Character';
 import { BattleBattle } from '@src/Battle';
+import { CharacterBattle } from '@src/Character';
 
 export interface EventData {} // eslint-disable-line
 export interface EventDataBattleStart extends EventData {

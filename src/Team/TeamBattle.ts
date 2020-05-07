@@ -1,9 +1,10 @@
-import { TeamNormal } from './TeamNormal';
+import { Properties, UUID } from '@src/Common';
+
+import { BattleBattle } from '@src/Battle';
 import { CharacterBattle } from '@src/Character';
 import { FactionBattle } from '@src/Faction';
-import { BattleBattle } from '@src/Battle';
 import { Game } from '@src/Game';
-import { UUID, Properties } from '@src/Common';
+import { TeamNormal } from './TeamNormal';
 
 /**
  * 队伍(战斗状态)

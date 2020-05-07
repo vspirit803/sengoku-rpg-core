@@ -1,5 +1,5 @@
-import { ItemConfiguration } from './ItemConfiguration';
 import { EquipmentPropertyConfiguration } from './EquipmentPropertyConfiguration';
+import { ItemConfiguration } from './ItemConfiguration';
 
 /**
  * 装备配置接口

@@ -1,5 +1,5 @@
-import { CharacterSave } from '@src/Character';
 import { BackpackSave } from '@src/Item';
+import { CharacterSave } from '@src/Character';
 import { MapSave } from '@src/Map';
 import { TeamSave } from '@src/Team';
 

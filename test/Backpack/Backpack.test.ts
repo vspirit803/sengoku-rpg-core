@@ -1,4 +1,5 @@
-import { ItemSystem, ItemCenter } from '@src/Item';
+import { ItemCenter, ItemSystem } from '@src/Item';
+
 import { Rarity } from '@src/Common';
 
 test('添加背包', () => {

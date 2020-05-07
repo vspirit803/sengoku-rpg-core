@@ -1,5 +1,5 @@
-import { Subscriber } from './Subscriber';
 import { Event } from './Event';
+import { Subscriber } from './Subscriber';
 
 /**
  * 发布-订阅模式的事件中心

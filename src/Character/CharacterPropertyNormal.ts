@@ -1,5 +1,6 @@
-import { CharacterPropertyConfiguration } from './CharacterPropertyConfiguration';
 import { CharacterNormal } from './CharacterNormal';
+import { CharacterPropertyConfiguration } from './CharacterPropertyConfiguration';
+
 /**
  * 角色属性类(平常状态)
  */

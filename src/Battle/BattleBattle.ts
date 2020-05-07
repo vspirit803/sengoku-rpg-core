@@ -1,11 +1,12 @@
-import { BattleConfiguration } from './BattleConfiguration';
-import { FactionBattle } from '@src/Faction';
-import { CharacterBattle } from '@src/Character';
-import { EventCenter, Event, TriggerTiming } from '@src/EventCenter';
 import { BattleActionQueueBase, BattleActionQueueMHXY } from '@src/BattleActionQueue';
-import { Game } from '@src/Game';
-import { TeamNormal, TeamBattle } from '@src/Team';
+import { Event, EventCenter, TriggerTiming } from '@src/EventCenter';
+import { TeamBattle, TeamNormal } from '@src/Team';
+
+import { BattleConfiguration } from './BattleConfiguration';
+import { CharacterBattle } from '@src/Character';
 import { Condition } from '@src/Condition';
+import { FactionBattle } from '@src/Faction';
+import { Game } from '@src/Game';
 import { UUID } from '@src/Common';
 
 /**

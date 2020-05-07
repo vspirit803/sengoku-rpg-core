@@ -1,8 +1,8 @@
-import { CharacterNormal } from './CharacterNormal';
-import { CharacterConfiguration } from './CharacterConfiguration';
-import { CharacterSave } from './CharacterSave';
 import { Game, SaveInterface } from '@src/Game';
 
+import { CharacterConfiguration } from './CharacterConfiguration';
+import { CharacterNormal } from './CharacterNormal';
+import { CharacterSave } from './CharacterSave';
 import commonEquipmentSlotsConfiguration from '@assets/data/commonEquipmentSlotsConfiguration.json';
 
 /**

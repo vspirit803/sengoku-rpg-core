@@ -1,5 +1,5 @@
-import { TaskStatus } from './TaskStatus';
 import { Condition } from '@src/Condition';
+import { TaskStatus } from './TaskStatus';
 
 /**任务 */
 export class Task {

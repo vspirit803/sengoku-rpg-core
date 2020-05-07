@@ -1,6 +1,7 @@
+import { Game, SaveInterface } from '@src/Game';
+
 import { TeamNormal } from './TeamNormal';
 import { TeamSave } from './TeamSave';
-import { SaveInterface, Game } from '@src/Game';
 
 /**
  * 队伍中心

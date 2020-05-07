@@ -1,4 +1,5 @@
-import { TeamNormal, TeamBattle } from '@src/Team';
+import { TeamBattle, TeamNormal } from '@src/Team';
+
 import { BattleBattle } from '@src/Battle';
 import { CharacterBattle } from '@src/Character';
 import { FactionConfiguration } from './FactionConfiguration';

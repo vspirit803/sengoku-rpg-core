@@ -1,6 +1,6 @@
-import { UUID } from '@src/Common';
-import { TriggerTiming } from './TriggerTiming';
 import { EventData } from './EventData';
+import { TriggerTiming } from './TriggerTiming';
+import { UUID } from '@src/Common';
 
 /**
  * 订阅者

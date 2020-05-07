@@ -1,4 +1,5 @@
 import { ItemMaterial, ItemType } from '@src/Item';
+
 import { Rarity } from '@src/Common';
 
 test('默认值', () => {

@@ -1,4 +1,5 @@
 import { EquipmentType, ItemEquipment } from '@src/Item';
+
 import { EquipmentSlotConfiguration } from './EquipmentSlotConfiguration';
 
 /**

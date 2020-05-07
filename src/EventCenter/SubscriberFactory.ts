@@ -1,7 +1,8 @@
+import * as EventData from './EventData';
+
 import { Subscriber } from './Subscriber';
 import { TriggerTiming } from './TriggerTiming';
 import { UUID } from '@src/Common';
-import * as EventData from './EventData';
 
 export class SubscriberFactory {
     static Subscriber(

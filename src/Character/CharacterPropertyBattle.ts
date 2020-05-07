@@ -1,5 +1,6 @@
-import { CharacterPropertyNormal } from './CharacterPropertyNormal';
 import { CharacterBattle } from './CharacterBattle';
+import { CharacterPropertyNormal } from './CharacterPropertyNormal';
+
 /**
  * 角色属性类(战斗状态)
  */

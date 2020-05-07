@@ -1,7 +1,8 @@
-import { TeamConfiguration } from './TeamConfiguration';
+import { Properties, UUID } from '@src/Common';
+
 import { CharacterNormal } from '@src/Character';
 import { Game } from '@src/Game';
-import { UUID, Properties } from '@src/Common';
+import { TeamConfiguration } from './TeamConfiguration';
 
 /**
  * 队伍(平常状态)

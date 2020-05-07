@@ -1,7 +1,8 @@
-import { CharacterBattle } from '@src/Character';
-import { BattleActionQueueBase } from './BattleActionQueueBase';
 import { Event, TriggerTiming } from '@src/EventCenter';
+
+import { BattleActionQueueBase } from './BattleActionQueueBase';
 import { BattleBattle } from '@src/Battle';
+import { CharacterBattle } from '@src/Character';
 
 /**
  * 战斗行动序列(梦幻西游型,每个回合所有角色按速度快慢依次行动)

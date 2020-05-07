@@ -1,14 +1,16 @@
-import { MapConfiguration } from './MapConfiguration';
 import { Game, SaveInterface } from '@src/Game';
-import { GameMap } from './Map';
+
 import { City } from './City';
 import { CityConfiguration } from './CityConfiguration';
+import { CitySave } from './CitySave';
+import { District } from './District';
+import { GameMap } from './Map';
+import { MapConfiguration } from './MapConfiguration';
+import { MapSave } from '.';
 import { Province } from './Province';
 import { ProvinceConfiguration } from './ProvinceConfiguration';
-import { District } from './District';
+
 // import { MapSave } from './MapSave';
-import { CitySave } from './CitySave';
-import { MapSave } from '.';
 
 export class MapCenter implements SaveInterface<MapSave> {
     /**绑定的游戏实例 */

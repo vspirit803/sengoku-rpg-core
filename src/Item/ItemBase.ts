@@ -1,5 +1,6 @@
+import { Rarity, UUID } from '@src/Common';
+
 import { ItemType } from './ItemType';
-import { UUID, Rarity } from '@src/Common';
 
 /**
  * 物品基类

@@ -1,9 +1,9 @@
+import { CharacterNormal } from '@src/Character';
+import { EquipmentProperty } from './EquipmentProperty';
+import { EquipmentType } from './EquipmentType';
 import { ItemBase } from './ItemBase';
 import { ItemType } from './ItemType';
-import { EquipmentType } from './EquipmentType';
-import { CharacterNormal } from '@src/Character';
 import { Rarity } from '@src/Common';
-import { EquipmentProperty } from './EquipmentProperty';
 
 /**
  * 装备类物品
