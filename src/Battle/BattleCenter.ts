@@ -1,9 +1,9 @@
 import { Condition, ConditionItem, LogicOperator } from '@src/Condition';
+import { Game } from '@src/Game';
+import { TeamNormal } from '@src/Team';
 
 import { BattleBattle } from './BattleBattle';
 import { BattleConfiguration } from './BattleConfiguration';
-import { Game } from '@src/Game';
-import { TeamNormal } from '@src/Team';
 
 /**
  * 战斗中心

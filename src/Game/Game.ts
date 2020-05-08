@@ -1,16 +1,17 @@
-import { BattleCenter } from '@src/Battle';
-import { CharacterCenter } from '@src/Character';
-import { GameSave } from './GameSave';
-import { ItemCenter } from '@src/Item';
-import { MapCenter } from '@src/Map';
-import { TaskCenter } from '@src/Task';
-import { TeamCenter } from '@src/Team';
 import battles from '@assets/data/battles.json';
 import characters from '@assets/data/characters.json';
 import cities from '@assets/data/cities.json';
 import equipments from '@assets/data/items/equipments.json';
 import maps from '@assets/data/maps.json';
 import provinces from '@assets/data/provinces.json';
+import { BattleCenter } from '@src/Battle';
+import { CharacterCenter } from '@src/Character';
+import { ItemCenter } from '@src/Item';
+import { MapCenter } from '@src/Map';
+import { TaskCenter } from '@src/Task';
+import { TeamCenter } from '@src/Team';
+
+import { GameSave } from './GameSave';
 
 /**
  * 游戏的实例

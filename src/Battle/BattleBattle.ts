@@ -1,13 +1,13 @@
 import { BattleActionQueueBase, BattleActionQueueMHXY } from '@src/BattleActionQueue';
+import { CharacterBattle } from '@src/Character';
+import { UUID } from '@src/Common';
+import { Condition } from '@src/Condition';
 import { Event, EventCenter, TriggerTiming } from '@src/EventCenter';
+import { FactionBattle } from '@src/Faction';
+import { Game } from '@src/Game';
 import { TeamBattle, TeamNormal } from '@src/Team';
 
 import { BattleConfiguration } from './BattleConfiguration';
-import { CharacterBattle } from '@src/Character';
-import { Condition } from '@src/Condition';
-import { FactionBattle } from '@src/Faction';
-import { Game } from '@src/Game';
-import { UUID } from '@src/Common';
 
 /**
  * 战斗(战斗状态)

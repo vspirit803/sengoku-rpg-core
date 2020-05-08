@@ -1,4 +1,5 @@
 import { Game } from '@src/Game';
+
 import { Task } from './Task';
 import { TaskStatus } from './TaskStatus';
 

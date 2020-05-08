@@ -10,4 +10,9 @@
         "typescriptreact"
     ],
     "eslint.alwaysShowStatus": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "eslint.codeAction.disableRuleComment": {},
 }

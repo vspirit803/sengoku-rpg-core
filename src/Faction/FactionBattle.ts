@@ -1,9 +1,9 @@
-import { TeamBattle, TeamNormal } from '@src/Team';
-
 import { BattleBattle } from '@src/Battle';
 import { CharacterBattle } from '@src/Character';
-import { FactionConfiguration } from './FactionConfiguration';
 import { Game } from '@src/Game';
+import { TeamBattle, TeamNormal } from '@src/Team';
+
+import { FactionConfiguration } from './FactionConfiguration';
 
 /**
  * 阵营(战斗状态)

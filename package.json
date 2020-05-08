@@ -6,7 +6,7 @@
     "license": "MIT",
     "sideEffects": false,
     "scripts": {
-        "lint": "eslint \"./**/*.ts\"",
+        "lint": "eslint \"./**/*.ts\" --fix",
         "test": "jest"
     },
     "devDependencies": {
@@ -23,6 +23,7 @@
         "eslint-plugin-import": "^2.18.2",
         "eslint-plugin-node": "^10.0.0",
         "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-simple-import-sort": "^5.0.3",
         "eslint-plugin-standard": "^4.0.1",
         "jest": "^24.9.0",
         "ts-node": "^8.4.1",

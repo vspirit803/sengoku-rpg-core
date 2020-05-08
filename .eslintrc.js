@@ -6,7 +6,7 @@ module.exports = {
         es6: true,
         jest: true,
     },
-    plugins: ['jest'],
+    plugins: ['jest','simple-import-sort'],
     extends: ['standard', 'typescript'],
     globals: {
         Atomics: 'readonly',
@@ -35,17 +35,9 @@ module.exports = {
         '@typescript-eslint/no-non-null-assertion': 'off',
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
-        'sort-imports': [
-            'error',
-            {
-                ignoreCase: false,
-                ignoreDeclarationSort: false,
-                ignoreMemberSort: false,
-                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-            },
-        ],
         // 'no-eval': 'off',
         // 'computed-property-even-spacing': 'off',
         // 'standard/computed-property-even-spacing': 'off'
+        'simple-import-sort/sort': 'error',
     },
 };

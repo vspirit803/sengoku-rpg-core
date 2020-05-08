@@ -1,8 +1,8 @@
-import { MapCenter } from '@src/Map';
 import cities from '@assets/data/cities.json';
 import maps from '@assets/data/maps.json';
 import provinces from '@assets/data/provinces.json';
 import save from '@assets/saves/sav001.json';
+import { MapCenter } from '@src/Map';
 
 const mapCenter = new MapCenter();
 mapCenter.loadCitiesConfiguration(cities);

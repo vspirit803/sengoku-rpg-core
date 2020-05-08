@@ -1,8 +1,8 @@
+import { UUID } from '@src/Common';
 import { Subscriber, SubscriberFactory, TriggerTiming } from '@src/EventCenter';
 
 import { Buff } from './Buff';
 import { Status } from './Status';
-import { UUID } from '@src/Common';
 
 /**
  * Buff - 事件Buff

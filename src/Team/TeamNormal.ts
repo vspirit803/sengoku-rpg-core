@@ -1,7 +1,7 @@
-import { Properties, UUID } from '@src/Common';
-
 import { CharacterNormal } from '@src/Character';
+import { Properties, UUID } from '@src/Common';
 import { Game } from '@src/Game';
+
 import { TeamConfiguration } from './TeamConfiguration';
 
 /**

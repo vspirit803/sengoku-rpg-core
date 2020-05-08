@@ -1,9 +1,9 @@
+import commonEquipmentSlotsConfiguration from '@assets/data/commonEquipmentSlotsConfiguration.json';
 import { Game, SaveInterface } from '@src/Game';
 
 import { CharacterConfiguration } from './CharacterConfiguration';
 import { CharacterNormal } from './CharacterNormal';
 import { CharacterSave } from './CharacterSave';
-import commonEquipmentSlotsConfiguration from '@assets/data/commonEquipmentSlotsConfiguration.json';
 
 /**
  * 角色中心

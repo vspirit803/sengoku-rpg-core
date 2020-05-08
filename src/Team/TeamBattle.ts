@@ -1,9 +1,9 @@
-import { Properties, UUID } from '@src/Common';
-
 import { BattleBattle } from '@src/Battle';
 import { CharacterBattle } from '@src/Character';
+import { Properties, UUID } from '@src/Common';
 import { FactionBattle } from '@src/Faction';
 import { Game } from '@src/Game';
+
 import { TeamNormal } from './TeamNormal';
 
 /**

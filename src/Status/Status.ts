@@ -1,5 +1,6 @@
-import { Buff } from './Buff';
 import { CharacterBattle } from '@src/Character';
+
+import { Buff } from './Buff';
 
 /**能否驱散 */
 enum Dispellable {
