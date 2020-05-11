@@ -112,7 +112,7 @@ export class SubscriberFactory {
         let subscriberFilter: undefined | symbol | Array<symbol>;
         if (filter === undefined) {
             subscriberFilter = undefined;
-        } else if ('uuid' in filter) {
+        } else if (!Array.isArray(filter)) {
             subscriberFilter = filter.uuid;
         } else {
             subscriberFilter = filter.map((each) => each.uuid);
