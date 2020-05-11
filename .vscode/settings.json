@@ -1,18 +1,10 @@
 {
-    "eslint.options": {
-        "configFile": ".eslintrc.js"
-    },
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "vue",
-        "typescript",
-        "typescriptreact"
-    ],
+    "prettier.packageManager": "yarn",
+    "eslint.validate": ["javascript", "typescript"],
     "eslint.alwaysShowStatus": true,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
-    "eslint.codeAction.disableRuleComment": {},
+    "eslint.codeAction.disableRuleComment": {}
 }

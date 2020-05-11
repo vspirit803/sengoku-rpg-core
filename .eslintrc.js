@@ -1,12 +1,13 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
+    root: true,
     env: {
         browser: true,
         node: true,
         es6: true,
         jest: true,
     },
-    plugins: ['jest','simple-import-sort'],
+    plugins: ['jest', 'simple-import-sort'],
     extends: ['standard', 'typescript'],
     globals: {
         Atomics: 'readonly',
