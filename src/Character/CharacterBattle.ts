@@ -1,7 +1,8 @@
-import { BattleBattle } from '@src/Battle';
+import { BattleBattle, BattleCenter } from '@src/Battle';
 import { UUID } from '@src/Common';
 import { Event, EventData, Subscriber, SubscriberFactory, TriggerTiming } from '@src/EventCenter';
 import { FactionBattle } from '@src/Faction';
+import { Skill } from '@src/Skill';
 import { Status } from '@src/Status';
 import { TeamBattle } from '@src/Team';
 
@@ -86,9 +87,9 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         //         return true;
         //     },
         // });
-        const onAttacking = SubscriberFactory.Subscriber(
-            TriggerTiming.Attacking,
-            (source, data: EventData.EventDataAttacking) => {
+        const onAttacking = SubscriberFactory.Subscriber({
+            event: TriggerTiming.Attacking,
+            callback: (source, data: EventData.EventDataAttacking) => {
                 const target: CharacterBattle = data.target;
                 console.log(`[${this.name}]🗡️[${target.name}]`);
                 this.battle!.eventCenter.trigger(
@@ -96,15 +97,15 @@ export class CharacterBattle extends CharacterNormal implements UUID {
                 );
                 return true;
             },
-            this,
-            2,
-        );
+            filter: this,
+            priority: 2,
+        });
         this.battle!.eventCenter.addSubscriber(onAttacking);
         this.baseBattleEventSubscribers.onAttacking = onAttacking;
 
-        const onAttacked = SubscriberFactory.Subscriber(
-            TriggerTiming.Attacked,
-            (source, data) => {
+        const onAttacked = SubscriberFactory.Subscriber({
+            event: TriggerTiming.Attacked,
+            callback: (source, data) => {
                 const attackSource: CharacterBattle = data.source;
                 const target = data.target;
                 const damage = Math.round(attackSource.properties.atk.battleValue);
@@ -126,28 +127,28 @@ export class CharacterBattle extends CharacterNormal implements UUID {
                 }
                 return true;
             },
-            this,
-            2,
-        );
+            filter: this,
+            priority: 2,
+        });
         this.battle!.eventCenter.addSubscriber(onAttacked);
         this.baseBattleEventSubscribers.onAttacked = onAttacked;
 
-        const onKilling: Subscriber = SubscriberFactory.Subscriber(
-            TriggerTiming.Killing,
-            (source, data): boolean => {
+        const onKilling: Subscriber = SubscriberFactory.Subscriber({
+            event: TriggerTiming.Killing,
+            callback: (source, data): boolean => {
                 const target = data.target;
                 console.log(`[${this.name}]🗡️☠[${target.name}]`);
                 return true;
             },
-            this,
-            2,
-        );
+            filter: this,
+            priority: 2,
+        });
         this.battle!.eventCenter.addSubscriber(onKilling);
         this.baseBattleEventSubscribers.onKilling = onKilling;
 
-        const onKilled: Subscriber = SubscriberFactory.Subscriber(
-            TriggerTiming.Killed,
-            (source, data): boolean => {
+        const onKilled: Subscriber = SubscriberFactory.Subscriber({
+            event: TriggerTiming.Killed,
+            callback: (source, data): boolean => {
                 const killSource = data.source;
                 console.log(`[${this.name}]☠`);
                 this.isAlive = false;
@@ -165,9 +166,9 @@ export class CharacterBattle extends CharacterNormal implements UUID {
                 this.unSubscribeBaseBattleEvent();
                 return true;
             },
-            this,
-            2,
-        );
+            filter: this,
+            priority: 2,
+        });
 
         this.battle!.eventCenter.addSubscriber(onKilled);
         this.baseBattleEventSubscribers.onKilled = onKilled;
@@ -183,13 +184,21 @@ export class CharacterBattle extends CharacterNormal implements UUID {
 
     async action(): Promise<void> {
         console.log(`轮到${this.name}行动了`);
-        // const availableTargets = this.battle!.characters.filter((eachCharacter) => {
-        //     return this.faction !== eachCharacter.faction && eachCharacter.isAlive;
-        // });
-        const availableTargets = this.enemies.filter((eachCharacter) => eachCharacter.isAlive);
-        const target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
+        // const availableTargets = this.enemies.filter((eachCharacter) => eachCharacter.isAlive);
+        // const target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
+
+        const skillSelectData = { source: this, selectedSkill: undefined, selectedTarget: undefined };
         await this.battle!.eventCenter.trigger(
-            new Event({ type: TriggerTiming.Attacking, source: this, data: { source: this, target } }),
+            new Event({
+                type: TriggerTiming.SkillSelect,
+                source: this,
+                data: skillSelectData,
+            }),
+        );
+        const { selectedSkill, selectedTarget } = skillSelectData;
+
+        await this.battle!.eventCenter.trigger(
+            new Event({ type: TriggerTiming.Attacking, source: this, data: { source: this, target: selectedTarget } }),
         );
         await this.battle!.eventCenter.trigger(
             new Event({ type: TriggerTiming.ActionEnd, source: this, data: { source: this } }),

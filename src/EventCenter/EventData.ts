@@ -1,5 +1,6 @@
 import { BattleBattle } from '@src/Battle';
 import { CharacterBattle } from '@src/Character';
+import { Skill } from '@src/Skill';
 
 export interface EventData {} // eslint-disable-line
 export interface EventDataBattleStart extends EventData {
@@ -15,6 +16,11 @@ export interface EventDataActionStart extends EventData {
     source: CharacterBattle;
 }
 
+export interface EventDataSkillSelect extends EventData {
+    source: CharacterBattle;
+    selectedSkill: Skill;
+    selectedTarget: CharacterBattle;
+}
 export interface EventDataSpelling extends EventData {
     source: CharacterBattle;
     target: CharacterBattle;

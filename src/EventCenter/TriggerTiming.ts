@@ -6,6 +6,8 @@ export enum TriggerTiming {
     RoundStart = 'RoundStart',
     /**行动开始时 */
     ActionStart = 'ActionStart',
+    /**选择技能时 */
+    SkillSelect = 'SkillSelect',
     /**施放技能时 */
     Spelling = 'Spelling',
     /**攻击时 */

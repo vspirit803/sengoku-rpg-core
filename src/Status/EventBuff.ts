@@ -44,7 +44,7 @@ export class EventBuff extends Buff {
         //     filter: this.status.source.uuid,
         //     callback,
         // });
-        this.subscriber = SubscriberFactory.Subscriber(event as any, callback as any, this.status.source); // eslint-disable-line @typescript-eslint/no-explicit-any
+        this.subscriber = SubscriberFactory.Subscriber({ event: event as any, callback, filter: this.status.source }); // eslint-disable-line @typescript-eslint/no-explicit-any
         this.status.source.battle!.eventCenter.addSubscriber(this.subscriber);
     }
 
