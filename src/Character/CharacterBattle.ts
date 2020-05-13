@@ -72,7 +72,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     }
 
     /**订阅基本的战斗事件 */
-    private subscribeBaseBattleEvent(): void {
+    subscribeBaseBattleEvent(): void {
         //攻击
         // const onAttacking: Subscriber = new Subscriber({
         //     event: TriggerTiming.Attacking,
@@ -175,7 +175,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     }
 
     /**移除订阅基本的战斗事件 */
-    private unSubscribeBaseBattleEvent(): void {
+    unSubscribeBaseBattleEvent(): void {
         for (const eachSubscriberKey in this.baseBattleEventSubscribers) {
             const eachSubscriber = this.baseBattleEventSubscribers[eachSubscriberKey];
             this.battle!.eventCenter.removeSubscriber(eachSubscriber);
