@@ -32,7 +32,7 @@
     },
     "dependencies": {
         "eslint-plugin-jest": "^23.13.1",
-        "ts-jest": "^25.5.1",
+        "ts-jest": "^26.0.0",
         "ts-loader": "^7.0.3",
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.10"
