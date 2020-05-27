@@ -31,7 +31,7 @@
         "typescript": "^3.9.3"
     },
     "dependencies": {
-        "eslint-plugin-jest": "^23.13.1",
+        "eslint-plugin-jest": "^23.13.2",
         "ts-jest": "^26.0.0",
         "ts-loader": "^7.0.5",
         "webpack": "^4.43.0",
