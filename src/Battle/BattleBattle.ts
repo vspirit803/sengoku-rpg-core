@@ -85,6 +85,16 @@ export class BattleBattle implements UUID {
         // eslint-disable-next-line no-constant-condition
         while (true) {
             const character = this.battleActionQueue.getNext();
+            this.eventCenter.trigger(
+                new Event({
+                    type: TriggerTiming.ActionStart,
+                    source: character,
+                    data: {
+                        source: character,
+                    },
+                }),
+            );
+
             await character.action();
             // await new Promise((resolve) => {
             //     setTimeout(() => {
@@ -102,8 +112,8 @@ export class BattleBattle implements UUID {
                             round: this.battleActionQueue.roundCount,
                             killed: this.characters
                                 .filter((eachCharacter) => eachCharacter.faction !== this.factions[0])
-                                .filter((eachCharacter) => !eachCharacter.isAlive)
-                                .map((eachCharacter) => eachCharacter.id),
+                                .filter((eachCharacter) => !eachCharacter.isAlive),
+                            // .map((eachCharacter) => eachCharacter.id),
                         },
                     }),
                 );
