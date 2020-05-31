@@ -1,4 +1,4 @@
-import { BattleBattle, BattleCenter } from '@src/Battle';
+import { BattleBattle } from '@src/Battle';
 import { UUID } from '@src/Common';
 import { Event, EventData, Subscriber, SubscriberFactory, TriggerTiming } from '@src/EventCenter';
 import { FactionBattle } from '@src/Faction';
@@ -108,7 +108,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
             callback: (source, data) => {
                 const attackSource: CharacterBattle = data.source;
                 const target = data.target;
-                const damage = Math.round(attackSource.properties.atk.battleValue);
+                const damage = Math.round(attackSource.properties.atk.battleValue) - target.properties.def.battleValue;
                 const newHp = target.currHp > damage ? target.currHp - damage : 0;
                 // console.log(
                 //     `[${target.name}]    ${target.currHp}❤️ - ${damage}💔 -> ${newHp}/${target.properties.hp.battleValue}`,
@@ -184,8 +184,8 @@ export class CharacterBattle extends CharacterNormal implements UUID {
 
     async action(): Promise<void> {
         console.log(`轮到${this.name}行动了`);
-        // const availableTargets = this.enemies.filter((eachCharacter) => eachCharacter.isAlive);
-        // const target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
+        const availableTargets = this.enemies.filter((eachCharacter) => eachCharacter.isAlive);
+        const target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
 
         const skillSelectData = { source: this, selectedSkill: undefined, selectedTarget: undefined };
         await this.battle!.eventCenter.trigger(
@@ -198,7 +198,11 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         const { selectedSkill, selectedTarget } = skillSelectData;
 
         await this.battle!.eventCenter.trigger(
-            new Event({ type: TriggerTiming.Attacking, source: this, data: { source: this, target: selectedTarget } }),
+            new Event({
+                type: TriggerTiming.Attacking,
+                source: this,
+                data: { source: this, target: selectedTarget ?? target },
+            }),
         );
         await this.battle!.eventCenter.trigger(
             new Event({ type: TriggerTiming.ActionEnd, source: this, data: { source: this } }),
