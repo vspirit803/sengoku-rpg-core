@@ -23,6 +23,10 @@ export class BattleBattle implements UUID {
     eventCenter: EventCenter;
     successCondition: Condition;
     battleActionQueue: BattleActionQueueBase;
+    /**
+     * 自动模式
+     */
+    autoMode: boolean;
 
     constructor(
         battleConfiguration: BattleConfiguration,
@@ -42,6 +46,7 @@ export class BattleBattle implements UUID {
         this.factions = [];
         this.eventCenter = new EventCenter();
         this.successCondition = successCondition ?? new Condition();
+        this.autoMode = false;
         if (battleConfiguration && game && playerTeam) {
             this.name = battleConfiguration.name;
             this.addFactions(

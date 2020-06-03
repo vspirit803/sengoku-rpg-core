@@ -1,6 +1,7 @@
 import { BattleBattle } from '@src/Battle';
 import { UUID } from '@src/Common';
 import { Event, EventData, Subscriber, SubscriberFactory, TriggerTiming } from '@src/EventCenter';
+import { EventDataSkillSelect } from '@src/EventCenter/EventData';
 import { FactionBattle } from '@src/Faction';
 import { Skill } from '@src/Skill';
 import { Status } from '@src/Status';
@@ -56,6 +57,11 @@ export class CharacterBattle extends CharacterNormal implements UUID {
 
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     loadSave(): void {}
+
+    /**是否玩家操控角色 */
+    get isPlayerControl(): boolean {
+        return this.faction === this.battle?.factions[0];
+    }
 
     setBattle(battle: BattleBattle): void {
         // this.unSubscribeBaseBattleEvent();
@@ -183,25 +189,31 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     }
 
     async action(): Promise<void> {
-        console.log(`轮到${this.name}行动了`);
         const availableTargets = this.enemies.filter((eachCharacter) => eachCharacter.isAlive);
-        const target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
+        let target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
 
-        const skillSelectData = { source: this, selectedSkill: undefined, selectedTarget: undefined };
-        await this.battle!.eventCenter.trigger(
-            new Event({
-                type: TriggerTiming.SkillSelect,
+        if (!this.battle!.autoMode && this.isPlayerControl) {
+            const skillSelectData: EventDataSkillSelect = {
                 source: this,
-                data: skillSelectData,
-            }),
-        );
-        const { selectedSkill, selectedTarget } = skillSelectData;
+                selectedSkill: undefined,
+                selectedTarget: undefined,
+            };
+            await this.battle!.eventCenter.trigger(
+                new Event({
+                    type: TriggerTiming.SkillSelect,
+                    source: this,
+                    data: skillSelectData,
+                }),
+            );
+            const { selectedSkill, selectedTarget } = skillSelectData;
+            target = selectedTarget ?? target;
+        }
 
         await this.battle!.eventCenter.trigger(
             new Event({
                 type: TriggerTiming.Attacking,
                 source: this,
-                data: { source: this, target: selectedTarget ?? target },
+                data: { source: this, target },
             }),
         );
         await this.battle!.eventCenter.trigger(

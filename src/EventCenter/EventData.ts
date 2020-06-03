@@ -18,8 +18,8 @@ export interface EventDataActionStart extends EventData {
 
 export interface EventDataSkillSelect extends EventData {
     source: CharacterBattle;
-    selectedSkill: Skill;
-    selectedTarget: CharacterBattle;
+    selectedSkill?: Skill;
+    selectedTarget?: CharacterBattle;
 }
 export interface EventDataSpelling extends EventData {
     source: CharacterBattle;
