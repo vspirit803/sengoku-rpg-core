@@ -192,6 +192,10 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         const availableTargets = this.enemies.filter((eachCharacter) => eachCharacter.isAlive);
         let target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
 
+        if (this.isPlayerControl && this.battle!.fireTarget) {
+            target = this.battle!.fireTarget;
+        }
+
         if (!this.battle!.autoMode && this.isPlayerControl) {
             const skillSelectData: EventDataSkillSelect = {
                 source: this,

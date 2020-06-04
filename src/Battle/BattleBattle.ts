@@ -27,6 +27,12 @@ export class BattleBattle implements UUID {
      * 自动模式
      */
     autoMode: boolean;
+    /**集火目标 */
+    fireTarget?: CharacterBattle;
+
+    setFireTarget(fireTarget: CharacterBattle): void {
+        this.fireTarget = fireTarget;
+    }
 
     constructor(
         battleConfiguration: BattleConfiguration,
