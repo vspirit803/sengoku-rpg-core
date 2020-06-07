@@ -4,6 +4,7 @@ import { Event, EventData, Subscriber, SubscriberFactory, TriggerTiming } from '
 import { EventDataSkillSelect } from '@src/EventCenter/EventData';
 import { FactionBattle } from '@src/Faction';
 import { Skill } from '@src/Skill';
+import { skillStore } from '@src/Skill/Skills';
 import { Status } from '@src/Status';
 import { TeamBattle } from '@src/Team';
 
@@ -136,8 +137,37 @@ export class CharacterBattle extends CharacterNormal implements UUID {
             filter: this,
             priority: 2,
         });
+
         this.battle!.eventCenter.addSubscriber(onAttacked);
         this.baseBattleEventSubscribers.onAttacked = onAttacked;
+
+        const onDamaged = SubscriberFactory.Subscriber({
+            event: TriggerTiming.Damaged,
+            callback: (source, data) => {
+                const damageSource: CharacterBattle = data.source;
+                const target = data.target;
+                const damage = data.damage;
+                const newHp = target.currHp > damage ? target.currHp - damage : 0;
+                console.log(`[${target.name}]💔${damage} -> ${newHp}/${target.properties.hp.battleValue}`);
+                target.currHp = newHp;
+                if (target.currHp <= 0) {
+                    target.currHp = 0;
+                    target.battle!.eventCenter.trigger(
+                        new Event({
+                            type: TriggerTiming.Killed,
+                            source: target,
+                            data: { source: damageSource, target },
+                        }),
+                    );
+                }
+                return true;
+            },
+            filter: this,
+            priority: 2,
+        });
+
+        this.battle!.eventCenter.addSubscriber(onDamaged);
+        this.baseBattleEventSubscribers.onDamaged = onDamaged;
 
         const onKilling: Subscriber = SubscriberFactory.Subscriber({
             event: TriggerTiming.Killing,
@@ -191,6 +221,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     async action(): Promise<void> {
         const availableTargets = this.enemies.filter((eachCharacter) => eachCharacter.isAlive);
         let target = availableTargets[Math.floor(Math.random() * availableTargets.length)];
+        let skill = this.skills[0];
 
         if (this.isPlayerControl && this.battle!.fireTarget) {
             target = this.battle!.fireTarget;
@@ -211,15 +242,19 @@ export class CharacterBattle extends CharacterNormal implements UUID {
             );
             const { selectedSkill, selectedTarget } = skillSelectData;
             target = selectedTarget ?? target;
+            skill = selectedSkill ?? skill;
         }
 
-        await this.battle!.eventCenter.trigger(
-            new Event({
-                type: TriggerTiming.Attacking,
-                source: this,
-                data: { source: this, target },
-            }),
-        );
+        await skillStore[skill.id](skill, this, target);
+
+        // await this.battle!.eventCenter.trigger(
+        //     new Event({
+        //         type: TriggerTiming.Attacking,
+        //         source: this,
+        //         data: { source: this, target },
+        //     }),
+        // );
+
         await this.battle!.eventCenter.trigger(
             new Event({ type: TriggerTiming.ActionEnd, source: this, data: { source: this } }),
         );

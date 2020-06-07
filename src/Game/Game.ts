@@ -4,10 +4,12 @@ import cities from '@assets/data/cities.json';
 import equipments from '@assets/data/items/equipments.json';
 import maps from '@assets/data/maps.json';
 import provinces from '@assets/data/provinces.json';
+import skills from '@assets/data/skills.json';
 import { BattleCenter } from '@src/Battle';
 import { CharacterCenter } from '@src/Character';
 import { ItemCenter } from '@src/Item';
 import { MapCenter } from '@src/Map';
+import { SkillFactory } from '@src/Skill';
 import { TaskCenter } from '@src/Task';
 import { TeamCenter } from '@src/Team';
 
@@ -31,6 +33,7 @@ export class Game {
     teamCenter: TeamCenter;
 
     constructor() {
+        SkillFactory.loadConfiguration(skills);
         //初始化角色中心
         this.characterCenter = new CharacterCenter();
         this.characterCenter.setGame(this);

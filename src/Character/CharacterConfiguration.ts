@@ -9,4 +9,5 @@ export interface CharacterConfiguration {
     name: string;
     properties: { [propName: string]: CharacterPropertyConfiguration };
     equipmentSlots: Array<EquipmentSlotConfiguration>;
+    skills: Array<string>;
 }

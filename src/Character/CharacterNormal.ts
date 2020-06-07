@@ -1,5 +1,6 @@
 import { UUID } from '@src/Common';
 import { ItemEquipment } from '@src/Item';
+import { Skill, SkillFactory } from '@src/Skill';
 
 import { CharacterConfiguration } from './CharacterConfiguration';
 import { CharacterPropertyNormal } from './CharacterPropertyNormal';
@@ -16,6 +17,7 @@ export class CharacterNormal implements UUID {
     level: number;
     properties: { [propName: string]: CharacterPropertyNormal };
     equipmentSlots: Array<EquipmentSlot>;
+    skills: Array<Skill>;
 
     constructor(character: CharacterNormal);
     constructor(character: CharacterConfiguration);
@@ -25,11 +27,13 @@ export class CharacterNormal implements UUID {
         this.name = character.name;
         this.properties = {};
         this.equipmentSlots = [];
+        this.skills = [];
 
         if (character instanceof CharacterNormal) {
             this.level = character.level;
             this.properties = character.properties;
             this.equipmentSlots = character.equipmentSlots;
+            this.skills = character.skills;
         } else {
             this.level = 0;
             for (const eachPropName in character.properties) {
@@ -42,6 +46,7 @@ export class CharacterNormal implements UUID {
             this.equipmentSlots = character.equipmentSlots.map(
                 (eachEquipmentSlotConfiguration) => new EquipmentSlot(eachEquipmentSlotConfiguration),
             );
+            this.skills = character.skills.map((eachId) => SkillFactory.getSkill(eachId));
         }
     }
 

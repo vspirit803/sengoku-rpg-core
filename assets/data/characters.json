@@ -12,7 +12,8 @@
             "hp": { "baseValue": 200, "increaseValue": 20 },
             "speed": { "baseValue": 100, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00004", "S00005", "S00006", "S00007"]
     },
     {
         "id": "C0002",
@@ -27,7 +28,8 @@
             "hp": { "baseValue": 470, "increaseValue": 47 },
             "speed": { "baseValue": 90, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00001", "S00002", "S00003"]
     },
     {
         "id": "C0003",
@@ -42,7 +44,8 @@
             "hp": { "baseValue": 470, "increaseValue": 47 },
             "speed": { "baseValue": 87, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0004",
@@ -57,7 +60,8 @@
             "hp": { "baseValue": 500, "increaseValue": 50 },
             "speed": { "baseValue": 86, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0005",
@@ -72,7 +76,8 @@
             "hp": { "baseValue": 450, "increaseValue": 45 },
             "speed": { "baseValue": 89, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0006",
@@ -87,7 +92,8 @@
             "hp": { "baseValue": 450, "increaseValue": 45 },
             "speed": { "baseValue": 84, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0007",
@@ -102,7 +108,8 @@
             "hp": { "baseValue": 485, "increaseValue": 49 },
             "speed": { "baseValue": 89, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0008",
@@ -117,7 +124,8 @@
             "hp": { "baseValue": 465, "increaseValue": 47 },
             "speed": { "baseValue": 81, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0009",
@@ -132,7 +140,8 @@
             "hp": { "baseValue": 455, "increaseValue": 46 },
             "speed": { "baseValue": 79, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0010",
@@ -147,7 +156,8 @@
             "hp": { "baseValue": 465, "increaseValue": 47 },
             "speed": { "baseValue": 82, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0011",
@@ -162,7 +172,8 @@
             "hp": { "baseValue": 490, "increaseValue": 49 },
             "speed": { "baseValue": 73, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0012",
@@ -177,7 +188,8 @@
             "hp": { "baseValue": 435, "increaseValue": 44 },
             "speed": { "baseValue": 79, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0013",
@@ -192,7 +204,8 @@
             "hp": { "baseValue": 445, "increaseValue": 45 },
             "speed": { "baseValue": 76, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0014",
@@ -207,7 +220,8 @@
             "hp": { "baseValue": 475, "increaseValue": 48 },
             "speed": { "baseValue": 85, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0015",
@@ -222,7 +236,8 @@
             "hp": { "baseValue": 445, "increaseValue": 45 },
             "speed": { "baseValue": 83, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0016",
@@ -237,7 +252,8 @@
             "hp": { "baseValue": 455, "increaseValue": 46 },
             "speed": { "baseValue": 77, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0017",
@@ -252,7 +268,8 @@
             "hp": { "baseValue": 435, "increaseValue": 44 },
             "speed": { "baseValue": 75, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0018",
@@ -267,7 +284,8 @@
             "hp": { "baseValue": 495, "increaseValue": 50 },
             "speed": { "baseValue": 72, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0019",
@@ -282,7 +300,8 @@
             "hp": { "baseValue": 455, "increaseValue": 46 },
             "speed": { "baseValue": 80, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0020",
@@ -297,7 +316,8 @@
             "hp": { "baseValue": 435, "increaseValue": 44 },
             "speed": { "baseValue": 88, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0021",
@@ -312,7 +332,8 @@
             "hp": { "baseValue": 480, "increaseValue": 48 },
             "speed": { "baseValue": 79, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0022",
@@ -327,7 +348,8 @@
             "hp": { "baseValue": 415, "increaseValue": 42 },
             "speed": { "baseValue": 52, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0023",
@@ -342,7 +364,8 @@
             "hp": { "baseValue": 415, "increaseValue": 42 },
             "speed": { "baseValue": 58, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0024",
@@ -357,7 +380,8 @@
             "hp": { "baseValue": 460, "increaseValue": 46 },
             "speed": { "baseValue": 76, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0025",
@@ -372,7 +396,8 @@
             "hp": { "baseValue": 395, "increaseValue": 40 },
             "speed": { "baseValue": 73, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0026",
@@ -387,7 +412,8 @@
             "hp": { "baseValue": 435, "increaseValue": 44 },
             "speed": { "baseValue": 85, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0027",
@@ -402,7 +428,8 @@
             "hp": { "baseValue": 405, "increaseValue": 41 },
             "speed": { "baseValue": 60, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0028",
@@ -417,7 +444,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 70, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0029",
@@ -432,7 +460,8 @@
             "hp": { "baseValue": 435, "increaseValue": 44 },
             "speed": { "baseValue": 82, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0030",
@@ -447,7 +476,8 @@
             "hp": { "baseValue": 485, "increaseValue": 49 },
             "speed": { "baseValue": 71, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0031",
@@ -462,7 +492,8 @@
             "hp": { "baseValue": 480, "increaseValue": 48 },
             "speed": { "baseValue": 83, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0032",
@@ -477,7 +508,8 @@
             "hp": { "baseValue": 455, "increaseValue": 46 },
             "speed": { "baseValue": 76, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0033",
@@ -492,7 +524,8 @@
             "hp": { "baseValue": 380, "increaseValue": 38 },
             "speed": { "baseValue": 70, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0034",
@@ -507,7 +540,8 @@
             "hp": { "baseValue": 440, "increaseValue": 44 },
             "speed": { "baseValue": 62, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0035",
@@ -522,7 +556,8 @@
             "hp": { "baseValue": 440, "increaseValue": 44 },
             "speed": { "baseValue": 87, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0036",
@@ -537,7 +572,8 @@
             "hp": { "baseValue": 410, "increaseValue": 41 },
             "speed": { "baseValue": 55, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0037",
@@ -552,7 +588,8 @@
             "hp": { "baseValue": 435, "increaseValue": 44 },
             "speed": { "baseValue": 54, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0038",
@@ -567,7 +604,8 @@
             "hp": { "baseValue": 435, "increaseValue": 44 },
             "speed": { "baseValue": 80, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0039",
@@ -582,7 +620,8 @@
             "hp": { "baseValue": 465, "increaseValue": 47 },
             "speed": { "baseValue": 80, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0040",
@@ -597,7 +636,8 @@
             "hp": { "baseValue": 405, "increaseValue": 41 },
             "speed": { "baseValue": 52, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0041",
@@ -612,7 +652,8 @@
             "hp": { "baseValue": 425, "increaseValue": 43 },
             "speed": { "baseValue": 80, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0042",
@@ -627,7 +668,8 @@
             "hp": { "baseValue": 445, "increaseValue": 45 },
             "speed": { "baseValue": 72, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0043",
@@ -642,7 +684,8 @@
             "hp": { "baseValue": 400, "increaseValue": 40 },
             "speed": { "baseValue": 50, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0044",
@@ -657,7 +700,8 @@
             "hp": { "baseValue": 425, "increaseValue": 43 },
             "speed": { "baseValue": 73, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0045",
@@ -672,7 +716,8 @@
             "hp": { "baseValue": 425, "increaseValue": 43 },
             "speed": { "baseValue": 44, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0046",
@@ -687,7 +732,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 80, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0047",
@@ -702,7 +748,8 @@
             "hp": { "baseValue": 355, "increaseValue": 36 },
             "speed": { "baseValue": 76, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0048",
@@ -717,7 +764,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 82, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0049",
@@ -732,7 +780,8 @@
             "hp": { "baseValue": 430, "increaseValue": 43 },
             "speed": { "baseValue": 73, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0050",
@@ -747,7 +796,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 56, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0051",
@@ -762,7 +812,8 @@
             "hp": { "baseValue": 495, "increaseValue": 50 },
             "speed": { "baseValue": 47, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0052",
@@ -777,7 +828,8 @@
             "hp": { "baseValue": 445, "increaseValue": 45 },
             "speed": { "baseValue": 70, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0053",
@@ -792,7 +844,8 @@
             "hp": { "baseValue": 385, "increaseValue": 39 },
             "speed": { "baseValue": 63, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0054",
@@ -807,7 +860,8 @@
             "hp": { "baseValue": 380, "increaseValue": 38 },
             "speed": { "baseValue": 71, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0055",
@@ -822,7 +876,8 @@
             "hp": { "baseValue": 395, "increaseValue": 40 },
             "speed": { "baseValue": 70, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0056",
@@ -837,7 +892,8 @@
             "hp": { "baseValue": 405, "increaseValue": 41 },
             "speed": { "baseValue": 70, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0057",
@@ -852,7 +908,8 @@
             "hp": { "baseValue": 385, "increaseValue": 39 },
             "speed": { "baseValue": 53, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0058",
@@ -867,7 +924,8 @@
             "hp": { "baseValue": 465, "increaseValue": 47 },
             "speed": { "baseValue": 68, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0059",
@@ -882,7 +940,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 74, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0060",
@@ -897,7 +956,8 @@
             "hp": { "baseValue": 375, "increaseValue": 38 },
             "speed": { "baseValue": 51, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0061",
@@ -912,7 +972,8 @@
             "hp": { "baseValue": 395, "increaseValue": 40 },
             "speed": { "baseValue": 67, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0062",
@@ -927,7 +988,8 @@
             "hp": { "baseValue": 390, "increaseValue": 39 },
             "speed": { "baseValue": 71, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0063",
@@ -942,7 +1004,8 @@
             "hp": { "baseValue": 410, "increaseValue": 41 },
             "speed": { "baseValue": 33, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0064",
@@ -957,7 +1020,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 82, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0065",
@@ -972,7 +1036,8 @@
             "hp": { "baseValue": 405, "increaseValue": 41 },
             "speed": { "baseValue": 80, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0066",
@@ -987,7 +1052,8 @@
             "hp": { "baseValue": 350, "increaseValue": 35 },
             "speed": { "baseValue": 72, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0067",
@@ -1002,7 +1068,8 @@
             "hp": { "baseValue": 445, "increaseValue": 45 },
             "speed": { "baseValue": 52, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0068",
@@ -1017,7 +1084,8 @@
             "hp": { "baseValue": 430, "increaseValue": 43 },
             "speed": { "baseValue": 56, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0069",
@@ -1032,7 +1100,8 @@
             "hp": { "baseValue": 415, "increaseValue": 42 },
             "speed": { "baseValue": 72, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0070",
@@ -1047,7 +1116,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 77, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0071",
@@ -1062,7 +1132,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 72, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0072",
@@ -1077,7 +1148,8 @@
             "hp": { "baseValue": 400, "increaseValue": 40 },
             "speed": { "baseValue": 67, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0073",
@@ -1092,7 +1164,8 @@
             "hp": { "baseValue": 360, "increaseValue": 36 },
             "speed": { "baseValue": 70, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0074",
@@ -1107,7 +1180,8 @@
             "hp": { "baseValue": 365, "increaseValue": 37 },
             "speed": { "baseValue": 49, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0075",
@@ -1122,7 +1196,8 @@
             "hp": { "baseValue": 350, "increaseValue": 35 },
             "speed": { "baseValue": 60, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0076",
@@ -1137,7 +1212,8 @@
             "hp": { "baseValue": 410, "increaseValue": 41 },
             "speed": { "baseValue": 71, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0077",
@@ -1152,7 +1228,8 @@
             "hp": { "baseValue": 450, "increaseValue": 45 },
             "speed": { "baseValue": 68, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0078",
@@ -1167,7 +1244,8 @@
             "hp": { "baseValue": 405, "increaseValue": 41 },
             "speed": { "baseValue": 83, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0079",
@@ -1182,7 +1260,8 @@
             "hp": { "baseValue": 340, "increaseValue": 34 },
             "speed": { "baseValue": 56, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0080",
@@ -1197,7 +1276,8 @@
             "hp": { "baseValue": 355, "increaseValue": 36 },
             "speed": { "baseValue": 68, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0081",
@@ -1212,7 +1292,8 @@
             "hp": { "baseValue": 430, "increaseValue": 43 },
             "speed": { "baseValue": 50, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0082",
@@ -1227,7 +1308,8 @@
             "hp": { "baseValue": 375, "increaseValue": 38 },
             "speed": { "baseValue": 52, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0083",
@@ -1242,7 +1324,8 @@
             "hp": { "baseValue": 365, "increaseValue": 37 },
             "speed": { "baseValue": 74, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0084",
@@ -1257,7 +1340,8 @@
             "hp": { "baseValue": 370, "increaseValue": 37 },
             "speed": { "baseValue": 75, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0085",
@@ -1272,7 +1356,8 @@
             "hp": { "baseValue": 405, "increaseValue": 41 },
             "speed": { "baseValue": 73, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0086",
@@ -1287,7 +1372,8 @@
             "hp": { "baseValue": 415, "increaseValue": 42 },
             "speed": { "baseValue": 73, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0087",
@@ -1302,7 +1388,8 @@
             "hp": { "baseValue": 385, "increaseValue": 39 },
             "speed": { "baseValue": 68, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0088",
@@ -1317,7 +1404,8 @@
             "hp": { "baseValue": 410, "increaseValue": 41 },
             "speed": { "baseValue": 76, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0089",
@@ -1332,7 +1420,8 @@
             "hp": { "baseValue": 410, "increaseValue": 41 },
             "speed": { "baseValue": 74, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0090",
@@ -1347,7 +1436,8 @@
             "hp": { "baseValue": 390, "increaseValue": 39 },
             "speed": { "baseValue": 74, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0091",
@@ -1362,7 +1452,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 78, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0092",
@@ -1377,7 +1468,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 70, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0093",
@@ -1392,7 +1484,8 @@
             "hp": { "baseValue": 390, "increaseValue": 39 },
             "speed": { "baseValue": 63, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0094",
@@ -1407,7 +1500,8 @@
             "hp": { "baseValue": 345, "increaseValue": 35 },
             "speed": { "baseValue": 57, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0095",
@@ -1422,7 +1516,8 @@
             "hp": { "baseValue": 390, "increaseValue": 39 },
             "speed": { "baseValue": 69, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0096",
@@ -1437,7 +1532,8 @@
             "hp": { "baseValue": 425, "increaseValue": 43 },
             "speed": { "baseValue": 53, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0097",
@@ -1452,7 +1548,8 @@
             "hp": { "baseValue": 360, "increaseValue": 36 },
             "speed": { "baseValue": 55, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0098",
@@ -1467,7 +1564,8 @@
             "hp": { "baseValue": 400, "increaseValue": 40 },
             "speed": { "baseValue": 69, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0099",
@@ -1482,7 +1580,8 @@
             "hp": { "baseValue": 350, "increaseValue": 35 },
             "speed": { "baseValue": 74, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0100",
@@ -1497,7 +1596,8 @@
             "hp": { "baseValue": 475, "increaseValue": 48 },
             "speed": { "baseValue": 60, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0101",
@@ -1512,7 +1612,8 @@
             "hp": { "baseValue": 385, "increaseValue": 39 },
             "speed": { "baseValue": 76, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0102",
@@ -1527,7 +1628,8 @@
             "hp": { "baseValue": 460, "increaseValue": 46 },
             "speed": { "baseValue": 58, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0103",
@@ -1542,7 +1644,8 @@
             "hp": { "baseValue": 420, "increaseValue": 42 },
             "speed": { "baseValue": 65, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0104",
@@ -1557,7 +1660,8 @@
             "hp": { "baseValue": 345, "increaseValue": 35 },
             "speed": { "baseValue": 73, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0105",
@@ -1572,7 +1676,8 @@
             "hp": { "baseValue": 385, "increaseValue": 39 },
             "speed": { "baseValue": 35, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0106",
@@ -1587,7 +1692,8 @@
             "hp": { "baseValue": 310, "increaseValue": 31 },
             "speed": { "baseValue": 70, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0107",
@@ -1602,7 +1708,8 @@
             "hp": { "baseValue": 375, "increaseValue": 38 },
             "speed": { "baseValue": 57, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0108",
@@ -1617,7 +1724,8 @@
             "hp": { "baseValue": 425, "increaseValue": 43 },
             "speed": { "baseValue": 57, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0109",
@@ -1632,7 +1740,8 @@
             "hp": { "baseValue": 385, "increaseValue": 39 },
             "speed": { "baseValue": 75, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0110",
@@ -1647,7 +1756,8 @@
             "hp": { "baseValue": 375, "increaseValue": 38 },
             "speed": { "baseValue": 68, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0111",
@@ -1662,7 +1772,8 @@
             "hp": { "baseValue": 360, "increaseValue": 36 },
             "speed": { "baseValue": 63, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0112",
@@ -1677,7 +1788,8 @@
             "hp": { "baseValue": 410, "increaseValue": 41 },
             "speed": { "baseValue": 48, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "C0113",
@@ -1692,7 +1804,8 @@
             "hp": { "baseValue": 385, "increaseValue": 39 },
             "speed": { "baseValue": 85, "increaseValue": 0 }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "Enemy0001",
@@ -1728,7 +1841,8 @@
                 "increaseValue": 0
             }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "Enemy0002",
@@ -1764,7 +1878,8 @@
                 "increaseValue": 0
             }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     },
     {
         "id": "Enemy0003",
@@ -1800,6 +1915,7 @@
                 "increaseValue": 0
             }
         },
-        "equipmentSlots": []
+        "equipmentSlots": [],
+        "skills": ["S00000"]
     }
 ]
