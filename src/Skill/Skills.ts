@@ -65,6 +65,9 @@ export const skillStore: {
                     data: { source, target, damage },
                 }),
             );
+            await new Promise((resolve) => {
+                setTimeout(resolve, 100);
+            });
         }
     },
     S00007: async function (skill: Skill, source: CharacterBattle, target: CharacterBattle) {
