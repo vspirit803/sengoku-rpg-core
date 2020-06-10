@@ -16,7 +16,7 @@ export const skillStore: {
             new Event({
                 type: TriggerTiming.Damaged,
                 source: target,
-                data: { source, target, damage },
+                data: { source, target, damage, isCrit },
             }),
         );
     },
@@ -31,7 +31,7 @@ export const skillStore: {
             new Event({
                 type: TriggerTiming.Damaged,
                 source: target,
-                data: { source, target, damage },
+                data: { source, target, damage, isCrit },
             }),
         );
     },
@@ -46,7 +46,7 @@ export const skillStore: {
             new Event({
                 type: TriggerTiming.Damaged,
                 source: target,
-                data: { source, target, damage },
+                data: { source, target, damage, isCrit },
             }),
         );
     },
@@ -62,7 +62,7 @@ export const skillStore: {
                 new Event({
                     type: TriggerTiming.Damaged,
                     source: target,
-                    data: { source, target, damage },
+                    data: { source, target, damage, isCrit },
                 }),
             );
             await new Promise((resolve) => {
@@ -81,7 +81,7 @@ export const skillStore: {
             new Event({
                 type: TriggerTiming.Damaged,
                 source: target,
-                data: { source, target, damage },
+                data: { source, target, damage, isCrit },
             }),
         );
     },

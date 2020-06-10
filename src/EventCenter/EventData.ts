@@ -46,6 +46,7 @@ export interface EventDataDamaged extends EventData {
     source: CharacterBattle;
     target: CharacterBattle;
     damage: number;
+    isCrit: boolean;
 }
 
 export interface EventDataKilling extends EventData {
