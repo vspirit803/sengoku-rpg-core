@@ -35,6 +35,21 @@ export const skillStore: {
             }),
         );
     },
+    S00003: async function (skill: Skill, source: CharacterBattle, target: CharacterBattle) {
+        const battle = source.battle!;
+        const ratio = skill.data.ratio;
+        const isCrit = Math.random() < source.properties.critRate.battleValue;
+        const damage = Math.round(
+            source.properties.atk.battleValue * (isCrit ? source.properties.critMultiply.battleValue : 1) * ratio,
+        );
+        await battle.eventCenter.trigger(
+            new Event({
+                type: TriggerTiming.Damaged,
+                source: target,
+                data: { source, target, damage, isCrit },
+            }),
+        );
+    },
     S00004: async function (skill: Skill, source: CharacterBattle, target: CharacterBattle) {
         const battle = source.battle!;
         const ratio = skill.data.ratio;
@@ -65,9 +80,6 @@ export const skillStore: {
                     data: { source, target, damage, isCrit },
                 }),
             );
-            await new Promise((resolve) => {
-                setTimeout(resolve, 100);
-            });
         }
     },
     S00007: async function (skill: Skill, source: CharacterBattle, target: CharacterBattle) {
