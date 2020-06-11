@@ -6,6 +6,7 @@ test('角色属性(常规) - normalValue校验', () => {
         name: '织田信长',
         properties: { atk: { baseValue: 10, increaseValue: 5 } },
         equipmentSlots: [],
+        skills: [],
     });
     characterNormal.setLevel(5);
     const property = new CharacterPropertyNormal({

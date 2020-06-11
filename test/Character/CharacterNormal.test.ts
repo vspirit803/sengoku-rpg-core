@@ -10,6 +10,7 @@ test('角色(常规) - 传值初始化', () => {
         name: '织田信长',
         properties: { attack },
         equipmentSlots: [],
+        skills: [],
     };
     const character = new CharacterNormal(characterConfiguration);
     character.level = 5;

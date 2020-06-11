@@ -24,6 +24,7 @@ test('setWearer', () => {
         name: '织田信长',
         properties: { atk: { baseValue: 10, increaseValue: 5 } },
         equipmentSlots: [],
+        skills: [],
     });
     const item = new ItemEquipment({
         id: 'Sword0001',
