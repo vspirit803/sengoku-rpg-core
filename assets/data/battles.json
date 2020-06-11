@@ -12,7 +12,7 @@
                         "members": [
                             {
                                 "id": "Enemy0001",
-                                "level": 10
+                                "level": 50
                             }
                         ]
                     },
@@ -51,7 +51,7 @@
                         "members": [
                             {
                                 "id": "Enemy0001",
-                                "level": 50
+                                "level": 10
                             }
                         ]
                     },
@@ -90,7 +90,7 @@
                         "members": [
                             {
                                 "id": "Enemy0001",
-                                "level": 10
+                                "level": 50
                             }
                         ]
                     },
