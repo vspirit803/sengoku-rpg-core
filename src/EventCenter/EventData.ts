@@ -36,16 +36,33 @@ export interface EventDataAttacked extends EventData {
   target: CharacterBattle;
 }
 
-export interface EventDataDamageing extends EventData {
+export interface EventDataDamaging extends EventData {
   source: CharacterBattle;
   target: CharacterBattle;
   damage: number;
+  finalDamage?: number;
+  actualDamage?: number;
+  overflowDamage?: number;
+  isCrit: boolean;
 }
 
 export interface EventDataDamaged extends EventData {
   source: CharacterBattle;
   target: CharacterBattle;
   damage: number;
+  finalDamage?: number;
+  actualDamage?: number;
+  overflowDamage?: number;
+  isCrit: boolean;
+}
+
+export interface EventDataAfterDamaging extends EventData {
+  source: CharacterBattle;
+  target: CharacterBattle;
+  damage: number;
+  finalDamage?: number;
+  actualDamage?: number;
+  overflowDamage?: number;
   isCrit: boolean;
 }
 

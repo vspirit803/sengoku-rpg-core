@@ -1,5 +1,6 @@
 import { CharacterBattle } from '@src/Character';
 import { Event, TriggerTiming } from '@src/EventCenter';
+import { EventDataDamaging } from '@src/EventCenter/EventData';
 import { Skill } from '@src/Skill';
 
 export const skillStore: {
@@ -35,6 +36,7 @@ export const skillStore: {
       }),
     );
   },
+  //地狱之手 茨木大招
   S00003: async function (skill: Skill, source: CharacterBattle, target: CharacterBattle) {
     const battle = source.battle!;
     const ratio = skill.data.ratio;
@@ -42,11 +44,12 @@ export const skillStore: {
     const damage = Math.round(
       source.properties.atk.battleValue * (isCrit ? source.properties.critMultiply.battleValue : 1) * ratio,
     );
+    const data: EventDataDamaging = { source, target, damage, isCrit };
     await battle.eventCenter.trigger(
       new Event({
-        type: TriggerTiming.Damaged,
-        source: target,
-        data: { source, target, damage, isCrit },
+        type: TriggerTiming.Damaging,
+        source,
+        data,
       }),
     );
   },

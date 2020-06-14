@@ -96,7 +96,7 @@ export class SubscriberFactory {
     priority,
   }: {
     event: TriggerTiming.Damaging;
-    callback: (source: UUID, data: EventData.EventDataDamageing) => Promise<boolean> | boolean;
+    callback: (source: UUID, data: EventData.EventDataDamaging) => Promise<boolean> | boolean;
     filter?: UUID | Array<UUID>;
     priority?: number;
   }): Subscriber;
@@ -109,6 +109,18 @@ export class SubscriberFactory {
   }: {
     event: TriggerTiming.Damaged;
     callback: (source: UUID, data: EventData.EventDataDamaged) => Promise<boolean> | boolean;
+    filter?: UUID | Array<UUID>;
+    priority?: number;
+  }): Subscriber;
+
+  static Subscriber({
+    event,
+    callback,
+    filter,
+    priority,
+  }: {
+    event: TriggerTiming.AfterDamaging;
+    callback: (source: UUID, data: EventData.EventDataAfterDamaging) => Promise<boolean> | boolean;
     filter?: UUID | Array<UUID>;
     priority?: number;
   }): Subscriber;

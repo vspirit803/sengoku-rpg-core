@@ -81,19 +81,6 @@ export class CharacterBattle extends CharacterNormal implements UUID {
   /**订阅基本的战斗事件 */
   subscribeBaseBattleEvent(): void {
     //攻击
-    // const onAttacking: Subscriber = new Subscriber({
-    //     event: TriggerTiming.Attacking,
-    //     filter: this.uuid,
-    //     priority: 2,
-    //     callback: (source, data): boolean => {
-    //         const target: CharacterBattle = data.target;
-    //         console.log(`${this.name}向${target.name}发起了攻击`);
-    //         this.battle!.eventCenter.trigger(
-    //             new Event({ type: TriggerTiming.Attacked, source: target, data: { source: source } }),
-    //         );
-    //         return true;
-    //     },
-    // });
     const onAttacking = SubscriberFactory.Subscriber({
       event: TriggerTiming.Attacking,
       callback: (source, data: EventData.EventDataAttacking) => {
@@ -110,6 +97,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     this.battle!.eventCenter.addSubscriber(onAttacking);
     this.baseBattleEventSubscribers.onAttacking = onAttacking;
 
+    //受到攻击
     const onAttacked = SubscriberFactory.Subscriber({
       event: TriggerTiming.Attacked,
       callback: (source, data) => {
@@ -117,9 +105,6 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         const target = data.target;
         const damage = Math.round(attackSource.properties.atk.battleValue) - target.properties.def.battleValue;
         const newHp = target.currHp > damage ? target.currHp - damage : 0;
-        // console.log(
-        //     `[${target.name}]    ${target.currHp}❤️ - ${damage}💔 -> ${newHp}/${target.properties.hp.battleValue}`,
-        // );
         console.log(`[${target.name}]💔${damage} -> ${newHp}/${target.properties.hp.battleValue}`);
         target.currHp = newHp;
         if (target.currHp <= 0) {
@@ -141,14 +126,50 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     this.battle!.eventCenter.addSubscriber(onAttacked);
     this.baseBattleEventSubscribers.onAttacked = onAttacked;
 
+    /**造成伤害 */
+    const onDamaging = SubscriberFactory.Subscriber({
+      event: TriggerTiming.Damaging,
+      callback: async (_, data) => {
+        const target = data.target;
+        await this.battle!.eventCenter.trigger(
+          new Event({
+            type: TriggerTiming.Damaged,
+            source: target,
+            data,
+          }),
+        );
+        await this.battle!.eventCenter.trigger(
+          new Event({
+            type: TriggerTiming.AfterDamaging,
+            source: this,
+            data,
+          }),
+        );
+        return true;
+      },
+      filter: this,
+      priority: 2,
+    });
+    this.battle!.eventCenter.addSubscriber(onDamaging);
+    this.baseBattleEventSubscribers.onDamaging = onDamaging;
+
+    /**受到伤害 */
     const onDamaged = SubscriberFactory.Subscriber({
       event: TriggerTiming.Damaged,
-      callback: (source, data) => {
-        const damageSource: CharacterBattle = data.source;
+      callback: (_, data) => {
+        const source: CharacterBattle = data.source;
         const target = data.target;
         const damage = data.damage;
-        const newHp = target.currHp > damage ? target.currHp - damage : 0;
-        console.log(`[${target.name}]💔${damage} -> ${newHp}/${target.properties.hp.battleValue}`);
+        /**计算减伤和保底后的伤害 */
+        const finalDamage = Math.round(
+          Math.max(0.1 * source.properties.atk.battleValue, damage - target.properties.def.battleValue),
+        );
+        const actualDamage = Math.min(target.currHp, finalDamage); //真正造成的伤害
+        const overflowDamage = finalDamage - actualDamage; //溢出伤害
+        const newHp = target.currHp - actualDamage;
+        console.log(`[${target.name}]💔${actualDamage} -> ${newHp}/${target.properties.hp.battleValue}`);
+        data.actualDamage = actualDamage;
+        data.overflowDamage = overflowDamage;
         target.currHp = newHp;
         if (target.currHp <= 0) {
           target.currHp = 0;
@@ -156,7 +177,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
             new Event({
               type: TriggerTiming.Killed,
               source: target,
-              data: { source: damageSource, target },
+              data,
             }),
           );
         }
@@ -165,10 +186,10 @@ export class CharacterBattle extends CharacterNormal implements UUID {
       filter: this,
       priority: 2,
     });
-
     this.battle!.eventCenter.addSubscriber(onDamaged);
     this.baseBattleEventSubscribers.onDamaged = onDamaged;
 
+    /**造成击杀 */
     const onKilling: Subscriber = SubscriberFactory.Subscriber({
       event: TriggerTiming.Killing,
       callback: (source, data): boolean => {
@@ -182,6 +203,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     this.battle!.eventCenter.addSubscriber(onKilling);
     this.baseBattleEventSubscribers.onKilling = onKilling;
 
+    /**受到击杀 */
     const onKilled: Subscriber = SubscriberFactory.Subscriber({
       event: TriggerTiming.Killed,
       callback: (source, data): boolean => {
@@ -247,14 +269,6 @@ export class CharacterBattle extends CharacterNormal implements UUID {
 
     await skillStore[skill.id](skill, this, target);
 
-    // await this.battle!.eventCenter.trigger(
-    //     new Event({
-    //         type: TriggerTiming.Attacking,
-    //         source: this,
-    //         data: { source: this, target },
-    //     }),
-    // );
-
     await this.battle!.eventCenter.trigger(
       new Event({ type: TriggerTiming.ActionEnd, source: this, data: { source: this } }),
     );
@@ -265,28 +279,5 @@ export class CharacterBattle extends CharacterNormal implements UUID {
       throw new Error('[CharacterBattle] get enemies before setting battle');
     }
     return this.battle.characters.filter((eachCharacter) => eachCharacter.faction !== this.faction);
-  }
-
-  print(): void {
-    const baseData: { [propName: string]: any } = {}; // eslint-disable-line @typescript-eslint/no-explicit-any
-    for (const key in this) {
-      if (Object.hasOwnProperty.call(this, key)) {
-        const element = this[key];
-        if (['string', 'number', 'boolean', 'bigint'].indexOf(typeof element) !== -1) {
-          baseData[key] = element;
-        }
-      }
-    }
-    for (const key in this.properties) {
-      const currProperty: { [propName: string]: number } = {};
-      currProperty.baseValue = this.properties[key].baseValue;
-      currProperty.increaseValue = this.properties[key].increaseValue;
-      currProperty.normalValue = this.properties[key].normalValue;
-      currProperty.extraPercent = this.properties[key].extraPercent;
-      currProperty.extraValue = this.properties[key].extraValue;
-      currProperty.battleValue = this.properties[key].battleValue;
-      baseData[key] = currProperty;
-    }
-    console.table(baseData);
   }
 }
