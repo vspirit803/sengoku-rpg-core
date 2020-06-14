@@ -2,11 +2,11 @@
  * 装备插槽/装备栏配置
  */
 export interface EquipmentSlotConfiguration {
-    /**插槽名称 */
-    name: string;
+  /**插槽名称 */
+  name: string;
 
-    /**允许的装备类型 */
-    validEquipmentTypes: Array<string>;
+  /**允许的装备类型 */
+  validEquipmentTypes: Array<string>;
 }
 // export class EquipmentSlotConfiguration {
 //     /**插槽名称 */

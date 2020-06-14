@@ -1,48 +1,48 @@
 {
-    "version": "0.0.1",
-    "characters": [
-        {
-            "id": "C0001",
-            "level": 50
-        },
-        {
-            "id": "C0002",
-            "level": 5
-        },
-        {
-            "id": "C0003",
-            "level": 5,
-            "name": "武田信玄"
-        },
-        {
-            "id": "C0007",
-            "level": 1,
-            "name": "羽柴秀吉"
-        },
-        {
-            "id": "C0008",
-            "level": 1
-        }
-    ],
-    "backpack": {
-        "materials": [],
-        "equipments": [
-            {
-                "id": "weapon0003",
-                "properties": {
-                    "atk": 917,
-                    "critRate": 0.25,
-                    "critMultiply": 0.17
-                },
-                "count": 1
-            }
-        ]
+  "version": "0.0.1",
+  "characters": [
+    {
+      "id": "C0001",
+      "level": 50
     },
-    "maps": {
-        "cities": [{ "id": "City0004", "name": "岐阜城", "owner": "C0001" }]
+    {
+      "id": "C0002",
+      "level": 5
     },
-    "teams": [
-        { "name": "第一小分队", "members": ["C0001", "C0002", "C0007"] },
-        { "name": "第二小分队", "members": ["C0001", "C0003", "C0008"] }
+    {
+      "id": "C0003",
+      "level": 5,
+      "name": "武田信玄"
+    },
+    {
+      "id": "C0007",
+      "level": 1,
+      "name": "羽柴秀吉"
+    },
+    {
+      "id": "C0008",
+      "level": 1
+    }
+  ],
+  "backpack": {
+    "materials": [],
+    "equipments": [
+      {
+        "id": "weapon0003",
+        "properties": {
+          "atk": 917,
+          "critRate": 0.25,
+          "critMultiply": 0.17
+        },
+        "count": 1
+      }
     ]
+  },
+  "maps": {
+    "cities": [{ "id": "City0004", "name": "岐阜城", "owner": "C0001" }]
+  },
+  "teams": [
+    { "name": "第一小分队", "members": ["C0001", "C0002", "C0007"] },
+    { "name": "第二小分队", "members": ["C0001", "C0003", "C0008"] }
+  ]
 }

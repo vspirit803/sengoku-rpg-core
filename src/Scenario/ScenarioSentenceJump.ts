@@ -5,10 +5,10 @@ import { ScenarioSentenceBase } from './ScenarioSentenceBase';
  */
 
 export class ScenarioSentenceJump extends ScenarioSentenceBase {
-    targetId: string;
-    constructor() {
-        super();
-        this.type = 'jump';
-        this.targetId = '';
-    }
+  targetId: string;
+  constructor() {
+    super();
+    this.type = 'jump';
+    this.targetId = '';
+  }
 }

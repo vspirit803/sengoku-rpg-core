@@ -1,4 +1,4 @@
 export interface TeamSave {
-    name: string;
-    members: Array<string>;
+  name: string;
+  members: Array<string>;
 }

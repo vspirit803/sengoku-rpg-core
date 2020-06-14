@@ -5,6 +5,6 @@ import { TeamConfiguration } from '@src/Team';
  */
 
 export interface FactionConfiguration {
-    name: string;
-    teams: Array<TeamConfiguration>;
+  name: string;
+  teams: Array<TeamConfiguration>;
 }

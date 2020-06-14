@@ -11,6 +11,6 @@ mapCenter.loadMapsConfiguration(maps);
 mapCenter.loadSave(save.maps);
 const japan = mapCenter.getMap('japan');
 test('MapCenter', () => {
-    expect(japan.id).toBe('japan');
-    expect(japan.name).toBe('东瀛');
+  expect(japan.id).toBe('japan');
+  expect(japan.name).toBe('东瀛');
 });

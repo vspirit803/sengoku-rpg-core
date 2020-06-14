@@ -1,7 +1,6 @@
 {
     "prettier.packageManager": "yarn",
     "eslint.validate": ["javascript", "typescript"],
-    "eslint.alwaysShowStatus": true,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.fixAll": true

@@ -1,70 +1,70 @@
 [
-    {
-        "id": "S00000",
-        "name": "普通攻击",
-        "levels": [{ "ratio": 1 }, { "ratio": 1.1 }, { "ratio": 1.2 }],
-        "description": "最平平无奇的攻击，造成攻击${ratio}的伤害",
-        "cost": 0,
-        "type": "attack"
-    },
-    {
-        "id": "S00001",
-        "name": "黑焰",
-        "levels": [{ "ratio": 1 }],
-        "description": "呵，这样就足够解决你了。茨木童子以鬼气凝成黑色火焰攻击敌人，造成攻击${ratio}的伤害",
-        "cost": 0,
-        "type": "attack"
-    },
-    {
-        "id": "S00002",
-        "name": "迁怒",
-        "levels": [{ "ratio": 1 }],
-        "description": "敢伤害我的友人？那就做好觉悟吧！",
-        "cost": 0,
-        "type": "passive"
-    },
-    {
-        "id": "S00003",
-        "name": "地狱之手",
-        "levels": [{ "ratio": 3 }],
-        "description": "就让你见识我真正的力量，降临吧，地狱之手！",
-        "cost": 3,
-        "type": "skill_attack"
-    },
-    {
-        "id": "S00004",
-        "name": "窒碍短匕",
-        "levels": [{ "ratio": 1 }],
-        "description": "「 魅影之纱成员学习到的第一个技能，中招就意味着下一次攻击要来了。 」",
-        "cost": 0,
-        "type": "attack"
-    },
-    {
-        "id": "S00005",
-        "name": "幻影突袭",
-        "levels": [
-            { "ratio": 0.8, "times": 4 },
-            { "ratio": 1.0, "times": 3 },
-            { "ratio": 1.2, "times": 4 }
-        ],
-        "description": "「 茉崔蒂的真丝面纱是她倒霉的目标临终所见之物。 」",
-        "cost": 3,
-        "type": "skill_attack"
-    },
-    {
-        "id": "S00006",
-        "name": "魅影无形",
-        "levels": [{ "ratio": 1 }],
-        "description": "「 长期的冥想使得魅影之纱的成员能够谨慎的预知到敌人的到来。 」",
-        "cost": 0,
-        "type": "passive"
-    },
-    {
-        "id": "S00007",
-        "name": "恩赐解脱",
-        "levels": [{ "ratio": 4 }, { "ratio": 6 }, { "ratio": 8 }],
-        "description": " 神圣的一击，茉崔蒂通过赐予对手死亡来向他们致以敬意。 」",
-        "cost": 6,
-        "type": "skill_attack"
-    }
+  {
+    "id": "S00000",
+    "name": "普通攻击",
+    "levels": [{ "ratio": 1 }, { "ratio": 1.1 }, { "ratio": 1.2 }],
+    "description": "最平平无奇的攻击，造成攻击${ratio}的伤害",
+    "cost": 0,
+    "type": "attack"
+  },
+  {
+    "id": "S00001",
+    "name": "黑焰",
+    "levels": [{ "ratio": 1 }],
+    "description": "呵，这样就足够解决你了。茨木童子以鬼气凝成黑色火焰攻击敌人，造成攻击${ratio}的伤害",
+    "cost": 0,
+    "type": "attack"
+  },
+  {
+    "id": "S00002",
+    "name": "迁怒",
+    "levels": [{ "ratio": 1 }],
+    "description": "敢伤害我的友人？那就做好觉悟吧！",
+    "cost": 0,
+    "type": "passive"
+  },
+  {
+    "id": "S00003",
+    "name": "地狱之手",
+    "levels": [{ "ratio": 3 }],
+    "description": "就让你见识我真正的力量，降临吧，地狱之手！",
+    "cost": 3,
+    "type": "skill_attack"
+  },
+  {
+    "id": "S00004",
+    "name": "窒碍短匕",
+    "levels": [{ "ratio": 1 }],
+    "description": "「 魅影之纱成员学习到的第一个技能，中招就意味着下一次攻击要来了。 」",
+    "cost": 0,
+    "type": "attack"
+  },
+  {
+    "id": "S00005",
+    "name": "幻影突袭",
+    "levels": [
+      { "ratio": 0.8, "times": 4 },
+      { "ratio": 1.0, "times": 3 },
+      { "ratio": 1.2, "times": 4 }
+    ],
+    "description": "「 茉崔蒂的真丝面纱是她倒霉的目标临终所见之物。 」",
+    "cost": 3,
+    "type": "skill_attack"
+  },
+  {
+    "id": "S00006",
+    "name": "魅影无形",
+    "levels": [{ "ratio": 1 }],
+    "description": "「 长期的冥想使得魅影之纱的成员能够谨慎的预知到敌人的到来。 」",
+    "cost": 0,
+    "type": "passive"
+  },
+  {
+    "id": "S00007",
+    "name": "恩赐解脱",
+    "levels": [{ "ratio": 4 }, { "ratio": 6 }, { "ratio": 8 }],
+    "description": " 神圣的一击，茉崔蒂通过赐予对手死亡来向他们致以敬意。 」",
+    "cost": 6,
+    "type": "skill_attack"
+  }
 ]

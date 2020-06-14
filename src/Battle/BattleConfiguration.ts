@@ -5,8 +5,8 @@ import { FactionConfiguration } from '@src/Faction';
  */
 
 export interface BattleConfiguration {
-    id: string;
-    /**战斗名称 */
-    name: string;
-    factions: Array<FactionConfiguration>;
+  id: string;
+  /**战斗名称 */
+  name: string;
+  factions: Array<FactionConfiguration>;
 }
