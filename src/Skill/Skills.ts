@@ -15,8 +15,8 @@ export const skillStore: {
     );
     await battle.eventCenter.trigger(
       new Event({
-        type: TriggerTiming.Damaged,
-        source: target,
+        type: TriggerTiming.Damaging,
+        source,
         data: { source, target, damage, isCrit },
       }),
     );
@@ -30,8 +30,8 @@ export const skillStore: {
     );
     await battle.eventCenter.trigger(
       new Event({
-        type: TriggerTiming.Damaged,
-        source: target,
+        type: TriggerTiming.Damaging,
+        source,
         data: { source, target, damage, isCrit },
       }),
     );
@@ -62,8 +62,8 @@ export const skillStore: {
     );
     await battle.eventCenter.trigger(
       new Event({
-        type: TriggerTiming.Damaged,
-        source: target,
+        type: TriggerTiming.Damaging,
+        source,
         data: { source, target, damage, isCrit },
       }),
     );
@@ -78,8 +78,8 @@ export const skillStore: {
       );
       await battle.eventCenter.trigger(
         new Event({
-          type: TriggerTiming.Damaged,
-          source: target,
+          type: TriggerTiming.Damaging,
+          source,
           data: { source, target, damage, isCrit },
         }),
       );
@@ -94,8 +94,8 @@ export const skillStore: {
     );
     await battle.eventCenter.trigger(
       new Event({
-        type: TriggerTiming.Damaged,
-        source: target,
+        type: TriggerTiming.Damaging,
+        source,
         data: { source, target, damage, isCrit },
       }),
     );

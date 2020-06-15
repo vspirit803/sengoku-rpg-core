@@ -56,16 +56,6 @@ export interface EventDataDamaged extends EventData {
   isCrit: boolean;
 }
 
-export interface EventDataAfterDamaging extends EventData {
-  source: CharacterBattle;
-  target: CharacterBattle;
-  damage: number;
-  finalDamage?: number;
-  actualDamage?: number;
-  overflowDamage?: number;
-  isCrit: boolean;
-}
-
 export interface EventDataKilling extends EventData {
   source: CharacterBattle;
   target: CharacterBattle;

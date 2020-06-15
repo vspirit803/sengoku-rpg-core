@@ -138,13 +138,6 @@ export class CharacterBattle extends CharacterNormal implements UUID {
             data,
           }),
         );
-        await this.battle!.eventCenter.trigger(
-          new Event({
-            type: TriggerTiming.AfterDamaging,
-            source: this,
-            data,
-          }),
-        );
         return true;
       },
       filter: this,
