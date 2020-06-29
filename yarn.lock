@@ -1047,27 +1047,6 @@
     jest-runner "^26.1.0"
     jest-runtime "^26.1.0"
 
-"@jest/transform@^26.0.1":
-  version "26.0.1"
-  resolved "https://registry.npm.taobao.org/@jest/transform/download/@jest/transform-26.0.1.tgz#0e3ecbb34a11cd4b2080ed0a9c4856cf0ceb0639"
-  integrity sha1-Dj7Ls0oRzUsggO0KnEhWzwzrBjk=
-  dependencies:
-    "@babel/core" "^7.1.0"
-    "@jest/types" "^26.0.1"
-    babel-plugin-istanbul "^6.0.0"
-    chalk "^4.0.0"
-    convert-source-map "^1.4.0"
-    fast-json-stable-stringify "^2.0.0"
-    graceful-fs "^4.2.4"
-    jest-haste-map "^26.0.1"
-    jest-regex-util "^26.0.0"
-    jest-util "^26.0.1"
-    micromatch "^4.0.2"
-    pirates "^4.0.1"
-    slash "^3.0.0"
-    source-map "^0.6.1"
-    write-file-atomic "^3.0.0"
-
 "@jest/transform@^26.1.0":
   version "26.1.0"
   resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-26.1.0.tgz#697f48898c2a2787c9b4cb71d09d7e617464e509"
@@ -1099,16 +1078,6 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@jest/types@^26.0.1":
-  version "26.0.1"
-  resolved "https://registry.npm.taobao.org/@jest/types/download/@jest/types-26.0.1.tgz#b78333fbd113fa7aec8d39de24f88de8686dac67"
-  integrity sha1-t4Mz+9ET+nrsjTneJPiN6GhtrGc=
-  dependencies:
-    "@types/istanbul-lib-coverage" "^2.0.0"
-    "@types/istanbul-reports" "^1.1.1"
-    "@types/yargs" "^15.0.0"
-    chalk "^4.0.0"
-
 "@jest/types@^26.1.0":
   version "26.1.0"
   resolved "https://registry.yarnpkg.com/@jest/types/-/types-26.1.0.tgz#f8afaaaeeb23b5cad49dd1f7779689941dcb6057"
@@ -1133,21 +1102,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@types/babel__core@^7.0.0":
+"@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.9"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.9.tgz#77e59d438522a6fb898fa43dc3455c6e72f3963d"
   integrity sha512-sY2RsIJ5rpER1u3/aQ8OFSI7qGIy8o1NEEbgb2UaJcvOtXOMpd39ko723NBpjQFg9SIX7TXtjejZVGeIMLhoOw==
-  dependencies:
-    "@babel/parser" "^7.1.0"
-    "@babel/types" "^7.0.0"
-    "@types/babel__generator" "*"
-    "@types/babel__template" "*"
-    "@types/babel__traverse" "*"
-
-"@types/babel__core@^7.1.7":
-  version "7.1.7"
-  resolved "https://registry.npm.taobao.org/@types/babel__core/download/@types/babel__core-7.1.7.tgz#1dacad8840364a57c98d0dd4855c6dd3752c6b89"
-  integrity sha1-HaytiEA2SlfJjQ3UhVxt03Usa4k=
   dependencies:
     "@babel/parser" "^7.1.0"
     "@babel/types" "^7.0.0"
@@ -1691,20 +1649,6 @@ aws4@^1.8.0:
   resolved "https://registry.npm.taobao.org/aws4/download/aws4-1.9.1.tgz#7e33d8f7d449b3f673cd72deb9abdc552dbe528e"
   integrity sha1-fjPY99RJs/ZzzXLeuavcVS2+Uo4=
 
-babel-jest@^26.0.1:
-  version "26.0.1"
-  resolved "https://registry.npm.taobao.org/babel-jest/download/babel-jest-26.0.1.tgz#450139ce4b6c17174b136425bda91885c397bc46"
-  integrity sha1-RQE5zktsFxdLE2QlvakYhcOXvEY=
-  dependencies:
-    "@jest/transform" "^26.0.1"
-    "@jest/types" "^26.0.1"
-    "@types/babel__core" "^7.1.7"
-    babel-plugin-istanbul "^6.0.0"
-    babel-preset-jest "^26.0.0"
-    chalk "^4.0.0"
-    graceful-fs "^4.2.4"
-    slash "^3.0.0"
-
 babel-jest@^26.1.0:
   version "26.1.0"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-26.1.0.tgz#b20751185fc7569a0f135730584044d1cb934328"
@@ -1737,15 +1681,6 @@ babel-plugin-istanbul@^6.0.0:
     istanbul-lib-instrument "^4.0.0"
     test-exclude "^6.0.0"
 
-babel-plugin-jest-hoist@^26.0.0:
-  version "26.0.0"
-  resolved "https://registry.npm.taobao.org/babel-plugin-jest-hoist/download/babel-plugin-jest-hoist-26.0.0.tgz#fd1d35f95cf8849fc65cb01b5e58aedd710b34a8"
-  integrity sha1-/R01+Vz4hJ/GXLAbXliu3XELNKg=
-  dependencies:
-    "@babel/template" "^7.3.3"
-    "@babel/types" "^7.3.3"
-    "@types/babel__traverse" "^7.0.6"
-
 babel-plugin-jest-hoist@^26.1.0:
   version "26.1.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-26.1.0.tgz#c6a774da08247a28285620a64dfadbd05dd5233a"
@@ -1771,14 +1706,6 @@ babel-preset-current-node-syntax@^0.1.2:
     "@babel/plugin-syntax-object-rest-spread" "^7.8.3"
     "@babel/plugin-syntax-optional-catch-binding" "^7.8.3"
     "@babel/plugin-syntax-optional-chaining" "^7.8.3"
-
-babel-preset-jest@^26.0.0:
-  version "26.0.0"
-  resolved "https://registry.npm.taobao.org/babel-preset-jest/download/babel-preset-jest-26.0.0.tgz?cache=0&sync_timestamp=1588614908454&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbabel-preset-jest%2Fdownload%2Fbabel-preset-jest-26.0.0.tgz#1eac82f513ad36c4db2e9263d7c485c825b1faa6"
-  integrity sha1-HqyC9ROtNsTbLpJj18SFyCWx+qY=
-  dependencies:
-    babel-plugin-jest-hoist "^26.0.0"
-    babel-preset-current-node-syntax "^0.1.2"
 
 babel-preset-jest@^26.1.0:
   version "26.1.0"
@@ -3331,12 +3258,7 @@ globals@^12.1.0:
   dependencies:
     type-fest "^0.8.1"
 
-graceful-fs@^4.1.11, graceful-fs@^4.1.15:
-  version "4.2.3"
-  resolved "https://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
-  integrity sha1-ShL/G2A3bvCYYsIJPt2Qgyi+hCM=
-
-graceful-fs@^4.1.2, graceful-fs@^4.2.4:
+graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.2.4:
   version "4.2.4"
   resolved "https://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.2.4.tgz?cache=0&sync_timestamp=1588086924019&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fgraceful-fs%2Fdownload%2Fgraceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha1-Ila94U02MpWMRl68ltxGfKB6Kfs=
@@ -3983,26 +3905,6 @@ jest-get-type@^26.0.0:
   resolved "https://registry.npm.taobao.org/jest-get-type/download/jest-get-type-26.0.0.tgz#381e986a718998dbfafcd5ec05934be538db4039"
   integrity sha1-OB6YanGJmNv6/NXsBZNL5TjbQDk=
 
-jest-haste-map@^26.0.1:
-  version "26.0.1"
-  resolved "https://registry.npm.taobao.org/jest-haste-map/download/jest-haste-map-26.0.1.tgz?cache=0&sync_timestamp=1588675386461&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjest-haste-map%2Fdownload%2Fjest-haste-map-26.0.1.tgz#40dcc03c43ac94d25b8618075804d09cd5d49de7"
-  integrity sha1-QNzAPEOslNJbhhgHWATQnNXUnec=
-  dependencies:
-    "@jest/types" "^26.0.1"
-    "@types/graceful-fs" "^4.1.2"
-    anymatch "^3.0.3"
-    fb-watchman "^2.0.0"
-    graceful-fs "^4.2.4"
-    jest-serializer "^26.0.0"
-    jest-util "^26.0.1"
-    jest-worker "^26.0.0"
-    micromatch "^4.0.2"
-    sane "^4.0.3"
-    walker "^1.0.7"
-    which "^2.0.2"
-  optionalDependencies:
-    fsevents "^2.1.2"
-
 jest-haste-map@^26.1.0:
   version "26.1.0"
   resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-26.1.0.tgz#ef31209be73f09b0d9445e7d213e1b53d0d1476a"
@@ -4175,13 +4077,6 @@ jest-runtime@^26.1.0:
     strip-bom "^4.0.0"
     yargs "^15.3.1"
 
-jest-serializer@^26.0.0:
-  version "26.0.0"
-  resolved "https://registry.npm.taobao.org/jest-serializer/download/jest-serializer-26.0.0.tgz#f6c521ddb976943b93e662c0d4d79245abec72a3"
-  integrity sha1-9sUh3bl2lDuT5mLA1NeSRavscqM=
-  dependencies:
-    graceful-fs "^4.2.4"
-
 jest-serializer@^26.1.0:
   version "26.1.0"
   resolved "https://registry.yarnpkg.com/jest-serializer/-/jest-serializer-26.1.0.tgz#72a394531fc9b08e173dc7d297440ac610d95022"
@@ -4209,17 +4104,6 @@ jest-snapshot@^26.1.0:
     natural-compare "^1.4.0"
     pretty-format "^26.1.0"
     semver "^7.3.2"
-
-jest-util@^26.0.1:
-  version "26.0.1"
-  resolved "https://registry.npm.taobao.org/jest-util/download/jest-util-26.0.1.tgz?cache=0&sync_timestamp=1588675386111&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjest-util%2Fdownload%2Fjest-util-26.0.1.tgz#72c4c51177b695fdd795ca072a6f94e3d7cef00a"
-  integrity sha1-csTFEXe2lf3XlcoHKm+U49fO8Ao=
-  dependencies:
-    "@jest/types" "^26.0.1"
-    chalk "^4.0.0"
-    graceful-fs "^4.2.4"
-    is-ci "^2.0.0"
-    make-dir "^3.0.0"
 
 jest-util@^26.1.0:
   version "26.1.0"
@@ -4255,14 +4139,6 @@ jest-watcher@^26.1.0:
     chalk "^4.0.0"
     jest-util "^26.1.0"
     string-length "^4.0.1"
-
-jest-worker@^26.0.0:
-  version "26.0.0"
-  resolved "https://registry.npm.taobao.org/jest-worker/download/jest-worker-26.0.0.tgz#4920c7714f0a96c6412464718d0c58a3df3fb066"
-  integrity sha1-SSDHcU8KlsZBJGRxjQxYo98/sGY=
-  dependencies:
-    merge-stream "^2.0.0"
-    supports-color "^7.0.0"
 
 jest-worker@^26.1.0:
   version "26.1.0"
