@@ -37,7 +37,7 @@
     "eslint-plugin-jest": "^23.19.0",
     "ts-jest": "^26.1.4",
     "ts-loader": "^8.0.1",
-    "webpack": "^4.44.0",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
 }
