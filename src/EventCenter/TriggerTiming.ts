@@ -18,6 +18,10 @@ export enum TriggerTiming {
   Damaging = 'Damaging',
   /**受到伤害时 */
   Damaged = 'Damaged',
+  /**治疗时 */
+  Treating = 'Treating',
+  /**受到治疗时 */
+  Treated = 'Treated',
   /**造成击杀时 */
   Killing = 'Killing',
   /**受到击杀时 */

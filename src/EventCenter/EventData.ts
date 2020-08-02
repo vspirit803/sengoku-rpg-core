@@ -2,7 +2,9 @@ import { BattleBattle } from '@src/Battle';
 import { CharacterBattle } from '@src/Character';
 import { Skill } from '@src/Skill';
 
-export interface EventData {} // eslint-disable-line
+export interface EventData {
+  [propName: string]: unknown;
+}
 export interface EventDataBattleStart extends EventData {
   battle: BattleBattle;
 }
@@ -21,6 +23,7 @@ export interface EventDataSkillSelect extends EventData {
   selectedSkill?: Skill;
   selectedTarget?: CharacterBattle;
 }
+
 export interface EventDataSpelling extends EventData {
   source: CharacterBattle;
   target: CharacterBattle;
@@ -47,6 +50,28 @@ export interface EventDataDamaging extends EventData {
 }
 
 export interface EventDataDamaged extends EventData {
+  source: CharacterBattle;
+  target: CharacterBattle;
+  damage: number;
+  finalDamage?: number;
+  actualDamage?: number;
+  overflowDamage?: number;
+  isCrit: boolean;
+}
+
+/**治疗 */
+export interface EventDataTreating extends EventData {
+  source: CharacterBattle;
+  target: CharacterBattle;
+  damage: number;
+  finalDamage?: number;
+  actualDamage?: number;
+  overflowDamage?: number;
+  isCrit: boolean;
+}
+
+/**受到治疗 */
+export interface EventDataTreated extends EventData {
   source: CharacterBattle;
   target: CharacterBattle;
   damage: number;

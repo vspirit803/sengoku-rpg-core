@@ -113,6 +113,32 @@ export class SubscriberFactory {
     priority?: number;
   }): Subscriber;
 
+  /**治疗 */
+  static Subscriber({
+    event,
+    callback,
+    filter,
+    priority,
+  }: {
+    event: TriggerTiming.Treating;
+    callback: (source: UUID, data: EventData.EventDataTreating) => Promise<boolean> | boolean;
+    filter?: UUID | Array<UUID>;
+    priority?: number;
+  }): Subscriber;
+
+  /**受到治疗 */
+  static Subscriber({
+    event,
+    callback,
+    filter,
+    priority,
+  }: {
+    event: TriggerTiming.Treated;
+    callback: (source: UUID, data: EventData.EventDataTreated) => Promise<boolean> | boolean;
+    filter?: UUID | Array<UUID>;
+    priority?: number;
+  }): Subscriber;
+
   static Subscriber({
     event,
     callback,

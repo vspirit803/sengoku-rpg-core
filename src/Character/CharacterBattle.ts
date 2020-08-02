@@ -162,6 +162,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
         const newHp = target.currHp - actualDamage;
         console.log(`[${target.name}]💔${actualDamage} -> ${newHp}/${target.properties.hp.battleValue}`);
         data.actualDamage = actualDamage;
+        data.finalDamage = finalDamage;
         data.overflowDamage = overflowDamage;
         target.currHp = newHp;
         if (target.currHp <= 0) {
@@ -181,6 +182,30 @@ export class CharacterBattle extends CharacterNormal implements UUID {
     });
     this.battle!.eventCenter.addSubscriber(onDamaged);
     this.baseBattleEventSubscribers.onDamaged = onDamaged;
+
+    /**受到治疗 */
+    const onTreated = SubscriberFactory.Subscriber({
+      event: TriggerTiming.Treated,
+      callback: (_, data) => {
+        const target = data.target;
+        const damage = data.damage;
+        /**计算减伤和保底后的治疗 */
+        const finalDamage = Math.round(Math.max(20, damage));
+        const actualDamage = Math.min(target.properties.hp.battleValue - target.currHp, finalDamage); //真正造成的治疗
+        const overflowDamage = finalDamage - actualDamage; //溢出治疗
+        const newHp = target.currHp + actualDamage;
+        console.log(`[${target.name}]♥${actualDamage} -> ${newHp}/${target.properties.hp.battleValue}`);
+        data.actualDamage = actualDamage;
+        data.finalDamage = finalDamage;
+        data.overflowDamage = overflowDamage;
+        target.currHp = newHp;
+        return true;
+      },
+      filter: this,
+      priority: 2,
+    });
+    this.battle!.eventCenter.addSubscriber(onTreated);
+    this.baseBattleEventSubscribers.onTreated = onTreated;
 
     /**造成击杀 */
     const onKilling: Subscriber = SubscriberFactory.Subscriber({
