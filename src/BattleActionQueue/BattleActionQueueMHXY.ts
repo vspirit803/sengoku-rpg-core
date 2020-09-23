@@ -28,7 +28,7 @@ export class BattleActionQueueMHXY implements BattleActionQueueBase {
             //回合结束
             new Event({
               type: TriggerTiming.RoundEnd,
-              source: { uuid: Symbol('BattleActionQueueMHXY') },
+              source: this.battle,
               data: { roundCount: this.roundCount },
             }),
           );
@@ -47,7 +47,7 @@ export class BattleActionQueueMHXY implements BattleActionQueueBase {
           //回合开始
           new Event({
             type: TriggerTiming.RoundStart,
-            source: { uuid: Symbol('BattleActionQueueMHXY') },
+            source: this.battle,
             data: { roundCount: this.roundCount },
           }),
         );

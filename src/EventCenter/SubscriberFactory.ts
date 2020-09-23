@@ -217,7 +217,7 @@ export class SubscriberFactory {
     filter?: UUID | Array<UUID>;
     priority?: number;
   }): Subscriber {
-    let subscriberFilter: undefined | symbol | Array<symbol>;
+    let subscriberFilter: undefined | string | Array<string>;
     if (filter === undefined) {
       subscriberFilter = undefined;
     } else if (!Array.isArray(filter)) {

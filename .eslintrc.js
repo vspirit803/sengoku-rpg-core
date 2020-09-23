@@ -1,44 +1,25 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  root: true,
-  env: {
-    browser: true,
-    node: true,
-    es6: true,
-    jest: true,
-  },
-  plugins: ['jest', 'simple-import-sort'],
-  extends: ['eslint:recommended', 'typescript', 'prettier'],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
   parserOptions: {
-    ecmaVersion: 2020,
     sourceType: 'module',
   },
+  plugins: ['jest', '@typescript-eslint/eslint-plugin', 'simple-import-sort'],
+  extends: [
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+  ],
+  root: true,
+  env: {
+    node: true,
+    jest: true,
+  },  
   rules: {
-    indent: [
-      'error',
-      2,
-      {
-        SwitchCase: 1,
-      },
-    ],
-    'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
-    semi: ['error', 'always'],
-    'no-unused-vars': 'off',
-    'space-before-function-paren': 'off',
-    // 'block-spacing': 'off',
-    'spaced-comment': 'off',
-    'comma-dangle': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
-    'no-useless-constructor': 'off',
-    '@typescript-eslint/no-useless-constructor': 'error',
-    // 'no-eval': 'off',
-    // 'computed-property-even-spacing': 'off',
-    // 'standard/computed-property-even-spacing': 'off'
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     'simple-import-sort/sort': 'error',
+    'comma-spacing': 'error',
   },
 };

@@ -1,6 +1,7 @@
 import { UUID } from '@src/Common';
 import { ItemEquipment } from '@src/Item';
 import { Skill, SkillFactory } from '@src/Skill';
+import { ObjectId } from 'bson';
 
 import { CharacterConfiguration } from './CharacterConfiguration';
 import { CharacterPropertyNormal } from './CharacterPropertyNormal';
@@ -11,7 +12,7 @@ import { EquipmentSlot } from './EquipmentSlot';
  * 角色类(平常状态)
  */
 export class CharacterNormal implements UUID {
-  uuid: symbol;
+  uuid: string;
   id: string;
   name: string;
   level: number;
@@ -22,7 +23,7 @@ export class CharacterNormal implements UUID {
   constructor(character: CharacterNormal);
   constructor(character: CharacterConfiguration);
   constructor(character: CharacterNormal | CharacterConfiguration) {
-    this.uuid = Symbol('CharacterNormal');
+    this.uuid = new ObjectId().toHexString();
     this.id = character.id;
     this.name = character.name;
     this.properties = {};

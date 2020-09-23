@@ -1,4 +1,5 @@
 import { Rarity, UUID } from '@src/Common';
+import { ObjectId } from 'bson';
 
 import { ItemType } from './ItemType';
 
@@ -7,7 +8,7 @@ import { ItemType } from './ItemType';
  */
 export abstract class ItemBase implements UUID {
   /**uuid */
-  uuid: symbol;
+  uuid: string;
   /**配置id */
   id: string;
   /**名称 */
@@ -29,7 +30,7 @@ export abstract class ItemBase implements UUID {
     rarity = Rarity.Common,
     count = 1,
   }: { id?: string; name?: string; isStackable?: boolean; type?: ItemType; rarity?: Rarity; count?: number } = {}) {
-    this.uuid = Symbol('ItemBase');
+    this.uuid = new ObjectId().toHexString();
     this.type = type;
     this.id = id;
     this.name = name;

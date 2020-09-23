@@ -2,5 +2,5 @@
  * UUID接口
  */
 export interface UUID {
-  uuid: symbol;
+  uuid: string;
 }

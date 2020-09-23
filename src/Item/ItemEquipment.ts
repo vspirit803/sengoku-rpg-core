@@ -1,5 +1,6 @@
 import { CharacterNormal } from '@src/Character';
 import { Rarity } from '@src/Common';
+import { ObjectId } from 'bson';
 
 import { EquipmentProperty } from './EquipmentProperty';
 import { EquipmentType } from './EquipmentType';
@@ -43,7 +44,7 @@ export class ItemEquipment extends ItemBase {
     properties: { [propName: string]: EquipmentProperty };
   }) {
     super({ id, name, isStackable: false, rarity });
-    this.uuid = Symbol('ItemEquipment');
+    this.uuid = new ObjectId().toHexString();
     this.type = ItemType.Equipment;
     this.level = level;
     this.equipmentType = equipmentType;

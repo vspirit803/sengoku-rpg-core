@@ -1,6 +1,7 @@
 import { CharacterNormal } from '@src/Character';
 import { Properties, UUID } from '@src/Common';
 import { Game } from '@src/Game';
+import { ObjectId } from 'bson';
 
 import { TeamConfiguration } from './TeamConfiguration';
 
@@ -11,13 +12,13 @@ export class TeamNormal implements UUID {
   /**队伍名称 */
   name: string;
   /**队伍id */
-  uuid: symbol;
+  uuid: string;
   /**队伍成员 */
   members: Array<CharacterNormal>;
   constructor(data: Array<CharacterNormal>, game: Game);
   constructor(data: TeamConfiguration, game: Game);
   constructor(data: TeamConfiguration | Array<CharacterNormal>, game: Game) {
-    this.uuid = Symbol('TeamNormal');
+    this.uuid = new ObjectId().toHexString();
     if (Array.isArray(data)) {
       this.name = '玩家队伍';
       this.members = data;

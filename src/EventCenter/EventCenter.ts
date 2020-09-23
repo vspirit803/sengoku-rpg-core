@@ -40,8 +40,8 @@ export class EventCenter {
         return (
           eachSubscriber.event === event.type &&
           (eachSubscriber.filter === undefined || //该订阅者不过滤来源
-          (typeof eachSubscriber.filter === 'symbol' && eachSubscriber.filter === event.source.uuid) || //仅单个来源触发
-            (typeof eachSubscriber.filter === 'object' && eachSubscriber.filter.includes(event.source.uuid))) //多个来源可触发
+            eachSubscriber.filter === event.source.uuid || //仅单个来源触发
+            (Array.isArray(eachSubscriber.filter) && eachSubscriber.filter.includes(event.source.uuid))) //多个来源可触发
         );
       })
       .sort((a, b) => {

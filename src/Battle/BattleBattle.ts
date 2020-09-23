@@ -6,6 +6,7 @@ import { Event, EventCenter, TriggerTiming } from '@src/EventCenter';
 import { FactionBattle } from '@src/Faction';
 import { Game } from '@src/Game';
 import { TeamBattle, TeamNormal } from '@src/Team';
+import { ObjectId } from 'bson';
 
 import { BattleConfiguration } from './BattleConfiguration';
 
@@ -13,7 +14,7 @@ import { BattleConfiguration } from './BattleConfiguration';
  * 战斗(战斗状态)
  */
 export class BattleBattle implements UUID {
-  uuid: symbol;
+  uuid: string;
   name: string;
   /**
    * 阵营,每个阵营都是互为敌人
@@ -47,7 +48,7 @@ export class BattleBattle implements UUID {
     playerTeam?: TeamNormal,
     successCondition?: Condition,
   ) {
-    this.uuid = Symbol('BattleBattle');
+    this.uuid = new ObjectId().toHexString();
     this.name = battleConfiguration?.name ?? '未留下名字的战斗';
     this.factions = [];
     this.eventCenter = new EventCenter();

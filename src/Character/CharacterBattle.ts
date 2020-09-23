@@ -42,7 +42,7 @@ export class CharacterBattle extends CharacterNormal implements UUID {
 
   constructor(character: CharacterNormal) {
     super(character);
-    this.uuid = Symbol('CharacterBattle');
+    this.uuid = character.uuid;
     this.properties = {};
     for (const eachPropName in character.properties) {
       const eachProperty = character.properties[eachPropName];

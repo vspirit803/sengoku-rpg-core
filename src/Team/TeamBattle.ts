@@ -3,6 +3,7 @@ import { CharacterBattle } from '@src/Character';
 import { Properties, UUID } from '@src/Common';
 import { FactionBattle } from '@src/Faction';
 import { Game } from '@src/Game';
+import { ObjectId } from 'bson';
 
 import { TeamNormal } from './TeamNormal';
 
@@ -12,7 +13,7 @@ import { TeamNormal } from './TeamNormal';
 export class TeamBattle implements TeamNormal, UUID {
   name: string;
   /**队伍id */
-  uuid: symbol;
+  uuid: string;
   /**队伍成员 */
   members: Array<CharacterBattle>;
   /**队伍所处的阵营 */
@@ -23,7 +24,7 @@ export class TeamBattle implements TeamNormal, UUID {
   orderPoint: number; //指令点,用于施放技能
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   constructor(team: TeamNormal, game: Game) {
-    this.uuid = Symbol('TeamBattle');
+    this.uuid = new ObjectId().toHexString();
     this.name = team.name;
     this.members = [];
     this.addMembers(...team.members.map((eachMemberNormal) => new CharacterBattle(eachMemberNormal)));
