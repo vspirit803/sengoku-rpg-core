@@ -1,0 +1,43 @@
+{
+  "name": "sengoku-rpg-core",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "author": "vspirit803",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint \"./**/*.ts\"",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "babel-jest": "^26.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.2",
+    "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "eslint-plugin-jest": "^24.0.2",
+    "ts-jest": "^26.4.0",
+    "ts-loader": "^8.0.4",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "prettier.packageManager": "yarn",
+    "eslint.validate": ["javascript", "typescript"],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "eslint.codeAction.disableRuleComment": {}
+}
