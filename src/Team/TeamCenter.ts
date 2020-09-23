@@ -38,7 +38,7 @@ export class TeamCenter implements SaveInterface<Array<TeamSave>> {
           id: eachMember,
         };
       });
-      const team = new TeamNormal({ name: eachTeam.name, members: memberIds }, this.game);
+      const team = new TeamNormal({ name: eachTeam.name, members: memberIds });
       this.teams.push(team);
     }
   }

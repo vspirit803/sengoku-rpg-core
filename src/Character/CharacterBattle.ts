@@ -15,10 +15,6 @@ import { CharacterPropertyBattle } from './CharacterPropertyBattle';
  * 角色类(战斗状态)
  */
 export class CharacterBattle extends CharacterNormal implements UUID {
-  // uuid: symbol;
-  // id: string;
-  // level: number;
-  // name: string;
   /**角色所处的队伍 */
   team?: TeamBattle;
   /**角色所处的阵营 */

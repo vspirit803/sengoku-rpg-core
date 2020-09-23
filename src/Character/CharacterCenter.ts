@@ -1,5 +1,5 @@
 import commonEquipmentSlotsConfiguration from '@assets/data/commonEquipmentSlotsConfiguration.json';
-import { Game, SaveInterface } from '@src/Game';
+import { SaveInterface } from '@src/Game';
 
 import { CharacterConfiguration } from './CharacterConfiguration';
 import { CharacterNormal } from './CharacterNormal';
@@ -9,8 +9,6 @@ import { CharacterSave } from './CharacterSave';
  * 角色中心
  */
 export class CharacterCenter implements SaveInterface<Array<CharacterSave>> {
-  /**绑定的游戏实例 */
-  private game?: Game;
   /**角色配置列表 */
   charactersConfiguration: Array<CharacterConfiguration>;
   /**角色配置映射 */
@@ -25,14 +23,6 @@ export class CharacterCenter implements SaveInterface<Array<CharacterSave>> {
     this.charactersConfigurationMap = new Map<string, CharacterConfiguration>();
     this.characters = [];
     this.charactersMap = new Map<string, CharacterNormal>();
-  }
-
-  /**
-   * 绑定游戏实例
-   * @param game 要绑定的游戏实例
-   */
-  setGame(game: Game): void {
-    this.game = game;
   }
 
   /**
@@ -86,7 +76,11 @@ export class CharacterCenter implements SaveInterface<Array<CharacterSave>> {
    */
   generateSave(): Array<CharacterSave> {
     return this.characters.map((eachCharacter) => {
-      const characterSave: CharacterSave = { id: eachCharacter.id, level: eachCharacter.getLevel() };
+      const characterSave: CharacterSave = {
+        uuid: eachCharacter.uuid,
+        id: eachCharacter.id,
+        level: eachCharacter.level,
+      };
       // 名字与配置不同(改过名)时,才会保存名字
       if (eachCharacter.name !== this.charactersConfigurationMap.get(eachCharacter.id)?.name) {
         characterSave.name = eachCharacter.name;

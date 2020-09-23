@@ -2,7 +2,6 @@ import { BattleBattle } from '@src/Battle';
 import { CharacterBattle } from '@src/Character';
 import { Properties, UUID } from '@src/Common';
 import { FactionBattle } from '@src/Faction';
-import { Game } from '@src/Game';
 import { ObjectId } from 'bson';
 
 import { TeamNormal } from './TeamNormal';
@@ -23,7 +22,7 @@ export class TeamBattle implements TeamNormal, UUID {
   /**指令点,用于施放技能 */
   orderPoint: number; //指令点,用于施放技能
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  constructor(team: TeamNormal, game: Game) {
+  constructor(team: TeamNormal) {
     this.uuid = new ObjectId().toHexString();
     this.name = team.name;
     this.members = [];

@@ -60,14 +60,6 @@ export class CharacterNormal implements UUID {
     this.level = eachCharacterSave.level;
   }
 
-  getLevel(): number {
-    return this.level;
-  }
-
-  setLevel(level: number): void {
-    this.level = level;
-  }
-
   putOnEquipment(slot: EquipmentSlot, equipment: ItemEquipment): void {
     if (!slot.validEquipmentTypes.has(equipment.equipmentType)) {
       throw new Error(

@@ -15,9 +15,9 @@ export class TeamNormal implements UUID {
   uuid: string;
   /**队伍成员 */
   members: Array<CharacterNormal>;
-  constructor(data: Array<CharacterNormal>, game: Game);
-  constructor(data: TeamConfiguration, game: Game);
-  constructor(data: TeamConfiguration | Array<CharacterNormal>, game: Game) {
+  constructor(data: Array<CharacterNormal>);
+  constructor(data: TeamConfiguration);
+  constructor(data: TeamConfiguration | Array<CharacterNormal>) {
     this.uuid = new ObjectId().toHexString();
     if (Array.isArray(data)) {
       this.name = '玩家队伍';
@@ -32,9 +32,12 @@ export class TeamNormal implements UUID {
         character = new CharacterNormal(eachMember);
       } else {
         //id
-        character = game.characterCenter.getCharacter(eachMember.id);
+        character = Game.characterCenter.getCharacter(eachMember.id);
       }
-      eachMember.level && character.setLevel(eachMember.level);
+
+      if (eachMember.level) {
+        character.level = eachMember.level;
+      }
       return character;
     });
   }

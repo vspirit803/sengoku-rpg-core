@@ -13,12 +13,12 @@ export class FactionBattle {
   name: string;
   /**阵营所处的战斗 */
   battle?: BattleBattle;
-  constructor(factionConfiguration: FactionConfiguration, game: Game) {
+  constructor(factionConfiguration: FactionConfiguration) {
     this.name = factionConfiguration.name;
     this.teams = [];
     this.addTeams(
       ...factionConfiguration.teams.map(
-        (eachTeamConfiguration) => new TeamBattle(new TeamNormal(eachTeamConfiguration, game), game),
+        (eachTeamConfiguration) => new TeamBattle(new TeamNormal(eachTeamConfiguration)),
       ),
     );
   }

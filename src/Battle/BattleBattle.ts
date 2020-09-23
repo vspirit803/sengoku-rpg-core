@@ -4,7 +4,6 @@ import { UUID } from '@src/Common';
 import { Condition } from '@src/Condition';
 import { Event, EventCenter, TriggerTiming } from '@src/EventCenter';
 import { FactionBattle } from '@src/Faction';
-import { Game } from '@src/Game';
 import { TeamBattle, TeamNormal } from '@src/Team';
 import { ObjectId } from 'bson';
 
@@ -35,33 +34,21 @@ export class BattleBattle implements UUID {
     this.fireTarget = fireTarget;
   }
 
-  constructor(
-    battleConfiguration: BattleConfiguration,
-    game: Game,
-    playerTeam: TeamNormal,
-    successCondition: Condition,
-  );
+  constructor(battleConfiguration: BattleConfiguration, playerTeam: TeamNormal, successCondition: Condition);
 
-  constructor(
-    battleConfiguration?: BattleConfiguration,
-    game?: Game,
-    playerTeam?: TeamNormal,
-    successCondition?: Condition,
-  ) {
+  constructor(battleConfiguration: BattleConfiguration, playerTeam?: TeamNormal, successCondition?: Condition) {
     this.uuid = new ObjectId().toHexString();
-    this.name = battleConfiguration?.name ?? '未留下名字的战斗';
+    this.name = battleConfiguration.name ?? '未留下名字的战斗';
     this.factions = [];
     this.eventCenter = new EventCenter();
     this.successCondition = successCondition ?? new Condition();
     this.autoMode = false;
-    if (battleConfiguration && game && playerTeam) {
+    if (battleConfiguration && playerTeam) {
       this.name = battleConfiguration.name;
       this.addFactions(
-        ...battleConfiguration.factions.map(
-          (eachFactionConfiguration) => new FactionBattle(eachFactionConfiguration, game),
-        ),
+        ...battleConfiguration.factions.map((eachFactionConfiguration) => new FactionBattle(eachFactionConfiguration)),
       );
-      this.factions[0].setPlayerTeam(new TeamBattle(playerTeam, game));
+      this.factions[0].setPlayerTeam(new TeamBattle(playerTeam));
     }
     this.battleActionQueue = new BattleActionQueueMHXY(this);
   }

@@ -20,68 +20,65 @@ import { GameSave } from './GameSave';
  */
 export class Game {
   /**角色中心 */
-  characterCenter: CharacterCenter;
+  static characterCenter: CharacterCenter;
   /**任务中心  */
-  taskCenter: TaskCenter;
+  static taskCenter: TaskCenter;
   /**背包 */
-  backpack: ItemCenter;
+  static backpack: ItemCenter;
   /**战斗中心 */
-  battleCenter: BattleCenter;
+  static battleCenter: BattleCenter;
   /**地图中心 */
-  mapCenter: MapCenter;
+  static mapCenter: MapCenter;
   /**队伍中心 */
-  teamCenter: TeamCenter;
+  static teamCenter: TeamCenter;
 
-  constructor() {
+  static init() {
     SkillFactory.loadConfiguration(skills);
+
     //初始化角色中心
-    this.characterCenter = new CharacterCenter();
-    this.characterCenter.setGame(this);
-    this.characterCenter.loadConfiguration(characters);
+    Game.characterCenter = new CharacterCenter();
+    Game.characterCenter.loadConfiguration(characters);
 
     //初始化任务中心
-    this.taskCenter = new TaskCenter();
-    this.taskCenter.setGame(this);
+    Game.taskCenter = new TaskCenter();
 
     //初始化背包
-    this.backpack = new ItemCenter();
-    this.backpack.setGame(this);
-    this.backpack.equipmentCenter.loadConfiguration(equipments);
+    Game.backpack = new ItemCenter();
+    Game.backpack.equipmentCenter.loadConfiguration(equipments);
 
     //初始化战斗中心
-    this.battleCenter = new BattleCenter(this);
-    this.battleCenter.loadConfiguration(battles);
-    this.battleCenter.setGame(this);
+    Game.battleCenter = new BattleCenter();
+    Game.battleCenter.loadConfiguration(battles);
 
     //初始化地图中心
-    this.mapCenter = new MapCenter();
-    this.mapCenter.loadCitiesConfiguration(cities);
-    this.mapCenter.loadProvincesConfiguration(provinces);
-    this.mapCenter.loadMapsConfiguration(maps);
+    Game.mapCenter = new MapCenter();
+    Game.mapCenter.loadCitiesConfiguration(cities);
+    Game.mapCenter.loadProvincesConfiguration(provinces);
+    Game.mapCenter.loadMapsConfiguration(maps);
 
     //初始化队伍中心
-    this.teamCenter = new TeamCenter(this);
+    Game.teamCenter = new TeamCenter();
   }
 
   /**
    * 载入存档
    * @param gameSave 存档数据
    */
-  loadSave(gameSave: GameSave): void {
-    this.characterCenter.loadSave(gameSave.characters);
-    this.backpack.loadSave(gameSave.backpack);
-    this.mapCenter.loadSave(gameSave.maps);
-    this.teamCenter.loadSave(gameSave.teams);
+  static loadSave(gameSave: GameSave): void {
+    Game.characterCenter.loadSave(gameSave.characters);
+    Game.backpack.loadSave(gameSave.backpack);
+    Game.mapCenter.loadSave(gameSave.maps);
+    Game.teamCenter.loadSave(gameSave.teams);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  generateSave(): GameSave {
+  static generateSave(): GameSave {
     return {
       version: '0.0.1',
-      characters: this.characterCenter.generateSave(),
-      backpack: this.backpack.generateSave(),
-      maps: this.mapCenter.generateSave(),
-      teams: this.teamCenter.generateSave(),
+      characters: Game.characterCenter.generateSave(),
+      backpack: Game.backpack.generateSave(),
+      maps: Game.mapCenter.generateSave(),
+      teams: Game.teamCenter.generateSave(),
     };
   }
 }
